@@ -1,0 +1,32 @@
+{
+  "name": "dgt",
+  "version": "1.0.0",
+  "description": "DGT site sources",
+  "main": "index.js",
+  "scripts": {
+    "start": "grunt dev",
+    "build": "grunt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cvtk/DGT.git"
+  },
+  "author": "cvtk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cvtk/DGT/issues"
+  },
+  "homepage": "https://github.com/cvtk/DGT#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-class-id-minifier": "^0.3.2",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
