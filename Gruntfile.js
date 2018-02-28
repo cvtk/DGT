@@ -2,11 +2,43 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    assemble: {
+      options: {
+        plugins: ['grunt-assemble-sitemap'],
+        partials: ['src/includes/*.hbs'],
+        layoutdir: 'src/layouts',
+        collections: [{
+          name: 'posts',
+          inflection: 'post',
+          sortorder: 'desc',
+          sortby: 'created',
+          index: 'src/pages/blog/index.hbs'
+        }],
+        sitemap: {
+          homepage: 'http://digit-it.ru',
+          changefreq: 'daily',
+          priority: '0.8',
+          pretty: true,
+          dest: 'dist',
+          relativedest: true
+          }
+      },
+      site: {
+        options: {
+          layout: 'post.hbs'
+        },
+        expand: true,
+        cwd: 'src/pages',
+        src: '**/*.{hbs,yml}',
+        dest: 'dist/'
+      }
+    },
+
     copy: {
       fonts: {
         files: [{
           dest: 'dist/',
-          src: 'src/fonts/**/*.{eot,svg,ttf,woff,woff2}',
+          src: 'src/assets/fonts/**/*.{eot,svg,ttf,woff,woff2}',
           expand: true,
           flatten: true
         }]
@@ -18,7 +50,22 @@ module.exports = function(grunt) {
           expand: true,
           flatten: true
         }]
-        
+      },
+      img: {
+        files:[{
+          dest: 'dist/',
+          src: 'src/assets/img/**/*.{png,svg,jpg,jpeg}',
+          expand: true,
+          flatten: true
+        }]
+      },
+      blogimg: {
+        files:[{
+          dest: 'dist/blog/i',
+          src: 'src/pages/blog/i/*.jpg',
+          expand: true,
+          flatten: true
+        }]
       }
     },
 
@@ -27,7 +74,7 @@ module.exports = function(grunt) {
         options: { style: 'compressed', sourcemap: 'none' },
         files: [{
           dest: 'dist/',
-          src: 'src/sass/*.sass',
+          src: 'src/assets/sass/*.sass',
           expand: true,
           flatten: true,
           ext: '.css'
@@ -39,30 +86,31 @@ module.exports = function(grunt) {
       js: {
         files: [{
           dest: 'dist/',
-          src: 'src/js/*.js',
+          src: 'src/assets/js/*.js',
           expand: true,
           flatten: true
         }]
       }
     },
 
-    "class-id-minifier": {
-      simple: {
+    rcs: {
+      options: {},
+      css: {
         options: {
-          jsMapFile: 'tmp/simple/map.js',
-          jsMapDevFile: 'tmp/simple/map.dev.js',
-          minifyFilter: function (k, type) {
-            return /^J_/.test(k) ? false : true;
-          },
-          jsMapFilter: function (k, type) {
-            return !!type.id;
-          }
+          replaceCss: true
         },
         files: [{
-          dest: 'dist/',
-          src: 'dist/*.{html,css}',
           expand: true,
-          flatten: true
+          flatten: true,
+          src: 'dist/**/*.css',
+          dest: 'dist/',
+        }]
+      },
+      all: {
+        files: [{
+          expand: true,
+          src: ['dist/**/*.js', 'dist/**/*.html'],
+          dest: './'
         }]
       }
     },
@@ -74,16 +122,15 @@ module.exports = function(grunt) {
           collapseWhitespace: true
         },
         files: [{
-          dest: 'dist/',
-          src: 'dist/*.html',
+          src: 'dist/**/*.html',
+          dest: './',
           expand: true,
-          flatten: true
         }]
       }
     },
 
     jshint: {
-      build: ['Gruntfile.js', 'src/**/*.js']
+      build: ['Gruntfile.js', 'src/assets/**/*.js']
     },
 
     connect: {
@@ -98,7 +145,7 @@ module.exports = function(grunt) {
     watch: {
       assets: {
         files: 'src/**/*.*',
-        tasks: ['jshint', 'copy', 'uglify', 'sass', 'class-id-minifier', 'htmlmin'],
+        tasks: ['assemble', 'jshint', 'copy', 'uglify', 'sass', 'rcs', 'htmlmin'],
         options: {
           spawn: false,
           livereload: true
@@ -107,14 +154,15 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-assemble');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-class-id-minifier');
+  grunt.loadNpmTasks('grunt-rcs');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.registerTask('default', ['jshint', 'copy', 'uglify', 'sass', 'class-id-minifier', 'htmlmin']);
+  grunt.registerTask('default', ['assemble', 'jshint', 'copy', 'uglify', 'sass', 'rcs', 'htmlmin']);
   grunt.registerTask('dev', ['connect', 'watch']);
 };

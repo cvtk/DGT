@@ -3,17 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>DGT - добро пожаловать!</title>
+    <title>{{ title }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="cvtk">
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/base.css">
+    <link rel="stylesheet" href="/post.css">
   </head>
-  <body class="index">
-    <p>Hello world! This is HTML5 Boilerplate</p>
+  <body class="page">
+    <div class="logo"></div>
+    {{> main-nav }}
+      # {{title}}
+      {{> body }}
     <script src="//localhost:35729/livereload.js"></script>
-    <script src="base.js"></script>
+    <script src="/base.js"></script>
+    <script src="/post.js"></script>
   </body>
 </html>

@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DGT - добро пожаловать!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="services.css">
+  </head>
+  <body class="page-services">
+    <div class="logo"></div>
+    <div class="nav">
+      <span class="nav__close"></span>
+      <div class="nav__menu">
+        <ul class="nav-menu">
+          <li class="nav-menu__item">
+            <a href="/" class="nav-menu__link" title="DIGIT Главная">Главная</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="/" class="nav-menu__link" title="DIGIT Услуги">Услуги</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="/" class="nav-menu__link" title="DIGIT Компания">Компания</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="/" class="nav-menu__link" title="DIGIT Кейсы">Кейсы</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="/" class="nav-menu__link" title="DIGIT Новости">Блог</a>
+          </li>
+          
+          <li class="nav-menu__item">
+            <a href="/" class="nav-menu__link" title="DIGIT Контакты">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav__actions">
+        <ul class="nav-actions">
+          <li class="nav-actions__item">
+            <span class="nav-actions__link" title="Отправить заявку / письмо">Отправить заявку / письмо</span>
+          </li>
+          <li class="nav-actions__item">
+            <a class="nav-actions__link" target="_blank" download title="Скачать pdf-презентацию">Скачать pdf-презентацию</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="info">
+      <div class="info__content">
+        <div class="info-content">
+          <h1 class="info-content__title" title="Мы создаем безопасность">Мы создаем безопасность</h1>
+          <h4 class="info-content__subtitle">Работаем с 2004</h4>
+          <p class="info-content__desc">
+            MST — <a href="/agency/">full service digital agency</a>. Качество <a href="/services/">наших услуг</a> проверено временем — мы работаем с <a href="/portfolio/">ведущими брендами</a> уже 13 лет. В нашей команде: более 80 талантов, большой опыт и почти неограниченные возможности. Мы занимаем 7-е место в рейтинге ведущих компаний, входим в группу компаний Red Keds.
+          </p>
+          <div class="info-content__social">
+            <div class="info-content-social">
+              <a href="mailto:sales@digit-it.ru" class="info-content-social__item info-content-social__item_mail" target="_blank" title="Почта"></a>
+              <a href="twitter.com" class="info-content-social__item info-content-social__item_twitter" target="_blank" title="Twitter"></a>
+              <a href="facebook.com" class="info-content-social__item info-content-social__item_facebook" target="_blank" title="Facebook"></a>
+              <a href="vk.com" class="info-content-social__item info-content-social__item_vk" target="_blank" title="Вконтакте"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info__contacts">
+        <div class="info-contacts" itemscope itemtype="http://schema.org/LocalBusiness">
+          <p class="info-contacts__address" itemprop="address">
+            <a href="/contacts" class="info-contacts__link"></a>Москва, Институтский переулок, 2, стр.1</p>
+          <p class="info-contacts__phone" itemprop="telephone">+7 (495) 722-30-17</p>
+        </div>
+      </div>
+    </div>
+    <div class="feedback">
+      <div class="feedback__close"></div>
+      <div class="feedback__content">
+        <div class="feedback-content">
+          <div class="feedback-content__form">
+            <form class="feedback-content-form" name="feedback-content-form" action="/" method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="sessid" id="sessid" value="4c681f74d53714c7103704ad5519e400">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="services-nav">
+      <h1 class="services-nav__title">Основные услуги</h1>
+      <div class="services-nav__categories">
+        <ul class="services-nav-categories">
+          <li class="services-nav-categories__item">
+            <button class="services-nav-categories__button services-nav-categories__button_1 services-nav-categories__button_active" title="Стратегия" data-ctn="qw">Стратегия</button>
+          </li>
+          <li class="services-nav-categories__item">
+            <button class="services-nav-categories__button services-nav-categories__button_2" title="Аналитика" data-ctn="qe">Аналитика</button>
+          </li>
+          <li class="services-nav-categories__item">
+            <button class="services-nav-categories__button services-nav-categories__button_3" title="Дизайн" data-ctn="qr">Дизайн</button>
+          </li>
+          <li class="services-nav-categories__item">
+            <button class="services-nav-categories__button services-nav-categories__button_4" title="Разработка" data-ctn="qt">Разработка</button>
+          </li>
+          <li class="services-nav-categories__item">
+            <button class="services-nav-categories__button services-nav-categories__button_5" title="Продвижение" data-ctn="qy">Продвижение</button>
+          </li>
+          <li class="services-nav-categories__item">
+            <button class="services-nav-categories__button services-nav-categories__button_6" title="Поддержка" data-ctn="qu">Поддержка</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="services-content">
+      <div class="services-content__categories">
+        <div class="services-content-categories">
+          <div class="services-content-categories__item" data-ctgr="qw">
+            <div class="services-content-categories-item">
+              <div class="services-content-categories-item__desc">
+                <div class="services-content-categories-item-desc_middle-line"></div>
+                <div class="services-content-categories-item-desc">
+                  <h3 class="services-content-categories-item-desc__title">Стратегия</h3>
+                  <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
+                  <div class="services-content-categories-item-desc__clients">
+                    <div class="services-content-categories-item-desc-clients">
+                      <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="services-content-categories-item__news">
+                <ul class="services-content-categories-item-news">
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 1">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_1.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 2">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_2.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 3">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_3.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="services-content-categories__item" data-ctgr="qe">
+            <div class="services-content-categories-item">
+              <div class="services-content-categories-item__desc">
+                <div class="services-content-categories-item-desc_middle-line"></div>
+                <div class="services-content-categories-item-desc">
+                  <h3 class="services-content-categories-item-desc__title">Стратегия</h3>
+                  <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
+                  <div class="services-content-categories-item-desc__clients">
+                    <div class="services-content-categories-item-desc-clients">
+                      <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="services-content-categories-item__news">
+                <ul class="services-content-categories-item-news">
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 1">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_1.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 2">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_2.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 3">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_3.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="services-content-categories__item" data-ctgr="qr">
+            <div class="services-content-categories-item">
+              <div class="services-content-categories-item__desc">
+                <div class="services-content-categories-item-desc_middle-line"></div>
+                <div class="services-content-categories-item-desc">
+                  <h3 class="services-content-categories-item-desc__title">Стратегия</h3>
+                  <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
+                  <div class="services-content-categories-item-desc__clients">
+                    <div class="services-content-categories-item-desc-clients">
+                      <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="services-content-categories-item__news">
+                <ul class="services-content-categories-item-news">
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 1">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_1.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 2">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_2.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 3">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_3.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="services-content-categories__item" data-ctgr="qt">
+            <div class="services-content-categories-item">
+              <div class="services-content-categories-item__desc">
+                <div class="services-content-categories-item-desc_middle-line"></div>
+                <div class="services-content-categories-item-desc">
+                  <h3 class="services-content-categories-item-desc__title">Стратегия</h3>
+                  <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
+                  <div class="services-content-categories-item-desc__clients">
+                    <div class="services-content-categories-item-desc-clients">
+                      <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="services-content-categories-item__news">
+                <ul class="services-content-categories-item-news">
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 1">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_1.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 2">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_2.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 3">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_3.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="services-content-categories__item" data-ctgr="qy">
+            <div class="services-content-categories-item">
+              <div class="services-content-categories-item__desc">
+                <div class="services-content-categories-item-desc_middle-line"></div>
+                <div class="services-content-categories-item-desc">
+                  <h3 class="services-content-categories-item-desc__title">Стратегия</h3>
+                  <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
+                  <div class="services-content-categories-item-desc__clients">
+                    <div class="services-content-categories-item-desc-clients">
+                      <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="services-content-categories-item__news">
+                <ul class="services-content-categories-item-news">
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 1">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_1.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 2">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_2.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 3">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_3.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="services-content-categories__item" data-ctgr="qu">
+            <div class="services-content-categories-item">
+              <div class="services-content-categories-item__desc">
+                <div class="services-content-categories-item-desc_middle-line"></div>
+                <div class="services-content-categories-item-desc">
+                  <h3 class="services-content-categories-item-desc__title">Стратегия</h3>
+                  <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
+                  <div class="services-content-categories-item-desc__clients">
+                    <div class="services-content-categories-item-desc-clients">
+                      <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                      <a href="/" class="services-content-categories-item-desc-clients__name" title="ЗАО Атрус">ЗАО "Атрус"</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="services-content-categories-item__news">
+                <ul class="services-content-categories-item-news">
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 1">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_1.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 2">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_2.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="services-content-categories-item-news__article">
+                    <a href="/" class="services-content-categories-item-news-article" title="Новость 3">
+                      <div class="services-content-categories-item-news-article__image" style="background-image: url('client_3.png')"></div>
+                      <div class="services-content-categories-item-news-article__meta">
+                        <div class="services-content-categories-item-news-article-meta">
+                          <div class="services-content-categories-item-news-article-meta__date">‘13</div>
+                          <div class="services-content-categories-item-news-article-meta__info">
+                            <div class="services-content-categories-item-news-article-meta-info">
+                              <h4 class="services-content-categories-item-news-article-meta-info__title">Стачка!</h4>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Продвижение</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Разработка</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Дизайн</span>
+                              <span class="services-content-categories-item-news-article-meta-info__tag">Стратегия</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="services-feedback">
+      <div class="services-feedback__toggler">
+        <div class="services-feedback-toggler" title="Оставить заявку">Оставить заявку</div>
+      </div>
+      <a href="/" class="services-feedback__presentation" target="_blank" download title="Скачать презентацию">Скачать презентацию</a>
+    </div>
+    <script src="//localhost:35729/livereload.js"></script>
+    <script src="base.js"></script>
+    <script src="services.js"></script>
+  </body>
+</html>

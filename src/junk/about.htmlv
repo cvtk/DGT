@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DGT - добро пожаловать!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="about.css">
+  </head>
+  <body class="page-about">
+    <div class="logo"></div>
+    <div class="nav">
+      <span class="nav__close"></span>
+      <div class="nav__menu">
+        <ul class="nav-menu">
+          <li class="nav-menu__item">
+            <a href="/" class="nav-menu__link" title="DIGIT Главная">Главная</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="/" class="nav-menu__link" title="DIGIT Услуги">Услуги</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="/" class="nav-menu__link" title="DIGIT Компания">Компания</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="/" class="nav-menu__link" title="DIGIT Кейсы">Кейсы</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="/" class="nav-menu__link" title="DIGIT Новости">Блог</a>
+          </li>
+          
+          <li class="nav-menu__item">
+            <a href="/" class="nav-menu__link" title="DIGIT Контакты">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav__actions">
+        <ul class="nav-actions">
+          <li class="nav-actions__item">
+            <span class="nav-actions__link" title="Отправить заявку / письмо">Отправить заявку / письмо</span>
+          </li>
+          <li class="nav-actions__item">
+            <a class="nav-actions__link" target="_blank" download title="Скачать pdf-презентацию">Скачать pdf-презентацию</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="info">
+      <div class="info__content">
+        <div class="info-content">
+          <h1 class="info-content__title" title="Мы создаем безопасность">Мы создаем безопасность</h1>
+          <h4 class="info-content__subtitle">Работаем с 2004</h4>
+          <p class="info-content__desc">
+            MST — <a href="/agency/">full service digital agency</a>. Качество <a href="/services/">наших услуг</a> проверено временем — мы работаем с <a href="/portfolio/">ведущими брендами</a> уже 13 лет. В нашей команде: более 80 талантов, большой опыт и почти неограниченные возможности. Мы занимаем 7-е место в рейтинге ведущих компаний, входим в группу компаний Red Keds.
+          </p>
+          <div class="info-content__social">
+            <div class="info-content-social">
+              <a href="mailto:sales@digit-it.ru" class="info-content-social__item info-content-social__item_mail" target="_blank" title="Почта"></a>
+              <a href="twitter.com" class="info-content-social__item info-content-social__item_twitter" target="_blank" title="Twitter"></a>
+              <a href="facebook.com" class="info-content-social__item info-content-social__item_facebook" target="_blank" title="Facebook"></a>
+              <a href="vk.com" class="info-content-social__item info-content-social__item_vk" target="_blank" title="Вконтакте"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info__contacts">
+        <div class="info-contacts" itemscope itemtype="http://schema.org/LocalBusiness">
+          <p class="info-contacts__address" itemprop="address">
+            <a href="/contacts" class="info-contacts__link"></a>Москва, Институтский переулок, 2, стр.1</p>
+          <p class="info-contacts__phone" itemprop="telephone">+7 (495) 722-30-17</p>
+        </div>
+      </div>
+    </div>
+    <div class="feedback">
+      <div class="feedback__close"></div>
+      <div class="feedback__content">
+        <div class="feedback-content">
+          <div class="feedback-content__form">
+            <form class="feedback-content-form" name="feedback-content-form" action="/" method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="sessid" id="sessid" value="4c681f74d53714c7103704ad5519e400">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="about-content">
+      <div class="about-content__company">
+        <div class="about-content-company">
+          <h1 class="about-content-company__title">Мы создаем безопасность</h1>
+          <h4 class="about-content-company__subtitle">Работаем с 2004</h4>
+          <div class="about-content-company__info">
+            <div class="about-content-company-info">
+              <p class="about-content-company-info__desc">Мы всегда открыты для общения и новых знакомств. И даже когда наш офис закрыт, мы рады пообщаться по почте или по телефону. Хотите поговорить с нашим руководителем?<br>Напишите Николаю в <a href="https://www.facebook.com/nickfet" target="_blank">Facebook</a>, он будет рад<br>Мечтаете работать у нас? Отправляйте резюме на <a href="mailto:bestjob@mstagency.ru" target="_blank">bestjob@mstagency.ru</a> нашему HR-директору Ольге.</p>
+              <div class="about-content-company-info__contacts" itemscope="" itemtype="http://schema.org/LocalBusiness">
+                <div class="about-content-company-info-contacts">
+                  <p class="about-content-company-info-contacts__address">
+                    Москва, <span class="_light">Институтский переулок, 2, стр.1</span>
+                  </p>
+                  <p class="about-content-company-info-contacts__phone" itemprop="telephone">+7 (495) 722-30-17</p>
+                  <p class="about-content-company-info-contacts__mail" itemprop="email">
+                    <a href="mailto:mail@mstagency.ru">mail@mstagency.ru</a>
+                  </p>
+                </div>
+              </div>
+              <div class="about-content-company-info__actions">
+                <div class="about-content-company-info-actions">
+                  <a href="/upload/MST_DIGITAL_AGENCY_2017.pdf" download="" target="_blank" class="about-content-company-info-actions__link" title="Скачать pdf-презентацию">Скачать pdf-презентацию</a>
+                  <span class="about-content-company-info-actions__link" title="Отправить заявку / письмо">Отправить заявку / письмо</span>
+                </div>
+              </div>
+              <div class="about-content-company-info__social">
+                <div class="about-content-company-info-social">
+                  <a href="mailto:mail@mstagency.ru" target="_blank" title="Эл. почта" class="about-content-company-info-social__icon _mail"></a>
+                  <a href="mailto:mail@mstagency.ru" target="_blank" title="Twitter" class="about-content-company-info-social__icon _twitter"></a>
+                  <a href="mailto:mail@mstagency.ru" target="_blank" title="Facebook" class="about-content-company-info-social__icon _facebook"></a>
+                  <a href="mailto:mail@mstagency.ru" target="_blank" title="Вконтакте" class="about-content-company-info-social__icon _vk"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-map" id="mp"></div>
+    <script src="//localhost:35729/livereload.js"></script>
+    <script src="base.js"></script>
+    <script src="about.js"></script>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9817cc582f6a3b97398cddceca9f51ec793abd1fd7620fa5d482add92736783f&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true&amp;id=mp"></script>
+  </body>
+</html>

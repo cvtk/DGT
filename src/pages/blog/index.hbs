@@ -1,0 +1,42 @@
+---
+title: DGT - наш блог
+shortname: blog
+layout: default.hbs
+---
+
+<div class="blog-content">
+  <div class="blog-content__sidebar"></div>
+  <div class="blog-content__posts">
+    <div class="blog-content-posts">
+      {{#each posts.news}}
+      <div class="blog-content-posts__item">
+        <div class="blog-content-posts-item">
+          <h1 class="blog-content-posts-item__title">
+            <a href="/blog/{{this.filename}}">{{data.title}}</a>
+          </h1>
+          <span class="blog-content-posts-item__date">{{moment  data.created  lang ="ru"  format ="DD MMMM YYYY" }}</span>
+          <div class="blog-content-posts-item__preview">
+            <div class="blog-content-posts-item-preview">
+              <span class="blog-content-posts-item-preview__text">{{data.preview}}</span>
+              <a href="/blog/{{this.filename}}" class="blog-content-posts-item-preview__link" title="Подробнее"></a>
+              <div class="blog-content-posts-item-preview__image">
+                <a href="/blog/{{this.filename}}">
+                  <img src="i/{{this.basename}}.jpg" alt="{{data.title}}">
+                </a>
+              </div>
+              <div class="blog-content-posts-item-preview__tags">
+                <div class="blog-content-posts-item-preview-tags">
+                  {{#each data.tags}}
+                  <a href="{{data.basename}}//{{this}}" class="blog-content-posts-item-preview-tags__item" title="{{this}}">{{this}}</a>
+                  {{/each}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="blog-content__banner"></div>
+</div>

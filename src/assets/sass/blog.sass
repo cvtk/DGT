@@ -1,0 +1,134 @@
+.blog-content
+  position: relative
+  z-index: 10
+  width: 100%
+  max-width: 1100px
+  background-color: white
+
+.blog-content__sidebar
+  position: fixed
+  width: 20%
+  min-width: 300px
+  right: auto
+  left: 1000px
+  height: 100%
+  background-color: #ff4f4f
+  z-index: 15
+
+.blog-content__posts
+  display: inline-block
+  vertical-align: top
+  width: 100%
+  max-width: 1100px
+  min-width: 980px
+  text-align: center
+
+.blog-content-posts
+  padding: 65px 0
+
+.blog-content-posts__item
+  display: inline-block
+  vertical-align: top
+  width: 100%
+  border-bottom: 1px solid #f0f0f0
+  padding: 30px 0 45px 0
+
+.blog-content-posts-item
+  display: inline-block
+  vertical-align: top
+  width: 700px
+  text-align: left
+  margin-left: -80px
+
+.blog-content-posts-item__title
+  font-size: 3.375em
+  font-family: 'Dgt Condensed'
+  font-weight: normal
+  letter-spacing: -0.015em
+  a:visited, a
+    color: #3a3a3a
+  a:hover
+    color: #ff4f4f
+
+.blog-content-posts-item__date
+  display: block
+  color: #a8a8a8
+  font-size: 1em
+  &:before
+    content: ''
+    display: inline-block
+    vertical-align: top
+    margin-right: 7px
+    width: 19px
+    height: 19px
+    background: url(sprite.png) -22px -130px
+
+.blog-content-posts-item__preview
+  width: 100%
+  margin-top: 8px
+  font-size: 16px
+  color: #3a3a3a
+  line-height: 1.5em
+
+.blog-content-posts-item-preview
+  position: relative
+
+.blog-content-posts-item-preview__text
+  line-height: normal
+
+.blog-content-posts-item-preview__link
+  display: inline-block
+  vertical-align: middle
+  width: 24px
+  height: 20px
+  cursor: pointer
+  background: url(sprite.png) -26px -153px no-repeat
+  margin-left: 3px
+  &:hover
+    background-position: 0 -153px
+
+.blog-content-posts-item-preview__image
+  width: 100%
+  text-align: center
+  border: 1px solid #efefef
+  border-radius: 1px
+  padding: 40px 0
+  margin: 15px 0
+  img
+    max-width: 680px
+
+.blog-content-posts-item-preview__tags
+  width: 100%
+  margin-top: 10px
+
+.blog-content-posts-item-preview-tags
+  line-height: normal
+
+.blog-content-posts-item-preview-tags__item
+  display: inline-block
+  color: #c9c9c9
+  border: 1px solid #dedede
+  border-radius: 3px
+  padding: 0 10px 3px 10px
+  font-size: .9125em
+  cursor: pointer
+  margin-right: 5px
+  transition: color .2s ease-in-out, border-color .2s ease-in-out
+  &:visited
+    color: #c9c9c9
+  &:hover
+    color: #3a3a3a
+    border-color: #3a3a3a
+
+
+.blog-content__banner
+  position: fixed
+  z-index: 5
+  width: 30%
+  height: 100%
+  right: 0
+  top: 0
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  background-size: cover
+  background-image: url('blog-banner.jpg')
