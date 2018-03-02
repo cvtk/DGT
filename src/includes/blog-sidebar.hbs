@@ -1,0 +1,40 @@
+<div class="blog-content-sidebar">
+  <div class="blog-content-sidebar__search">
+    <form action="/" class="blog-content-sidebar-search">
+      <input type="search" name="q" value class="blog-content-sidebar-search__input">
+      <button type="submit" name="s" value="Поиск" class="blog-content-sidebar-search__button"></button>
+    </form>
+  </div>
+  <div class="blog-content-sidebar__tags">
+    <noindex>
+      {{#tags}}
+      <a href="/blog/tags/{{tag}}.html" class="blog-content-sidebar-tags__item" rel="nofollow">{{tag}}</a>
+      {{/tags}}
+    </noindex>
+  </div>
+  <div class="blog-content-sidebar__social">
+    <div class="blog-content-sidebar-social">
+      <a href="/" class="blog-content-sidebar-social__link _mail" title="Отправить сообщение"></a>
+      <a href="/" class="blog-content-sidebar-social__link _vk" title="Вконтакте"></a>
+      <a href="/" class="blog-content-sidebar-social__link _facebook" title="Facebook"></a>
+      <a href="/" class="blog-content-sidebar-social__link _twitter" title="Twitter"></a>
+    </div>
+  </div>
+  <div class="blog-content-sidebar__best">
+    <div class="blog-content-sidebar-best">
+      <h3 class="blog-content-sidebar-best__title">Лучшее за неделю</h3>
+      <div class="blog-content-sidebar-best__list">
+        <ul class="blog-content-sidebar-best-list">
+          {{#posts}}{{#is post "news"}}{{#withFirst pages 3}} 
+          <li class="blog-content-sidebar-best-list__item">
+            <a href="/blog/{{filename}}" title="{{data.title}}" class="blog-content-sidebar-best-list-item">
+              <h5 class="blog-content-sidebar-best-list-item__title">{{data.title}}</h5>
+              <p class="blog-content-sidebar-best-list-item__text">{{data.preview}}</p>
+            </a>
+          </li>
+          {{/withFirst}}{{/is}}{{/posts}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

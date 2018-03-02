@@ -15,6 +15,167 @@
   background-color: #ff4f4f
   z-index: 15
 
+.blog-content-sidebar
+  position: relative
+
+.blog-content-sidebar__search
+  width: 100%
+  box-sizing: border-box
+  padding: 20px 25px
+
+.blog-content-sidebar-search
+  position: relative
+
+.blog-content-sidebar-search__input
+  width: 100%
+  border: 0
+  box-sizing: border-box
+  height: 37px
+  background-color: white
+  color: #3a3a3a
+  font-size: .9125em
+  padding: 0 10px
+  border: 1px solid #fff
+  transition: border-color .2s ease-in-out
+  &:focus, &:hover
+    border-color: #c61616
+
+.blog-content-sidebar-search__button
+  position: absolute
+  top: 0
+  right: 0
+  width: 37px
+  height: 37px
+  border: 0
+  display: block
+  background: url(sprite.png) 0 -173px no-repeat
+  cursor: pointer
+
+.blog-content-sidebar__tags
+  width: 100%
+  box-sizing: border-box
+  padding: 15px 20px 20px 20px
+  border-top: 1px solid #ff6b6b
+
+.blog-content-sidebar-tags__item
+  display: inline-block
+  border: 1px solid #ff7474
+  border-radius: 3px
+  padding: 0 10px 3px 10px
+  font-size: .9125em
+  cursor: pointer
+  margin-right: 5px
+  transition: border-color .2s ease-in-out
+  color: white
+  margin-top: 5px
+  &:visited
+    color: #fff
+  &:hover
+    border-color: #fff
+    color: #fff
+
+.blog-content-sidebar__social
+  width: 100%
+  box-sizing: border-box
+  padding: 13px 15px
+  border-top: 1px solid #ff6b6b
+  text-align: center
+
+.blog-content-sidebar-social
+  position: relative
+
+.blog-content-sidebar-social__link
+  position: relative
+  display: inline-block
+  width: 45px
+  height: 43px
+  border: 1px solid #ff8383
+  border-radius: 45px
+  background-color: #f55
+  cursor: pointer
+  transition: background-color .2s ease-in-out, border-color .2s ease-in-out
+  margin: 0 2px
+  &:hover
+    background-color: #d23d3d
+    border-color: #c33939
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    top: 10px
+    left: 10px
+    background-image: url(sprite.png)
+    background-repeat: no-repeat
+  &._mail:after
+    width: 20px
+    height: 14px
+    top: 15px
+    left: 12px
+    background-position: 0 -211px
+  &._vk:after
+    width: 11px
+    height: 14px
+    top: 14px
+    left: 18px
+    background-position: -39px -56px
+  &._facebook:after
+    width: 10px
+    height: 16px
+    top: 13px
+    left: 17px
+    background-position: -11px -57px
+  &._twitter:after
+    width: 17px
+    height: 15px
+    top: 15px
+    left: 14px
+    background-position: 0 -41px
+
+.blog-content-sidebar__best
+  width: 100%
+  box-sizing: border-box
+  padding: 25px
+  border-top: 1px solid #ff6b6b
+
+.blog-content-sidebar-best
+  position: relative
+
+.blog-content-sidebar-best__title
+  font-size: 2.0625em
+  font-family: 'Dgt Condensed'
+  color: white
+  opacity: .88
+
+.blog-content-sidebar-best__list
+  position: relative
+
+.blog-content-sidebar-best-list
+  opacity: .88
+
+.blog-content-sidebar-best-list__item
+  padding-bottom: 25px
+  margin-bottom: 25px
+  border-bottom: 1px solid #ff6b6b
+
+.blog-content-sidebar-best-list-item
+  color: white
+  display: block
+  &:hover .blog-content-sidebar-best-list-item__title, &:hover .blog-content-sidebar-best-list-item__text
+    color: #ffabab
+
+.blog-content-sidebar-best-list-item__title
+  font-size: 1.125em
+  font-family: 'Roboto Condensed'
+  font-weight: 400
+  color: white
+  transition: color .2s ease-in-out
+
+.blog-content-sidebar-best-list-item__text
+  margin: 0
+  font-size: 1.0625em
+  color: white
+  transition: color .2s ease-in-out
+
 .blog-content__posts
   display: inline-block
   vertical-align: top
@@ -35,10 +196,36 @@
 
 .blog-content-posts-item
   display: inline-block
+  position: relative
   vertical-align: top
   width: 700px
   text-align: left
   margin-left: -80px
+
+.blog-content-posts-item__back
+  display: block
+  position: absolute
+  top: -60px
+  right: 0
+  font-size: 1em
+  color: #636363
+  z-index: 1
+  &:visited
+    color: #636363
+  &:before
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    width: 24px
+    height: 11px
+    opacity: .6
+    margin-right: 5px
+    background: url(sprite.png) -22px -228px
+    transition: opacity .2s ease-in-out
+  &:hover
+    color: black
+    &:before
+      opacity: 1
 
 .blog-content-posts-item__title
   font-size: 3.375em
@@ -62,6 +249,30 @@
     width: 19px
     height: 19px
     background: url(sprite.png) -22px -130px
+
+.blog-content-posts-item__social
+  position: relative
+  display: inline-block
+  vertical-align: top
+  width: 49.5%
+  overflow: hidden
+
+.blog-content-posts-item__tags
+  width: 49.5%
+  display: inline-block
+  vertical-align: top
+  text-align: right
+  margin-top: 10px
+
+.blog-content-posts-item__body
+  width: 100%
+  margin-top: 8px
+  font-size: 16px
+  color: #3a3a3a
+  line-height: 1.5em
+
+.blog-content-posts-item-body
+  margin-bottom: 15px
 
 .blog-content-posts-item__preview
   width: 100%

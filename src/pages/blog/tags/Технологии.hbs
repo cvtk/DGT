@@ -10,9 +10,10 @@ layout: default.hbs
   </div>
   <div class="blog-content__posts">
     <div class="blog-content-posts">
-      {{#each posts}}{{#is post "news"}}{{#pages}}
+      {{#each posts}}{{#is post "test"}}{{#pages}}{{#inArray this.data.tags "Технологии"}}{{log this}}
       <div class="blog-content-posts__item">
         <div class="blog-content-posts-item">
+          <a href="/blog" class="blog-content-posts-item__back" title="к статьям">к статьям</a>
           <h1 class="blog-content-posts-item__title">
             <a href="/blog/{{this.filename}}">{{data.title}}</a>
           </h1>
@@ -24,7 +25,7 @@ layout: default.hbs
               {{#unless data.noImage}}
               <div class="blog-content-posts-item-preview__image">
                 <a href="/blog/{{this.filename}}">
-                  <img src="i/{{this.basename}}.jpg" alt="{{data.title}}">
+                  <img src="/blog/i/{{this.basename}}.jpg" alt="{{data.title}}">
                 </a>
               </div>
               {{/unless}}
@@ -39,7 +40,7 @@ layout: default.hbs
           </div>
         </div>
       </div>
-      {{/pages}}{{/is}}{{/each}}
+      {{/inArray}}{{/pages}}{{/is}}{{/each}}
     </div>
   </div>
   <div class="blog-content__banner"></div>
