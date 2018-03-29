@@ -1,0 +1,271 @@
+.about-content
+  width: 67%
+  position: relative
+  height: 100%
+  z-index: 10
+  box-shadow: none
+
+.about-content__info
+  width: 100%
+  height: 100%
+  box-sizing: border-box
+  padding-top: 180px
+
+.about-content-info
+  position: relative
+  width: 75%
+  height: 65%
+  border: 4px solid #ff4f4f
+  margin-left: 12%
+  text-align: center
+  min-height: 520px
+  &:before
+    content: ''
+    position: absolute
+    top: -5px
+    left: 50%
+    margin-left: -145px
+    height: 6px
+    width: 290px
+    background-color: white
+
+.about-content-info__title
+  position: absolute
+  top: -41px
+  left: 50%
+  margin-left: -133px
+  width: 266px
+  height: 95px
+  overflow: hidden
+  text-indent: -9999em
+  padding-bottom: 10px
+  background: url(/info_title.png) 50% 0 no-repeat
+  color: #3a3a3a
+  font-size: 3.75em
+  text-transform: uppercase
+  font-family: 'Bebas Neue'
+  border-bottom: 1px solid #484848
+
+.about-content-info__subtitle
+  position: absolute
+  font-size: 1.0625em
+  top: 70px
+  left: 50%
+  margin-left: -135px
+  width: 270px
+  text-align: center
+  font-family: 'Roboto Condensed'
+  font-weight: 300
+  text-transform: uppercase
+
+.about-content-info__text
+  width: 100%
+  padding: 145px 7% 0
+  box-sizing: border-box
+
+.about-content-info-text
+  font-size: .9375em
+  line-height: 1.5em
+
+.about-content-info__contacts
+  text-align: center
+  margin-top: 40px
+
+.about-content-info-contacts
+  position: relative
+
+.about-content-info-contacts__phone
+  display: block
+  font-family: 'Bebas Neue'
+  font-size: 1.5em
+  padding-top: 5px
+  margin: 0
+
+.about-content-info-contacts__address
+  width: 300px
+  margin: 0
+  display: inline-block
+  vertical-align: top
+  font-size: 1em
+  a 
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    width: 14px
+    height: 17px
+    margin: -3px 7px 0 0
+    background: url(/sprite.png) -23px -56px no-repeat
+
+.about-content-info-contacts__email
+  margin: 0
+  &:before
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    width: 16px
+    height: 11px
+    margin: -1px 7px 0 0
+    background: url(/icon_email.png) 0px 0px no-repeat
+
+.about-content-info__feedback
+  margin-top: 5px
+
+.about-content-info-feedback
+  display: inline-block
+  font-family: 'Roboto Condensed'
+  font-weight: 300
+  font-size: 1em
+  width: 244px
+  height: 45px
+  line-height: 43px
+  box-sizing: border-box
+  background-color: #ff4f4f
+  padding: 0 10px
+  color: white !important
+  text-align: center
+  text-decoration: none !important
+  border: 0
+  cursor: pointer
+  transition: background-color .1s ease-in-out
+  &:hover
+    background-color: #e73636
+
+.about-content-info__services
+  width: 100%
+  text-align: center
+  margin-top: 30px
+
+.about-content-info-services
+  display: inline-block
+  width: 392px
+  font-size: 0
+
+.about-content-info-services__link
+  position: relative
+  display: inline-block
+  vertical-align: top
+  width: 48px
+  height: 48px
+  margin-right: 15px
+  font-size: 16px
+  text-align: left
+
+.about-content-info-services-link
+  position: absolute
+  left: 50%
+  margin-left: -24px
+  cursor: pointer
+  opacity: .35
+  z-index: 5
+  top: 0
+  width: 48px
+  height: 48px
+  display: inline-block
+  background-color: white
+  border-radius: 48px
+  line-height: 46px
+  text-align: center
+  overflow: hidden
+  font-size: 0
+  box-sizing: border-box
+  padding-left: 30px
+  border: 0
+  color: white
+  transition: all .2s ease-in-out
+  &:hover
+    opacity: 1
+    background-color: #ff4f4f
+    width: 175px
+    z-index: 10
+    font-size: 15px
+    color: white
+    text-decoration: none
+  &:after
+    content: ''
+    position: absolute
+    width: 48px
+    height: 48px
+    left: 0
+    top: 0
+    background: url(/icons-services.png) 0 0 no-repeat
+
+.about-content-info-services-link._5, .about-content-info-services-link._6
+  left: auto
+  right: 0
+  padding-right: 33px
+  padding-left: 0
+  &:after
+    left: auto
+    right: 0
+
+.about-content-info-services-link._1:after
+  background-position: 0 0
+
+.about-content-info-services-link._2:after
+  background-position: -50px 0
+
+.about-content-info-services-link._3:after
+  background-position: -100px 0
+
+.about-content-info-services-link._4:after
+  background-position: -150px 0
+
+.about-content-info-services-link._5:after
+  background-position: -200px 0
+
+.about-content-info-services-link._6:after
+  background-position: -250px 0
+
+.about-content-info-services-link._1:hover:after
+  background-position: 0 -50px
+
+.about-content-info-services-link._2:hover:after
+  background-position: -50px -50px
+
+.about-content-info-services-link._3:hover:after
+  background-position: -100px -50px
+
+.about-content-info-services-link._4:hover:after
+  background-position: -150px -50px
+
+.about-content-info-services-link._5:hover:after
+  background-position: -200px -50px
+
+.about-content-info-services-link._6:hover:after
+  background-position: -250px -50px
+
+.about-content-info__scroll-button
+  display: inline-block
+  width: 48px
+  height: 48px
+  border-radius: 48px
+  border: 1px solid #484848
+  position: absolute
+  left: 50%
+  margin-left: -24px
+  bottom: -90px
+  cursor: pointer
+  &:after
+    content: ''
+    position: absolute
+    width: 10px
+    height: 24px
+    top: 10px
+    left: 19px
+    background: url(/sprite.png) 0 -75px no-repeat
+  &._up:after
+    top: 12px
+    background-position: -22px -75px
+
+.about-content-info__social
+  margin-top: 60px
+
+.about-banner
+  width: 33%
+  height: 100%
+  position: fixed
+  top: 0
+  right: 0
+  background: url(/company-banner.jpg) center center no-repeat
+  background-size: cover
+  box-shadow: inset 3px 0 6px rgba(0, 0, 0, 0.25)

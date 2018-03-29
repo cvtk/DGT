@@ -1,0 +1,185 @@
+.cases-content
+  width: 100%
+  box-sizing: border-box
+  padding-left: 88px
+
+.cases-content__title
+  display: none
+  width: 100%
+  color: #373737
+  font-family: 'Bebas Neue'
+  font-size: 2.8125em
+  text-align: center
+  padding: 30px 0
+
+.cases-content__nav
+  position: fixed
+  top: 0
+  left: 0
+  width: 88px
+  height: 100%
+  box-sizing: border-box
+  padding-top: 88px
+  background-color: #ff4f4f
+  z-index: 50
+
+.cases-content-nav
+  position: relative
+  width: 100%
+  height: 94%
+  border-top: 1px solid #c84040
+  box-sizing: border-box
+  padding: 25px 0
+  &:before
+    content: ''
+    position: absolute
+    font-size: 0
+    width: 1px
+    height: 100%
+    left: 50%
+    top: 3%
+    background-color: white
+
+.cases-content-nav__item
+  height: 24.85%
+  width: 100%
+  text-align: center
+  position: relative
+
+.cases-content-nav-item
+  display: inline-block
+  font-family: 'Bebas Neue'
+  font-size: 1.1875em
+  position: relative
+  width: 30px
+  height: 30px
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  padding-top: 10px
+  color: white
+  background-color: #ff4f4f
+  border: 0
+  cursor: pointer
+  &:hover:after
+    border: 1px solid white
+    background-color: #ff4f4f
+  &:hover:before
+    opacity: 0
+  &:before
+    opacity: 1
+    content: ''
+    position: absolute
+    transition: opacity .1s ease-in-out
+    width: 7px
+    height: 7px
+    border-radius: 7px
+    background-color: white
+    left: 50%
+    margin-left: -3px
+    top: 0
+    z-index: 1
+  &:after
+    content: ''
+    position: absolute
+    transition: background-color .1s ease-in-out, border .25s ease-in-out
+    width: 50px
+    height: 50px
+    border-radius: 50px
+    top: -6px
+    left: -10px
+    z-index: 0
+    border: 1px solid transparent
+    background-color: transparent
+
+.cases-content-nav-item__year
+  position: relative
+  z-index: 1
+
+.cases-content__list
+  position: relative
+
+.cases-content-list
+  width: 100%
+  font-size: 0
+  overflow: hidden
+  &:hover .cases-content-list-item__image
+    opacity: .25
+
+.cases-content-list__item
+  position: relative
+  width: 50%
+  height: 310px
+  display: block
+  float: left
+  vertical-align: top
+  font-size: 16px
+  overflow: hidden
+  background-color: #000
+  width: 33.33%
+
+.cases-content-list-item
+  display: block
+  position: relative
+  &:hover > .cases-content-list-item__meta
+    bottom: 0
+  &:hover > .cases-content-list-item__image
+    opacity: 1
+
+.cases-content-list-item__image
+  position: relative
+  width: 100%
+  height: 310px
+  opacity: 1
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  background-size: cover
+  transition: opacity .2s ease-in-out
+
+.cases-content-list-item__meta
+  position: absolute
+  width: 100%
+  bottom: -100%
+  left: 0
+  background-color: #ff4f4f
+  color: white
+  z-index: 5
+  transition: bottom .35s ease-in-out
+
+.cases-content-list-item-meta
+  position: relative
+
+.cases-content-list-item-meta__year
+  display: inline-block
+  vertical-align: middle
+  font-size: 3.125em
+  font-family: 'Bebas Neue'
+  width: 17%
+  box-sizing: border-box
+  text-align: center
+  padding: 0 1%
+
+.cases-content-list-item-meta__header
+  display: inline-block
+  vertical-align: middle
+  width: 80%
+  border-left: 1px solid #e94242
+  padding: 4.75% 0 4.75% 5%
+  box-sizing: border-box
+
+.cases-content-list-item-meta-header
+  position: relative
+
+.cases-content-list-item-meta-header__title
+  font-family: 'Dgt Condensed'
+  font-size: 2.5em
+  line-height: .85em
+
+.cases-content-list-item-meta-header__subtitle
+  display: inline-block
+  line-height: .9em
+  font-size: 1em
+  padding-right: 8px
+  margin-right: 5px
+  border-right: 1px solid white
+  &:last-child
+    border-right: 0

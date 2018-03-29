@@ -24,7 +24,7 @@ layout: default.hbs
               {{#unless data.noImage}}
               <div class="blog-content-posts-item-preview__image">
                 <a href="/blog/{{this.filename}}">
-                  <img src="i/{{this.basename}}.jpg" alt="{{data.title}}">
+                  <img src="/{{this.basename}}.jpg" alt="{{data.title}}">
                 </a>
               </div>
               {{/unless}}

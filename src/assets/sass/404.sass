@@ -1,0 +1,59 @@
+.not-found-content
+  width: 100%
+  height: 100%
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  padding-top: 14%
+
+.not-found-content__inside
+  position: relative
+  width: 75%
+  height: 65%
+  margin-left: 12%
+  text-align: center
+  min-height: 520px
+
+.not-found-content-inside
+  position: relative
+  height: 434px
+  width: 100%
+  box-sizing: border-box
+  &:after
+    content: ''
+    clear: both
+    display: table 
+
+._50p
+  position: relative
+  float: left
+  box-sizing: border-box
+  width: 50%
+  &:last-child
+    border-left: 1px solid #e2e2e2
+
+.not-found-content-inside__title
+  font-family: 'Bebas Neue'
+  font-size: 274px
+  color: #3a3a3a
+
+.not-found-content-inside__subtitle
+  font-family: 'Roboto Condensed'
+  font-size: 30px
+  display: block
+  color: #373737
+  margin-top: -32px
+
+.not-found-content-inside__message
+  font-size: 16px
+  line-height: 23px
+  color: #373737
+  width: 300px
+  margin: 0 auto
+
+.not-found-content-inside__arrow
+  width: 48px
+  height: 48px
+  display: block
+  margin: 32px auto 0
+  background: url(/error_arr.png) no-repeat 0 0
+
