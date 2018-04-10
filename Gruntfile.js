@@ -68,22 +68,6 @@ module.exports = function(grunt) {
           flatten: true
         }]
       },
-      // blogimg: {
-      //   files:[{
-      //     dest: 'dist/blog/i',
-      //     src: 'src/pages/blog/i/*.jpg',
-      //     expand: true,
-      //     flatten: true
-      //   }]
-      // },
-      // caseimg: {
-      //   files:[{
-      //     dest: 'dist/cases/i',
-      //     src: 'src/pages/cases/i/*.jpg',
-      //     expand: true,
-      //     flatten: true
-      //   }]
-      // }
     },
 
     sass: {

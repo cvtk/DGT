@@ -36,27 +36,6 @@ layout: default.hbs
     </ul>
   </div>
   <div class="cases-content__list">
-    <ul class="cases-content-list">
-      {{#each posts}}{{#is post "cases"}}{{#pages}}
-      <li class="cases-content-list__item" data-year="{{moment  data.created  lang ="ru"  format ="YYYY" }}">
-        <a href="/cases/{{this.filename}}" class="cases-content-list-item" title="{{data.title}}">
-          <div class="cases-content-list-item__image" style="background-image: url(/{{this.basename}}.jpg)"></div>
-          <div class="cases-content-list-item__meta">
-            <div class="cases-content-list-item-meta">
-              <div class="cases-content-list-item-meta__year">‘{{moment  data.created  lang ="ru"  format ="YY" }}</div>
-              <div class="cases-content-list-item-meta__header">
-                <div class="cases-content-list-item-meta-header">
-                  <h4 class="cases-content-list-item-meta-header__title">{{data.title}}</h4>
-                  {{#each data.tags}}
-                  <span class="cases-content-list-item-meta-header__subtitle">{{this}}</span>
-                  {{/each}}
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </li>
-      {{/pages}}{{/is}}{{/each}}
-    </ul>
+    {{> cases-content-list }}
   </div>
 </div>

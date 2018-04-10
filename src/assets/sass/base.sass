@@ -79,11 +79,14 @@ img
   vertical-align: middle
   border: 0
 
-input, textarea
+input, textarea, button
   font-family: 'Roboto Condensed', Arial, sans-serif
   font-weight: 300
   -webkit-appearance: none
   border-radius: 0
+  outline: 0
+  border: 0
+  width: 100%
 
 input[type=search]::-ms-clear, input[type=search]::-ms-reveal
   display: none
@@ -100,6 +103,9 @@ button, input, select, textarea
 
 button, input
   line-height: normal
+
+*, :after, :before
+  box-sizing: border-box
   
 .page
   position: relative
@@ -477,3 +483,259 @@ button, input
   left: 0
   visibility: visible
   transition: opacity .3s ease-in-out
+
+._index-page
+  .cases-content-list-item-meta__year
+    display: none
+    width: 0
+  .cases-content-list-item-meta__header
+    width: 100%
+  .cases-content-list-item__meta
+    bottom: 0
+
+
+.cases-content-list
+  width: 100%
+  font-size: 0
+  overflow: hidden
+  &:hover .cases-content-list-item__bg
+    opacity: .55
+
+.cases-content-list__item
+  position: relative
+  width: 33.33%
+  height: 310px
+  display: block
+  float: left
+  vertical-align: top
+  font-size: 16px
+  overflow: hidden
+  background-color: #000
+
+.cases-content-list-item
+  display: block
+  position: relative
+  &:hover > .cases-content-list-item__meta
+    bottom: 0
+  &:hover > .cases-content-list-item__bg
+    opacity: 0
+
+.cases-content-list-item__image
+  position: relative
+  width: 100%
+  height: 310px
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  background-size: cover
+
+.cases-content-list-item__meta
+  position: absolute
+  width: 100%
+  bottom: -100%
+  left: 0
+  background-color: #ff4f4f
+  color: white
+  z-index: 1
+  transition: bottom .35s ease-in-out
+
+.cases-content-list-item-meta
+  position: relative
+
+.cases-content-list-item-meta__year
+  display: inline-block
+  vertical-align: middle
+  font-size: 3.125em
+  font-family: 'Bebas Neue'
+  width: 17%
+  box-sizing: border-box
+  text-align: center
+  padding: 0 1%
+
+.cases-content-list-item-meta__header
+  display: inline-block
+  vertical-align: middle
+  width: 80%
+  border-left: 1px solid #e94242
+  padding: 4.75% 0 4.75% 5%
+  box-sizing: border-box
+
+.cases-content-list-item-meta-header
+  position: relative
+
+.cases-content-list-item-meta-header__title
+  font-family: 'Dgt Condensed'
+  font-size: 2.5em
+  line-height: .85em
+
+.cases-content-list-item-meta-header__subtitle
+  display: inline-block
+  line-height: .9em
+  font-size: 1em
+  padding-right: 8px
+  margin-right: 5px
+  border-right: 1px solid white
+  &:last-child
+    border-right: 0
+
+.cases-content-list-item__bg
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: #000
+  opacity: 0
+  transition: opacity .25s ease
+  z-index: 2
+
+._white .header-block
+  .header-block__title
+    color: #fff
+    &:after
+      background: #fff
+  .header-block__subtitle
+    color: #fff
+
+.header-block
+  position: relative
+
+.header-block__title
+  position: relative
+  display: inline-block
+  font: 55px/50px DGT Condensed
+  text-transform: uppercase
+  color: #3a3a3a
+  &:after
+    content: ""
+    width: 100%
+    height: 2px
+    background: #484848
+    display: block
+    margin: 6px 0 9px
+
+.header-block__subtitle
+  font: 200 16px/1em "Roboto Condensed"
+  text-transform: uppercase
+
+.contacts-block
+  position: relative
+  line-height: 1
+
+._dark .contacts-block
+  svg 
+    fill: #373737
+  .contacts-block__address, .contacts-block__phone
+    color: #373737
+    &:hover
+      color: #373737
+
+.contacts-block svg
+  fill: #fff
+  width: 14px
+  height: 17px
+  margin: 0 8px 0 0
+  vertical-align: middle
+
+.contacts-block__icon
+  display: inline-block
+  vertical-align: middle
+  width: 14px
+  height: 17px
+  margin: -1px 10px 0 0
+  background: url(sprite.png) -23px -56px no-repeat
+
+.contacts-block__address
+  display: inline-block
+  font-size: 16px
+  font-family: "Roboto Condensed"
+  color: #fff
+  font-weight: 300
+  margin: 0
+
+.contacts-block__phone
+  font-family: "Dgt Condensed"
+  color: #fff
+  font-weight: 400
+  text-decoration: none
+  font-size: 27px
+  &:hover
+    color: #fff
+
+._dark .social-block
+  .social-block__link
+    border: 1px solid #aaa
+    &._mail:after
+      background-position: -21px -246px
+    &._twitter:after
+      background-position: 0 -41px
+    &._facebook:after
+      background-position: -11px -57px
+    &._vk:after
+      background-position: -31px -41px
+    &:hover
+      background-color: transparent
+      border-color: #fff
+
+.social-block
+  position: relative
+  height: 40px
+  font-size: 0
+
+.social-block__link
+  display: inline-block
+  position: relative
+  width: 40px
+  height: 40px
+  margin-right: 4px
+  border: 1px solid #4e4e4e
+  border-radius: 20px
+  transition: background-color .2s ease-in-out, border-color .2s ease-in-out
+  &:last-child
+    margin-right: 0
+  &:after
+    content: ''
+    position: absolute
+    background: url(sprite.png) -23px 0 no-repeat
+  &:hover
+    background-color: #ff4f4f
+    border-color: #ff4f4f
+
+.social-block__link._mail:after
+  top: 12px
+  left: 9px
+  width: 20px
+  height: 14px
+  background-position: 0 -246px
+
+.social-block__link._mail:hover:after
+  background-position: -21px -246px
+
+.social-block__link._twitter:after
+  top: 12px
+  left: 11px
+  width: 17px
+  height: 15px
+  background-position: 0 -24px
+
+.social-block__link._twitter:hover:after
+  background-position: 0 -41px
+
+.social-block__link._facebook:after
+  top: 11px
+  left: 14px
+  width: 10px
+  height: 16px
+  background-position: 0 -57px
+
+.social-block__link._facebook:hover:after
+  background-position: -11px -57px
+
+.social-block__link._vk:after
+  top: 12px
+  left: 14px
+  width: 10px
+  height: 13px
+  background-position: -19px -41px
+
+.social-block__link._vk:hover:after
+  background-position: -31px -41px
