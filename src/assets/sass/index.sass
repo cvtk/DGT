@@ -3,7 +3,7 @@
 
 .index-content__services
   width: 100%
-  height: 1280px
+  height: 960px
   background-image: url('/index-content-services.jpg')
   background-size: cover
   background-position: center
@@ -12,9 +12,9 @@
 .index-content-services
   display: block
   position: absolute
-  width: 1600px
-  height: 706px
-  border: 5px solid #ff4f4f
+  width: 1200px
+  height: 550px
+  border: 4px solid #ff4f4f
   background-color: rgba(255, 255, 255, 0.9)
   top: 0
   right: 0
@@ -27,14 +27,14 @@
   left: 0
   right: 0
   margin: 0 auto
-  top: -85px
-  width: 388px
+  top: -60px
+  width: 320px
   padding: 0
   background-color: #fff
   text-align: center
 
 .index-content-services__body
-  margin-top: 190px
+  margin-top: 140px
   text-align: center
   padding: 0 10px
 
@@ -43,11 +43,11 @@
 
 .index-content-services-body__item
   display: inline-block
-  padding: 28px 38px
+  padding: 18px 28px
+  margin: 5px 4px
   border: 1px solid #282828
   color: #282828
   line-height: 16px
-  margin: 5px 7px
   cursor: pointer
   transition: background .6s ease, color .2s ease
   &._active
@@ -57,7 +57,7 @@
 
 .index-content-services__description
   text-align: center
-  padding: 0 245px
+  padding: 0 180px
 
 .index-content-services-description
   width: 600px
@@ -114,6 +114,62 @@
   &:visited
     color: #fff
 
+@media screen and (max-width: 1600px) and (min-width: 1100px)
+  .index-content__services
+    height: 750px
+
+  .index-content-services
+    width: 940px
+    height: 500px
+    border-width: 4px
+
+  .index-content-services__header-block
+    width: 270px
+    top: -48px
+
+  .index-content-services__body
+    margin-top: 110px
+
+  .index-content-services-body__item
+    padding: 13px 18px
+    margin: 4px 3px
+  
+  .index-content-services__description
+    padding: 0 150px
+
+  .index-content-services-description-item__text
+    margin-top: 15px
+
+@media screen and (max-width: 1100px) and (min-width: 900px)
+  .index-content__services
+    height: 800px
+
+  .index-content-services
+    width: 820px
+    height: 512px
+    border-width: 4px
+  
+  .index-content-services__header-block
+    width: 240px
+    top: -44px
+
+  .index-content-services__body
+    margin-top: 100px
+
+  .index-content-services-body__item
+    padding: 18px 11px
+    margin: 5px 3px
+    font-size: 15px
+
+  .index-content-services__description
+    padding: 0 105px
+
+  .index-content-services-description-item__title
+    font-size: 15px
+
+  .index-content-services-description-item__button
+    font-size: 15px
+
 .index-content__advantage
   position: relative
   width: 100%
@@ -147,6 +203,7 @@
 
 .index-content-advantage-content-text
   padding: 0 40px 0 0
+  height: 506px
 
 .index-content-advantage-content-text__p
   font-size: 17px
@@ -154,22 +211,22 @@
   margin: 0 0 23px
 
 .index-content-advantage__cases
-  padding: 10px 10px 0
+  padding: 10px
   height: 100%
   width: 50%
   float: left
 
 .index-content-advantage-cases
   position: relative
+  height: 100%
+  margin: -5px
 
 .index-content-advantage-cases__item
-  padding-bottom: 10px
-  height: 460px
+  height: 470px
   width: 50%
   float: left
   text-align: center
-  &:nth-child(even)
-    padding-left: 10px
+  padding: 5px
 
 .index-content-advantage-cases-item
   height: 100%
@@ -200,6 +257,97 @@
 .index-content-advantage-cases-item__text
   font: 300 17px/23px "Roboto Condensed"
   color: #373737
+  margin: 0
+
+@media screen and (max-width: 1600px) and (min-width: 1100px)
+
+  .index-content__advantage
+    height: 681px
+  
+  .index-content-advantage__content
+    padding: 0 65px
+
+  .index-content-advantage__cases
+    padding: 7px 0 0
+
+  .index-content-advantage-content-text
+    height: 400px
+    overflow-y: auto
+
+  .index-content-advantage-content-text__p
+    font-size: 15px
+    line-height: 21px
+    margin: 0 0 21px
+
+  .index-content-advantage__cases
+    padding: 8px
+
+  .index-content-advantage-cases
+    margin: -4px
+
+  .index-content-advantage-cases__item
+    height: 336px
+    padding: 4px
+
+  .index-content-advantage-cases-item
+    padding: 0 40px
+
+  .index-content-advantage-cases-item svg
+    width: 80px
+    height: 80px
+
+  .index-content-advantage-cases-item__title
+    margin: 29px 0 16px
+
+  .index-content-advantage-cases-item__text
+    font-size: 15px
+    line-height: 21px
+
+@media screen and (max-width: 1100px) and (min-width: 900px)
+
+  .index-content__advantage
+    height: 530px
+  
+  .index-content-advantage__content
+    padding: 50px 80px
+
+  .index-content-advantage__cases
+    padding: 7px 0 0
+  
+  .index-content-advantage-content-text
+    height: 200px
+    overflow-y: auto
+
+  .index-content-advantage-content-text__p
+    font-size: 15px
+    line-height: 21px
+    margin: 0 0 21px
+
+  .index-content-advantage__cases
+    padding: 10px
+
+  .index-content-advantage-cases
+    margin: -5px
+
+  .index-content-advantage-cases__item
+    height: 260px
+    padding: 5px
+    
+  .index-content-advantage-cases-item
+    padding: 0 10px
+    border-width: 1px
+
+  .index-content-advantage-cases-item svg
+    width: 55px
+    height: 55px
+
+  .index-content-advantage-cases-item__title
+    margin: 23px 0 9px
+    font-size: 15px
+
+  .index-content-advantage-cases-item__text
+    font-size: 15px
+    line-height: 21px
 
 .index-content__divider
   height: 430px
@@ -218,6 +366,24 @@
   background-repeat: no-repeat
   background-size: contain
   background-position: left bottom
+
+@media screen and (max-width: 1600px) and (min-width: 1100px)
+
+  .index-content__divider
+    height: 335px
+
+  .index-content-divider
+    height: 415px
+    margin-top: -80px
+
+@media screen and (max-width: 1100px) and (min-width: 900px)
+
+  .index-content__divider
+    height: 200px
+
+  .index-content-divider
+    height: 315px
+    margin-top: -115px
 
 .index-content__work
   margin: 0 0 110px
@@ -294,6 +460,69 @@
   color: #373737
   margin: 0
 
+@media screen and (max-width: 1600px) and (min-width: 1100px)
+
+  .index-content__work
+    margin: 0 0 120px
+
+  .index-content-work__header-block
+    padding: 75px 0 55px
+
+  .index-content-work-list__item
+    height: 330px
+
+  .index-content-work-list-item__icon svg
+    width: 80px
+    height: 80px
+    margin: 0 auto 30px
+
+  .index-content-work-list-item__text
+    font-size: 15px
+    line-height: 21px
+
+@media screen and (max-width: 1100px) and (min-width: 900px)
+
+  .index-content__work
+    margin: 0 0 110px
+
+  .index-content-work__header-block
+    padding: 75px 0 55px
+
+  .index-content-work__list
+    padding: 0 10px
+
+  .index-content-work-list
+    margin: 0 -5px
+
+  .index-content-work-list__item
+    height: 245px
+    padding: 0 5px
+    height: 245px
+
+  .index-content-work-list-item
+    border-width: 1px
+
+  .index-content-work-list-item__arrow
+    width: 70px
+    height: 35px
+
+  .index-content-work-list-item__arrow svg
+    width: 37px
+
+  .index-content-work-list-item__icon svg
+    width: 56px
+    height: 56px
+    margin: 0 auto 24px
+
+  .index-content-work-list-item__header
+    margin: 0 0 8px
+    font-size: 15px
+
+  .index-content-work-list-item__text
+    padding: 0 10px
+    font-size: 15px
+    line-height: 21px
+
 .index-content__rates
   height: 850px
   background-image: url("/index-content__rates.jpg")
@@ -305,7 +534,7 @@
 .index-content-rates
   position: relative
   height: 100%
-  &:after
+  &:before
     content: ''
     position: absolute
     bottom: 0
@@ -316,7 +545,6 @@
     background-size: contain
     background-position: bottom right
     background-repeat: no-repeat
-    z-index: 1
     clear: both
     display: table
 
@@ -359,21 +587,10 @@
   width: 100%
 
 .index-content-rates-list-item__image
+  display: block
   padding: 20px 0 11px
-  
-  height: 136px
-
-.index-content-rates-list-item-image
-  background: url(/index-content-rates-list-item-image.png) 0 0 no-repeat
-  height: 100%
-  width: 90px
   margin: 0 auto
-  &._2
-    width: 69px
-    background-position: -90px 0
-  &._3
-    width: 107px
-    background-position: -159px 0
+  height: 136px
 
 .index-content-rates-list-item__header
   padding: 0 0 36px
@@ -438,6 +655,107 @@
     color: #fff
     background-color: #e73636
 
+@media screen and (max-width: 1600px) and (min-width: 1100px)
+
+  .index-content__rates
+    height: 650px
+  
+  .index-content-rates__header-block
+    padding: 111px 0 0 50px
+    width: 38%
+
+  .index-content-rates__list
+    padding: 100px 0 0 13px
+    width: 62%
+
+  .index-content-rates-list-item
+    height: 470px
+    padding: 13px
+
+  .index-content-rates-list-item__image
+    padding: 12px 0 7px
+    height: 103px
+
+  .index-content-rates-list-item__header
+    padding: 0 0 27px
+
+  .index-content-rates-list-item__price
+    height: 110px
+    padding: 30px 0 0
+
+  .index-content-rates-list-item-price
+    font-size: 45px
+    line-height: 40px
+
+  .index-content-rates-list-item-price svg
+    width: 22px
+    height: 32px
+    margin-left: 5px
+
+  .index-content-rates-list-item-price__text
+    font-size: 15px
+    line-height: 21px
+
+  .index-content-rates-list-item__info
+    margin: 110px 0 0
+    padding: 16px 0
+
+  .index-content-rates-list-item-info__point
+    font-size: 15px
+    line-height: 23.25px
+  
+@media screen and (max-width: 1100px) and (min-width: 900px)
+  .index-content__rates
+    height: 865px
+  
+  .index-content-rates__header-block
+    height: 220px
+    float: none
+    width: 100%
+    padding: 70px 0 0 47px
+
+  .index-content-rates__list
+    padding: 0 30px
+    width: 100%
+    height: auto
+
+  .index-content-rates-list-item
+    height: 550px
+    padding: 13px
+
+  .index-content-rates-list-item__image
+    padding: 12px 0 7px
+    height: 103px
+
+  .index-content-rates-list-item__header
+    font-size: 15px
+    padding: 0 0 15px
+
+  .index-content-rates-list-item__price
+    height: 110px
+    padding: 30px 0 0
+
+  .index-content-rates-list-item-price
+    font-size: 45px
+    line-height: 40px
+
+  .index-content-rates-list-item-price svg
+    width: 22px
+    height: 32px
+    margin-left: 5px
+
+  .index-content-rates-list-item-price__text
+    font-size: 15px
+    line-height: 21px
+
+  .index-content-rates-list-item__info
+    margin: 110px 0 0
+    padding: 16px 0
+
+  .index-content-rates-list-item-info__point
+    font-size: 15px
+    line-height: 23.25px
+
 .index-content__cases
   margin: 0 0 100px
 
@@ -450,6 +768,25 @@
 
 .index-content-cases__list
   position: relative
+
+@media screen and (max-width: 1600px) and (min-width: 1100px)
+
+  .index-content-cases
+    padding: 0 90px
+
+  .index-content-cases__header-block
+    padding: 75px 0 55px
+
+@media screen and (max-width: 1100px) and (min-width: 900px)
+
+  .index-content__cases
+    margin: 0 0 80px
+
+  .index-content-cases
+    padding: 0 15px
+
+  .index-content-cases__header-block
+    padding: 75px 0 55px
 
 .index-content__reviews
   position: relative
@@ -473,6 +810,110 @@
 .index-content-reviews-content__header-block
   text-align: center
   padding: 97px 0 68px
+
+.index-content-reviews-content__slider
+  position: relative
+  margin: 0 95px 34px
+  overflow: hidden
+  user-select: none
+  height: 454px
+
+.index-content-reviews-content-slider
+  position: relative
+  left: 0
+  transition: left .35s ease
+
+.index-content-reviews-content-slider__item
+  position: relative
+  border: 2px solid #e7e7e7
+  width: 100%
+  float: left
+  height: 420px
+
+.index-content-reviews-content-slider-item
+  position: relative
+  height: 100%
+
+.index-content-reviews-content-slider-item__body
+  padding: 55px 55px 117px
+  height: 100%
+  overflow: hidden
+  touch-action: auto
+  font: 300 17px/23px "Roboto Condensed"
+
+.index-content-reviews-content-slider-item-body
+  position: relative
+
+.index-content-reviews-content-slider-item-body__header
+  font: 400 16px "Roboto Condensed"
+  color: #ff4f4f
+  text-transform: uppercase
+
+.index-content-reviews-content-slider-item-body__text
+  margin: 23px 0
+
+.index-content-reviews-content-slider-item__footer
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    transform: translate(0, 100%)
+    left: 10%
+    width: 60px
+    height: 34px
+    background-image: url("/index-content-reviews-content-slider__footer.png")
+    background-repeat: no-repeat
+    background-position: left -1px
+    background-size: cover
+
+.index-content-reviews-content-slider-item-footer
+  position: relative
+  border-top: 1px solid #e4e4e4
+  background-color: #f1f1f1
+  white-space: nowrap
+  text-overflow: ellipsis
+  height: 62px
+  line-height: 62px
+  padding: 0 110px 0 55px
+  font: 300 16px/62px "Roboto Condensed"
+
+.index-content-reviews-content-slider-item-footer__name
+  display: inline-block
+  color: #272727
+  text-transform: uppercase
+
+.index-content-reviews-content-slider-item-footer__position
+  display: inline-block
+  color: #a8a8a8
+
+.index-content-reviews-content-slider-item-footer__nav
+  position: absolute
+  top: 0
+  right: 0
+  height: 100%
+  width: 110px
+  background-color: #f1f1f1
+
+.index-content-reviews-content-slider-item-footer-nav
+  position: relative
+
+.index-content-reviews-content-slider-item-footer-nav__prev, .index-content-reviews-content-slider-item-footer-nav__next
+  width: 48px
+  height: 48px
+  margin: 7px 7px 0 0
+  border: 2px solid #b4b4b4
+  float: left
+  cursor: pointer
+  svg
+    width: 23px
+    height: 100%
+    margin: 0 auto
+    fill: #b4b4b4
+    display: block
 
 .index-content-reviews__banners
   height: 807px
@@ -693,26 +1134,3 @@
 
 .index-content-footer__contacts-block
   text-align: center
-
-@media screen and (max-width: 2300px) and (min-width: 1600px)
-  .index-content__services
-    height: 960px
-
-  .index-content-services
-    width: 1200px
-    height: 550px
-    border-width: 4px
-
-  .index-content-services__header-block
-    width: 290px
-    top: -60px
-
-  .index-content-services__body
-    margin-top: 140px
-
-  .index-content-services-body__item
-    padding: 18px 28px
-    margin: 3px 4px
-
-  .index-content-services__description
-    padding: 0 180px

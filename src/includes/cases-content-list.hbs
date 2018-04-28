@@ -1,4 +1,4 @@
-<ul class="cases-content-list">
+<ul class="cases-content-list{{#if listLength}} _listLength-{{listLength}}{{/if}}">
   {{#each posts}}{{#is post "cases"}}{{#pages}}
   <li class="cases-content-list__item" data-year="{{moment  data.created  lang ="ru"  format ="YYYY" }}">
     <a href="/cases/{{this.filename}}" class="cases-content-list-item" title="{{data.title}}">

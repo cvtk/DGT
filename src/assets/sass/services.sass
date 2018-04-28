@@ -176,15 +176,14 @@
   vertical-align: middle
 
 .services-content-categories-item-desc__title
-  font-family: 'Dgt Condensed'
-  font-size: 3.4375em
-  color: #373737
+  font: 55px "DGT Condensed"
   letter-spacing: -0.022em
 
 .services-content-categories-item-desc__text
   margin-top: 0
   margin-bottom: 25px
-  font-size: 15px
+  font-size: 17px
+  line-height: 23px
 
 .services-content-categories-item-desc__clients
   position: relative
@@ -193,7 +192,7 @@
   position: relative
 
 .services-content-categories-item-desc-clients__title
-  font-size: .9125em
+  font-size: 15px
   text-transform: uppercase
 
 .services-content-categories-item-desc-clients__name
@@ -209,120 +208,12 @@
     color: #3a3a3a !important
     border-color: #5d5d5d
 
-.services-content-categories-item__news
+.services-content-categories-item__cases-context-list
+  position: relative
   display: inline-block
   vertical-align: top
   width: 45%
   height: 100%
-
-.services-content-categories-item-news
-  position: relative
-  height: 100%
-  overflow: hidden
-  width: 100%
-  font-size: 0
-  transition: all .2s ease-in-out
-  &:after
-    content: ''
-    display: block
-    width: 10px
-    height: 100%
-    position: absolute
-    z-index: 5
-    top: 0
-    left: -10px
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2)
-
-.services-content-categories-item-news__article
-  width: 100%
-  height: 33.3333%
-  position: relative
-  display: block
-  float: left
-  vertical-align: top
-  font-size: 16px
-  overflow: hidden
-  background-color: #000000
-
-.services-content-categories-item-news-article
-  height: 100%
-  display: block
-  position: relative
-  &:hover
-    .services-content-categories-item-news-article__meta
-      opacity: 1
-      visibility: visible
-      transition: opacity .3s ease-in-out
-
-.services-content-categories-item-news-article__image
-  height: 100%
-  position: relative
-  width: 100%
-  background-position: 50% 50%
-  background-repeat: no-repeat
-  background-size: cover
-  &:after
-    content: ''
-    position: absolute
-    width: 100%
-    height: 100%
-    background-color: #000000
-    opacity: 0
-    will-change: opacity
-    transition: all 0s .3s, opacity .3s ease-in-out
-  &._overlay:after
-    opacity: .65
-    visibility: visible
-    transition: opacity .3s ease-in-out
-
-.services-content-categories-item-news-article__meta
-  position: absolute
-  width: 100%
-  bottom: 0
-  opacity: 0
-  left: 0
-  z-index: 5
-  will-change: opacity
-  transition: all 0s .3s, opacity .3s ease-in-out
-
-.services-content-categories-item-news-article-meta
-  background-color: #ff4f4f
-  color: white
-  transition: all .2s ease-in-out
-
-.services-content-categories-item-news-article-meta__date
-  display: inline-block
-  vertical-align: middle
-  font-size: 3.125em
-  font-family: 'Bebas Neue'
-  width: 17%
-  box-sizing: border-box
-  text-align: center
-  padding: 0 1%
-
-.services-content-categories-item-news-article-meta__info
-  display: inline-block
-  vertical-align: middle
-  width: 80%
-  border-left: 1px solid #e94242
-  padding: 4.75% 0 4.75% 5%
-  box-sizing: border-box
-
-.services-content-categories-item-news-article-meta-info
-  position: relative
-
-.services-content-categories-item-news-article-meta-info__title
-  font-family: 'Dgt Condensed'
-  font-size: 2.5em
-  line-height: .85em
-
-.services-content-categories-item-news-article-meta-info__tag
-  display: inline-block
-  line-height: .9em
-  font-size: 1em
-  padding-right: 8px
-  margin-right: 5px
-  border-right: 1px solid white
 
 .services-feedback
   display: none

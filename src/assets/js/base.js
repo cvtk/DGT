@@ -2,28 +2,65 @@ function hasClass(el, cl) {
   return (' ' + el.className + ' ').indexOf(' ' + cl + ' ') > -1;
 }
 
+function tinySwipe(args) {
+  if ( typeof args !== 'object' && !args.hasOwnProperty('container') ) return;
+
+  function queryBySelectorAll(selector) {
+    return Array.prototype.slice.call( document.querySelectorAll(selector) );
+  }
+
+  function addEventToArray(array, event, handler) {
+    if ( !array.length ) return;
+    array.forEach(function(item) {
+      item.addEventListener(event, handler);
+    });
+  }
+
+  var self = this,
+      container = document.querySelector(args.container),
+      slides = Array.prototype.slice.call( document.querySelectorAll(args.container + '>*') );
+
+  if ( !container || !slides ) return;
+
+  this.currentSlide = 0;
+
+  this.nextSlide = function() {
+    if ( self.currentSlide >= slides.length - 1 ) return;
+    container.style.left = -1 * slides[++self.currentSlide].offsetLeft + 'px';
+  };
+
+  this.prevSlide = function() {
+    if ( !self.currentSlide ) return;
+    container.style.left = -1 * slides[--self.currentSlide].offsetLeft + 'px';
+  };
+
+  // init slider
+  container.style.width = slides.reduce(function(result, current) {
+    result += current.offsetWidth;
+    current.style.width = current.offsetWidth + 'px';
+    return result;
+  }, 0) + 'px';
+
+  if ( args.hasOwnProperty('next') ) {
+    addEventToArray( queryBySelectorAll(args.next), 'click', this.nextSlide );
+  }
+
+  if ( args.hasOwnProperty('previos') ) {
+    addEventToArray( queryBySelectorAll(args.previos), 'click', this.prevSlide );
+  }
+}
+
+new tinySwipe({
+  container: '.index-content-reviews-content-slider',
+  next: '.index-content-reviews-content-slider-item-footer-nav__next',
+  previos: '.index-content-reviews-content-slider-item-footer-nav__prev'
+
+});
+
 (function() {
-  var logo = document.querySelector('.logo'),
-      feedback = document.querySelector('.feedback'),
+  var feedback = document.querySelector('.feedback'),
       feedbackToggler = document.querySelector('.nav-actions__link'),
-      feedbackClose = document.querySelector('.feedback__close'),
-      close = document.querySelector('.nav__close'),
-      nav = document.querySelector('.nav'),
-      info = document.querySelector('.info'),
-      overlay = document.querySelector('.overlay');
-
-  var showNav = function() {
-    nav.classList.add('nav_visible');
-    info.classList.add('info_visible');
-    overlay.classList.add('overlay_visible');
-  };
-
-  var hideNav = function() {
-    nav.classList.remove('nav_visible');
-    info.classList.remove('info_visible');
-    overlay.classList.remove('overlay_visible');
-    feedback.classList.remove('feedback_visible');
-  };
+      feedbackClose = document.querySelector('.feedback__close');
 
   feedbackToggler.addEventListener('click', function() {
     feedback.classList.toggle('feedback_visible');
@@ -32,8 +69,4 @@ function hasClass(el, cl) {
   feedbackClose.addEventListener('click', function() {
     feedback.classList.remove('feedback_visible');
   });
-
-  close.addEventListener('click', hideNav);
-  overlay.addEventListener('click', hideNav);
-  logo.addEventListener('click', showNav);
 })();

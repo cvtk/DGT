@@ -7,7 +7,6 @@
   float: left
   background-color: white
 
-
 .contacts-map
   width: 34%
   height: 100%
@@ -38,35 +37,12 @@
     width: 290px
     background-color: white
 
-.contacts-content-company__title
+.contacts-content-company__header-block
   position: absolute
-  display: inline-block
-  top: -41px
+  top: -49px
   left: 50%
-  margin-left: -133px
-  width: 266px
-  height: 95px
+  margin-left: -134px
   overflow: hidden
-  text-indent: -9999em
-  padding-bottom: 10px
-  background: url(info_title.png) 50% 0 no-repeat
-  // font-family: 'bebas_neue_cyrillicregular';
-  color: #3a3a3a
-  font-size: 3.75em
-  text-transform: uppercase
-  border-bottom: 1px solid #484848
-
-.contacts-content-company__subtitle
-  position: absolute
-  top: 70px
-  left: 50%
-  margin-left: -135px
-  width: 270px
-  text-align: center
-  font-family: 'Roboto Condensed'
-  font-weight: 300
-  font-size: 1.0625em
-  text-transform: uppercase
 
 .contacts-content-company__info
   padding-left: 2%
@@ -81,42 +57,14 @@
   position: relative
 
 .contacts-content-company-info__desc
-  font-size: 1em
+  font-size: 17px
+  line-height: 23px
   width: 76%
   margin: 0 12%
 
-.contacts-content-company-info__contacts
+.contacts-content-company-info__contacts-block
   text-align: center
   margin-top: 40px
-
-.contacts-content-company-info-contacts
-  position: relative
-
-.contacts-content-company-info-contacts__address
-  width: 300px
-  display: inline-block
-  vertical-align: top
-  font-size: 1em
-  margin: 0
-  &._light
-    color: #222222
-
-.contacts-content-company-info-contacts__phone
-  font-size: 1.875em
-  padding-top: 2px
-  font-family: "Bebas Neue"
-  margin: 0
-
-.contacts-content-company-info-contacts__mail
-  margin: 0
-  &:before
-    content: ''
-    display: inline-block
-    vertical-align: middle
-    width: 16px
-    height: 11px
-    margin: -1px 7px 0 0
-    background: url(icon_email.png) 0px 0px no-repeat
 
 .contacts-content-company-info__actions
   margin-top: 15px
@@ -143,69 +91,8 @@
   &:first-child
     margin-right: 7px
 
-.contacts-content-company-info__social
+.contacts-content-company-info__social-block
   padding: 76px 0
-
-.contacts-content-company-info-social
-  position: relative
-
-.contacts-content-company-info-social__icon
-  display: inline-block
-  position: relative
-  width: 40px
-  height: 40px
-  border: 1px solid #4e4e4e
-  border-radius: 40px
-  box-sizing: border-box
-  transition: all .2s ease-in-out
-  margin: 0 2px
-  &:hover
-    background-color: #ff4f4f
-    border-color: #ff4f4f
-  &:after
-    content: ''
-    position: absolute
-    background: url(sprite.png) -23px 0 no-repeat
-
-  &._mail
-    &:hover:after
-      background-position: -21px -246px
-    &:after
-      top: 12px
-      left: 9px
-      width: 20px
-      height: 14px
-      background-position: 0 -246px
-
-  &._twitter
-    &:hover:after
-      background-position: 0 -41px
-    &:after
-      top: 12px
-      left: 11px
-      width: 17px
-      height: 15px
-      background-position: 0 -24px
-
-  &._facebook
-    &:hover:after
-      background-position: -11px -57px
-    &:after
-      top: 11px
-      left: 14px
-      width: 10px
-      height: 16px
-      background-position: 0 -57px
-
-  &._vk
-    &:hover:after
-      background-position: -31px -41px
-    &:after
-      top: 12px
-      left: 14px
-      width: 10px
-      height: 13px
-      background-position: -19px -41px
 
 @media (max-width: 979px)
   .contacts-content

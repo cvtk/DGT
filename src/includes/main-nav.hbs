@@ -1,5 +1,4 @@
 <div class="nav">
-  <span class="nav__close"></span>
   <div class="nav__menu">
     <ul class="nav-menu">
       <li class="nav-menu__item">
@@ -36,28 +35,19 @@
 <div class="info">
   <div class="info__content">
     <div class="info-content">
-      <h1 class="info-content__title" title="Мы создаем безопасность">Мы создаем безопасность</h1>
-      <h4 class="info-content__subtitle">Работаем с 2004</h4>
+      <div class="info-content__header-block">
+        <div class="header-block">
+          <h3 class="header-block__title">Цифровые идеи<br>для бизнеса</h3>
+          <h4 class="header-block__subtitle">Работаем с 2004</h4>
+        </div>
+      </div>
       <p class="info-content__desc">
         MST — <a href="/agency/">full service digital agency</a>. Качество <a href="/services/">наших услуг</a> проверено временем — мы работаем с <a href="/portfolio/">ведущими брендами</a> уже 13 лет. В нашей команде: более 80 талантов, большой опыт и почти неограниченные возможности. Мы занимаем 7-е место в рейтинге ведущих компаний, входим в группу компаний Red Keds.
       </p>
-      <div class="info-content__social">
-        <div class="info-content-social">
-          <a href="mailto:sales@digit-it.ru" class="info-content-social__item info-content-social__item_mail" target="_blank" title="Почта"></a>
-          <a href="twitter.com" class="info-content-social__item info-content-social__item_twitter" target="_blank" title="Twitter"></a>
-          <a href="facebook.com" class="info-content-social__item info-content-social__item_facebook" target="_blank" title="Facebook"></a>
-          <a href="vk.com" class="info-content-social__item info-content-social__item_vk" target="_blank" title="Вконтакте"></a>
-        </div>
-      </div>
+      <div class="info-content__social-block">{{> social-block }}</div>
     </div>
   </div>
-  <div class="info__contacts">
-    <div class="info-contacts" itemscope itemtype="http://schema.org/LocalBusiness">
-      <p class="info-contacts__address" itemprop="address">
-        <a href="/contacts" class="info-contacts__link"></a>Москва, Институтский переулок, 2, стр.1</p>
-      <p class="info-contacts__phone" itemprop="telephone">+7 (495) 722-30-17</p>
-    </div>
-  </div>
+  <div class="info__contacts-block _dark">{{> contacts-block }}</div>
 </div>
 <div class="feedback">
   <div class="feedback__close"></div>
@@ -71,4 +61,3 @@
     </div>
   </div>
 </div>
-<div class="overlay"></div>
