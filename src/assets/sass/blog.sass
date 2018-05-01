@@ -126,12 +126,20 @@
   color: white
   transition: color .2s ease-in-out
 
+@media screen and (max-width: 1300px) and (min-width: 1200px)
+  .blog-content__sidebar
+    right: 0
+    left: auto
+
+@media screen and (max-width: 1200px)
+  .blog-content__sidebar
+    display: none
+
 .blog-content__posts
   display: inline-block
   vertical-align: top
   width: 100%
   max-width: 1100px
-  min-width: 980px
   text-align: center
 
 .blog-content-posts
@@ -178,9 +186,8 @@
       opacity: 1
 
 .blog-content-posts-item__title
-  font-size: 3.375em
-  font-family: 'Dgt Condensed'
-  font-weight: normal
+  font: 55px/50px DGT Condensed
+  color: #3a3a3a
   letter-spacing: -0.015em
   a:visited, a
     color: #3a3a3a
@@ -190,7 +197,8 @@
 .blog-content-posts-item__date
   display: block
   color: #a8a8a8
-  font-size: 1em
+  font-size: 17px
+  margin: 6px 0
   &:before
     content: ''
     display: inline-block
@@ -216,20 +224,18 @@
 
 .blog-content-posts-item__body
   width: 100%
-  margin-top: 8px
-  font-size: 16px
+  font-size: 17px
+  line-height: 23px
   color: #3a3a3a
-  line-height: 1.5em
 
 .blog-content-posts-item-body
   margin-bottom: 15px
 
 .blog-content-posts-item__preview
   width: 100%
-  margin-top: 8px
-  font-size: 16px
+  font-size: 17px
+  line-height: 23px
   color: #3a3a3a
-  line-height: 1.5em
 
 .blog-content-posts-item-preview
   position: relative
@@ -256,7 +262,7 @@
   padding: 40px 0
   margin: 15px 0
   img
-    max-width: 680px
+    max-width: 1100px
 
 .blog-content-posts-item-preview__tags
   width: 100%
@@ -271,7 +277,7 @@
   border: 1px solid #dedede
   border-radius: 3px
   padding: 0 10px 3px 10px
-  font-size: .9125em
+  font-size: 16px
   cursor: pointer
   margin-right: 5px
   transition: color .2s ease-in-out, border-color .2s ease-in-out
@@ -281,6 +287,69 @@
     color: #3a3a3a
     border-color: #3a3a3a
 
+@media screen and (max-width: 1600px)
+
+  .blog-content-posts-item__title
+    font-size: 45px
+    line-height: 40px
+
+  .blog-content-posts-item__date
+    font-size: 15px
+    line-height: 21px
+    margin: 4px 0
+
+  .blog-content-posts-item__preview
+    font-size: 15px
+    line-height: 21px
+
+  .blog-content-posts-item__body
+    font-size: 15px
+    line-height: 21px
+
+  .blog-content-posts-item-preview-tags__item
+    font-size: 14px
+    margin-right: 3px
+
+@media screen and (max-width: 1100px)
+  .blog-content-posts__item
+    padding: 22px 0 33px 0
+
+  .blog-content-posts-item
+    padding: 0 75px
+    margin-left: 0
+    width: 100%
+
+  .blog-content-posts-item__back
+    right: 75px
+    top: -60px
+
+  .blog-content-posts-item__title
+    font-size: 40px
+    line-height: 36px
+
+  .blog-content-posts-item__social
+    width: 100%
+
+  .blog-content-posts-item__tags
+    width: 100%
+    text-align: left
+    
+  .blog-content-posts-item-preview__image img
+    max-width: 100%
+
+@media screen and (max-width: 600px)
+  .blog-content-posts-item
+    padding: 0 15px
+
+  .blog-content-posts-item__back
+    right: 15px
+
+  .blog-content-posts-item-preview__image
+    padding: 20px 0
+    margin: 8px 0
+
+  .blog-content-posts-item-preview__tags
+    margin-top: 6px
 
 .blog-content__banner
   position: fixed
@@ -293,3 +362,8 @@
   background-repeat: no-repeat
   background-size: cover
   background-image: url('blog-banner.jpg')
+  @media (max-width: 1500px) and (min-width: 1300px)
+    width: 22%
+
+  @media (max-width: 1300px)
+    display: none
