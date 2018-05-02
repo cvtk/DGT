@@ -843,6 +843,8 @@
 
 .index-content-reviews-content-slider-item-body
   position: relative
+  max-height: 100%
+  overflow-y: auto
 
 .index-content-reviews-content-slider-item-body__header
   font: 400 16px "Roboto Condensed"
@@ -954,6 +956,116 @@
     background-repeat: no-repeat
     background-image: url(cases-companies-sprites.png)
   
+@media screen and (max-width: 1600px) and (min-width: 1100px)
+  .index-content-reviews__content
+    height: 682px
+
+  .index-content-reviews-content__header-block
+    padding: 75px 0 55px
+
+  .index-content-reviews-content__slider
+    margin: 0 45px 27px
+
+  .index-content-reviews-content-slider__item
+    border-width: 2px
+    height: 310px
+
+  .index-content-reviews-content-slider-item__body
+    padding: 44px 44px 92px
+
+  .index-content-reviews-content-slider-item-body__text
+    margin: 21px 0
+    font-size: 15px
+    line-height: 21px
+
+  .index-content-reviews-content-slider-item__footer:after
+    width: 47px
+    height: 27px
+
+  .index-content-reviews-content-slider-item-footer
+    height: 48px
+    line-height: 48px
+    padding: 0 86px 0 44px
+
+  .index-content-reviews-content-slider-item-footer__name
+    font-size: 14px
+
+  .index-content-reviews-content-slider-item-footer__position
+    font-size: 14px
+
+  .index-content-reviews-content-slider-item-footer__nav
+    width: 86px
+
+  .index-content-reviews-content-slider-item-footer-nav__prev, .index-content-reviews-content-slider-item-footer-nav__next
+    border-width: 2px
+    width: 38px
+    height: 38px
+    margin: 5px 5px 0 0
+    svg
+      width: 18px
+
+  .index-content-reviews__banners
+    height: 682px
+
+@media screen and (max-width: 1100px) and (min-width: 900px)
+  .index-content-reviews__content
+    height: 478px
+
+  .index-content-reviews-content__header-block
+    padding: 35px 0 33px
+
+  .index-content-reviews-content__slider
+    margin: 0 45px 27px
+
+  .index-content-reviews-content-slider__item
+    border-width: 1px
+    height: 315px
+
+  .index-content-reviews-content-slider-item__body
+    padding: 40px 40px 140px
+
+  .index-content-reviews-content-slider-item-body__text
+    margin: 21px 0
+    font-size: 15px
+    line-height: 21px
+
+  .index-content-reviews-content-slider-item__footer:after
+    display: none
+
+  .index-content-reviews-content-slider-item-footer
+    height: 102px
+    line-height: 18px
+    padding: 0 86px 0 40px
+    white-space: normal
+
+  .index-content-reviews-content-slider-item-footer__name
+    font-size: 14px
+    display: block
+    padding: 20px 0 5px
+
+  .index-content-reviews-content-slider-item-footer__position
+    font-size: 14px
+    display: block
+    padding: 5px 0
+
+  .index-content-reviews-content-slider-item-footer__nav
+    width: 46px
+    padding: 0
+
+  .index-content-reviews-content-slider-item-footer-nav__prev, .index-content-reviews-content-slider-item-footer-nav__next
+    border-width: 1px
+    width: 40px
+    height: 40px
+    margin: 8px 8px 0 0
+    svg
+      width: 17px
+
+  .index-content-reviews__banners
+    height: 478px
+
+  .index-content-reviews-banners__item
+    border-width: 1px
+    margin: -1px -1px 0 0
 
 .index-content__feedback
   height: 960px
@@ -1097,6 +1209,99 @@
   color: #343434
   cursor: pointer
 
+@media screen and (max-width: 1600px) and (min-width: 1100px)
+  .index-content__feedback
+    height: 700px
+    padding: 103px 0 0
+
+  .index-content-feedback
+    width: 322px
+
+  .index-content-feedback__header
+    padding: 33px 0
+    font-size: 45px
+    line-height: 40px
+
+  .index-content-feedback-form-input
+    height: 40px
+    padding: 0 16px
+    font-size: 15px
+
+  .index-content-feedback-form-input._comment
+    height: 80px
+    padding: 10px 16px
+    font-size: 15px
+
+  .index-content-feedback-form-button
+    height: 35px
+    font-size: 15px
+
+@media screen and (max-width: 1100px) and (min-width: 900px)
+  .index-content__feedback
+    height: 650px
+    padding: 35px 0 0
+
+  .index-content-feedback
+    width: 284px
+    &:before
+      border-width: 1px
+
+  .index-content-feedback__header
+    padding: 33px 0
+    font-size: 40px
+    line-height: 36px
+
+  .index-content-feedback-form__input
+    margin-bottom: -1px
+    border-width: 1px
+
+  .index-content-feedback-form-input
+    height: 50px
+    padding: 0 20px
+    font-size: 15px
+
+  .index-content-feedback-form-input._comment
+    height: 100px
+    padding: 15px 20px
+    font-size: 15px
+
+  .index-content-feedback-form-button
+    height: 45px
+    font-size: 15px
+
+@media screen and (max-width: 900px)
+  .index-content__feedback
+    height: 735px
+    padding: 50px 0 0
+    margin-bottom: 50px
+
+  .index-content-feedback
+    width: 282px
+    &:before
+      border-width: 1px
+
+  .index-content-feedback__header
+    padding: 33px 0
+    font-size: 40px
+    line-height: 36px
+
+  .index-content-feedback-form__input
+    margin-bottom: -1px
+    border-width: 1px
+
+  .index-content-feedback-form-input
+    height: 50px
+    padding: 0 20px
+    font-size: 15px
+
+  .index-content-feedback-form-input._comment
+    height: 100px
+    padding: 15px 20px
+    font-size: 15px
+
+  .index-content-feedback-form-button
+    height: 45px
+    font-size: 15px
 .index-content__footer
   position: absolute
   bottom: 0

@@ -83,21 +83,20 @@ module.exports = function(grunt) {
       }
     },
     concat: {
-      dist: {
-        src: [
-          'src/assets/js/2048/bind_polyfill.js',
-          'src/assets/js/2048/classlist_polyfill.js',
-          'src/assets/js/2048/animframe_polyfill.js',
-          'src/assets/js/2048/keyboard_input_manager.js',
-          'src/assets/js/2048/html_actuator.js',
-          'src/assets/js/2048/grid.js',
-          'src/assets/js/2048/tile.js',
-          'src/assets/js/2048/local_storage_manager.js',
-          'src/assets/js/2048/game_manager.js',
-          'src/assets/js/2048/application.js'
-          ],
-        dest: 'dist/404.js',
-      },
+      // js: {
+      //   src: [
+      //     'src/assets/vendor/tiny-slider.js',
+      //     'dist/base.js',
+      //     ],
+      //   dest: 'dist/base.js',
+      // },
+      // css: {
+      //   src: [
+      //     'src/assets/vendor/tiny-slider.css',
+      //     'dist/base.css',
+      //     ],
+      //   dest: 'dist/base.css',
+      // },
     },
     uglify: {
       js: {
