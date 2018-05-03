@@ -760,6 +760,7 @@
   width: 50%
   float: left
   height: 100%
+  overflow: hidden
 
 .index-content-rates-list
   position: relative
@@ -842,7 +843,7 @@
   margin: 30px -14px 0
   width: 100%
   text-align: center
-  font-weight: 600
+  font-weight: 400
   text-transform: uppercase
   line-height: 52px
   font-size: 17px
@@ -906,7 +907,7 @@
     font-size: 15px
     line-height: 23.25px
   
-@media screen and (max-width: 1100px) and (min-width: 900px)
+@media screen and (max-width: 1100px)
   .index-content__rates
     height: 865px
   
@@ -919,10 +920,10 @@
   .index-content-rates__list
     padding: 0 30px
     width: 100%
-    height: auto
+    height: 645px
 
   .index-content-rates-list-item
-    height: 550px
+    height: 510px
     padding: 13px
 
   .index-content-rates-list-item__image
@@ -958,6 +959,39 @@
     font-size: 15px
     line-height: 23.25px
 
+@media screen and (max-width: 900px)
+  .index-content-rates-list
+    width: 9999px
+
+  .index-content-rates-list__item
+    width: 283px
+
+@media screen and (max-width: 600px)
+  .index-content__rates
+    height: 745px
+  
+  .index-content-rates__header-block
+    height: 175px
+    padding: 48px 0 0 20px
+
+  .index-content-rates__list
+    padding: 0 20px
+    height: 570px
+
+  .index-content-rates-list__item
+    width: 250px
+
+  .index-content-rates-list-item
+    height: 480px
+    padding: 13px
+
+  .index-content-rates-list-item__image
+    height: 123px
+
+  .index-content-rates-list-item__info
+    font-size: 15px
+    line-height: 30px
+
 .index-content__cases
   margin: 0 0 100px
 
@@ -989,6 +1023,50 @@
 
   .index-content-cases__header-block
     padding: 75px 0 55px
+
+@media screen and (max-width: 900px)
+  
+  .index-content__cases
+    margin: 0 0 70px
+
+  .index-content-cases
+    padding: 0 45px
+
+  .index-content-cases__header-block
+    padding: 68px 0 36px
+
+  .cases-content-list__item
+    width: 50%
+
+  .cases-content-list-item-meta-header__title
+    font-size: 36px
+    line-height: 37px
+
+  .cases-content-list-item-meta-header__subtitle
+    font-size: 15px
+    line-height: 21px
+
+@media screen and (max-width: 600px)
+  
+  .index-content__cases
+    margin: 0 0 50px
+
+  .index-content-cases
+    padding: 0 15px
+
+  .index-content-cases__header-block
+    padding: 68px 0 36px
+
+  .cases-content-list__item
+    width: 100%
+    float: none
+    height: 250px
+
+  .cases-content-list-item__image
+    height: 250px
+
+  .cases-content-list-item-meta__header
+    padding: 14px 20px
 
 .index-content__reviews
   position: relative
@@ -1307,7 +1385,6 @@
 .index-content-feedback__form
   position: relative
   z-index: 1
-
 
 .index-content-feedback-form
   position: relative
