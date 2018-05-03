@@ -16,6 +16,13 @@ function tinySwipe(args) {
     });
   }
 
+  function onWheel(e) {
+    var delta = e.deltaY || e.detail || e.wheelDelta;
+    if ( delta > 0 ) { self.nextSlide(); }
+    else { self.prevSlide(); }
+    e.preventDefault();
+  }
+
   var self = this,
       container = document.querySelector(args.container),
       slides = Array.prototype.slice.call( document.querySelectorAll(args.container + '>*') );
@@ -48,13 +55,26 @@ function tinySwipe(args) {
   if ( args.hasOwnProperty('previos') ) {
     addEventToArray( queryBySelectorAll(args.previos), 'click', this.prevSlide );
   }
+
+  if ( args.hasOwnProperty('onWheel') ) {
+    if (container.addEventListener) {
+      if ('onwheel' in document) {
+        container.addEventListener("wheel", onWheel);
+      } else if ('onmousewheel' in document) {
+        container.addEventListener("mousewheel", onWheel);
+      } else {
+        container.addEventListener("MozMousePixelScroll", onWheel);
+      }
+    } else {
+      container.attachEvent("onmousewheel", onWheel);
+    }
+  }
 }
 
-new tinySwipe({
+var swipe = new tinySwipe({
   container: '.index-content-reviews-content-slider',
   next: '.index-content-reviews-content-slider-item-footer-nav__next',
   previos: '.index-content-reviews-content-slider-item-footer-nav__prev'
-
 });
 
 (function() {

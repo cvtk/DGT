@@ -18,4 +18,12 @@
     });
   });
 
+if ( window.screen.availWidth <= 900 ) {
+  new tinySwipe({
+    container: '.index-content-advantage-cases',
+    onWheel: true
+  });
+}
+
+
 })();

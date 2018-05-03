@@ -185,7 +185,55 @@ button, input
 
 @media screen and (max-width: 900px)
   .logo
-    position: absolute
+    position: fixed
+    width: 50px
+    height: 50px
+    background-size: 35px
+    border-bottom: 1px solid rgba(255, 255, 255, .19)
+    &:after
+      left: 11px
+      top: 17px
+      width: 26px
+      font-size: 20px
+    @keyframes logo
+      47%
+        background-size: 35px
+      50%
+        background-size: 0
+      97%
+        background-size: 0
+      100%
+        background-size: 35px
+
+.bar
+  position: fixed
+  display: none
+  top: 0
+  right: 0
+  width: 100%
+  height: 50px
+  margin-left: 50px
+  background-color: #ff4e4e
+  z-index: 96
+  border-bottom: 1px solid rgba(255, 255, 255, .19)
+
+.bar__phone
+  display: block
+  position: absolute
+  right: 15px
+  font-family: "Dgt Condensed"
+  color: #fff
+  font-weight: 400
+  text-decoration: none
+  font-size: 22px
+  line-height: 50px
+  text-align: right
+  &:hover, &:visited
+    color: #fff
+
+@media screen and (max-width: 900px)
+  .bar
+    display: block
 
 .menu_toggler
   display: none
@@ -315,13 +363,14 @@ button, input
 
 @media screen and (max-width: 900px)
   .nav
-    position: absolute
+    position: fixed
     top: -480px
     left: 0
     width: 100%
-    height: 458px
+    height: 408px
     min-height: 0
     transition: top .3s ease-in-out
+    border-bottom: 1px solid rgba(255, 255, 255, .19)
 
   .nav__menu
     margin: 50px 0 105px 0
@@ -332,13 +381,12 @@ button, input
     line-height: 50px
     margin-left: 0
 
-  .nav-actions__link
-    margin-left: 0px
-    text-align: center
+  .nav__actions
+    display: none
 
 @media screen and (max-width: 600px)
   .nav
-    height: 423px
+    height: 368px
 
   .nav__menu
     margin-top: 45px
@@ -404,43 +452,44 @@ button, input
 
 @media screen and (max-width: 900px)
   .info
-    position: absolute
-    top: -1000px
-    left: 0
-    width: 100%
-    min-height: 0
-    height: auto
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25)
-    transition: top .5s ease-in-out
+    display: none
+//     position: absolute
+//     top: -1000px
+//     left: 0
+//     width: 100%
+//     min-height: 0
+//     height: auto
+//     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25)
+//     transition: top .5s ease-in-out
 
-  .info__content
-    position: relative
-    margin: 15% 5% 10% 5%
-    width: 90%
-    left: 0
-    top: 0
+//   .info__content
+//     position: relative
+//     margin: 15% 5% 10% 5%
+//     width: 90%
+//     left: 0
+//     top: 0
 
-  .info-content__desc
-    font-size: 15px
-    line-height: 21px
-    margin: 28px 0 20px 0
+//   .info-content__desc
+//     font-size: 15px
+//     line-height: 21px
+//     margin: 28px 0 20px 0
 
-  .info__contacts-block
-    position: relative
-    margin: 0 auto 20px
-    bottom: auto
-    .contacts-block__address
-      span:after
-        content: ""
-    .contacts-block__phone
-      display: block
-      margin-top: 4px
+//   .info__contacts-block
+//     position: relative
+//     margin: 0 auto 20px
+//     bottom: auto
+//     .contacts-block__address
+//       span:after
+//         content: ""
+//     .contacts-block__phone
+//       display: block
+//       margin-top: 4px
 
-@media screen and (max-width: 600px)
+// @media screen and (max-width: 600px)
 
-  .info__content
-    margin-top: 20%
-    margin-bottom: 15%
+//   .info__content
+//     margin-top: 20%
+//     margin-bottom: 15%
 
 .feedback
   position: fixed

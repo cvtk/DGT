@@ -170,6 +170,59 @@
   .index-content-services-description-item__button
     font-size: 15px
 
+@media screen and (max-width: 900px)
+  .index-content__services
+    height: auto
+    background: none
+
+  .index-content-services
+    border: none
+    position: relative
+    width: 100%
+    height: auto
+  
+  .index-content-services__header-block
+    width: auto
+    position: relative
+    height: 223px
+    top: 0
+    padding: 85px 0 30px
+
+  .index-content-services__body
+    display: none
+
+  .index-content-services__description
+    padding: 0
+    background-color: #ff4e4e
+    height: 300px
+
+  .index-content-services-description-item__title
+    color: #fff
+    font-size: 15px
+
+  .index-content-services-description-item__text
+    color: #fff
+
+  .index-content-services-description-item__button
+    color: #fff
+    border: 1px solid #fff
+
+@media screen and (max-width: 600px)
+  .index-content-services-description
+    width: 280px
+
+  .index-content-services__description
+    height: 365px
+
+  .index-content-services-description__wrapper
+    width: 2520px
+
+  .index-content-services-description__item
+    width: 280px
+
+  .index-content-services-description-item__title
+    margin-top: 45px
+
 .index-content__advantage
   position: relative
   width: 100%
@@ -220,8 +273,11 @@
   position: relative
   height: 100%
   margin: -5px
+  left: 0
+  transition: left .5s ease
 
 .index-content-advantage-cases__item
+  position: relative
   height: 470px
   width: 50%
   float: left
@@ -349,6 +405,87 @@
     font-size: 15px
     line-height: 21px
 
+@media screen and (max-width: 900px)
+  .index-content__advantage
+    height: auto
+    padding-bottom: 70px
+
+  .index-content-advantage__content
+    padding: 0 30px
+    float: none
+    width: 100%
+
+  .index-content-advantage-content__header-block
+    text-align: center
+    margin: 70px 0 20px
+
+  .index-content-advantage-content-text
+    height: 150px
+    overflow-y: auto
+
+  .index-content-advantage-content-text__p
+    font-size: 15px
+    line-height: 21px
+    margin: 0 0 21px
+  
+  .index-content-advantage__cases
+    padding: 0 30px
+    margin: 40px 0 0
+    width: 100%
+    height: 300px
+    overflow: hidden
+  
+  .index-content-advantage-cases
+    width: 1240px
+
+  .index-content-advantage-cases__item
+    width: auto
+    height: 300px
+    padding: 5px
+
+  .index-content-advantage-cases-item
+    padding: 0 10px
+    border-width: 1px
+    height: 300px
+    width: 300px
+
+  .index-content-advantage-cases-item svg
+    width: 55px
+    height: 55px
+
+  .index-content-advantage-cases-item__title
+    margin: 23px 0 9px
+    font-size: 15px
+
+  .index-content-advantage-cases-item__text
+    font-size: 15px
+    line-height: 21px
+
+@media screen and (max-width: 600px)
+  .index-content__advantage
+    padding-bottom: 50px
+
+  .index-content-advantage__content
+    padding: 0 20px
+
+  .index-content-advantage-content__header-block
+    margin: 50px 0 14px
+  
+  .index-content-advantage__cases
+    padding: 0 20px
+    height: 250px
+  
+  .index-content-advantage-cases
+    width: 1040px
+
+  .index-content-advantage-cases__item
+    height: 250px
+    padding: 5px
+
+  .index-content-advantage-cases-item
+    height: 250px
+    width: 250px
+
 .index-content__divider
   height: 430px
   background: #ff4e4e
@@ -368,7 +505,6 @@
   background-position: left bottom
 
 @media screen and (max-width: 1600px) and (min-width: 1100px)
-
   .index-content__divider
     height: 335px
 
@@ -377,13 +513,26 @@
     margin-top: -80px
 
 @media screen and (max-width: 1100px) and (min-width: 900px)
-
   .index-content__divider
     height: 200px
 
   .index-content-divider
     height: 315px
     margin-top: -115px
+
+@media screen and (max-width: 900px)
+  .index-content__divider
+    height: 330px
+
+  .index-content-divider
+    height: 363px
+    margin-top: -33px
+    background-size: auto 363px
+    background-position: bottom right
+
+@media screen and (max-width: 600px)
+  .index-content__divider
+    display: none
 
 .index-content__work
   margin: 0 0 110px
@@ -497,7 +646,6 @@
   .index-content-work-list__item
     height: 245px
     padding: 0 5px
-    height: 245px
 
   .index-content-work-list-item
     border-width: 1px
@@ -522,6 +670,60 @@
     padding: 0 10px
     font-size: 15px
     line-height: 21px
+
+@media screen and (max-width: 900px)
+
+  .index-content__work
+    margin: 0 0 90px
+
+  .index-content-work__header-block
+    padding: 68px 0 36px
+
+  .index-content-work__list
+    padding: 5px 10px
+
+  .index-content-work-list
+    margin: -5px
+
+  .index-content-work-list__item
+    width: 50%
+    padding: 5px
+    height: 300px
+
+  .index-content-work-list-item
+    border-width: 1px
+
+  .index-content-work-list-item__arrow
+    display: none
+
+  .index-content-work-list-item__icon svg
+    width: 56px
+    height: 56px
+    margin: 0 auto 24px
+
+  .index-content-work-list-item__header
+    margin: 0 0 8px
+    font-size: 15px
+
+  .index-content-work-list-item__text
+    padding: 0 10px
+    font-size: 15px
+    line-height: 21px
+
+@media screen and (max-width: 600px)
+
+  .index-content__work
+    margin: 0 0 70px
+
+  .index-content-work__list
+    padding: 5px 10px
+
+  .index-content-work-list
+    margin: -5px
+
+  .index-content-work-list__item
+    width: 100%
+    height: 250px
 
 .index-content__rates
   height: 850px
@@ -1273,7 +1475,6 @@
   .index-content__feedback
     height: 735px
     padding: 50px 0 0
-    margin-bottom: 50px
 
   .index-content-feedback
     width: 282px
@@ -1302,6 +1503,7 @@
   .index-content-feedback-form-button
     height: 45px
     font-size: 15px
+
 .index-content__footer
   position: absolute
   bottom: 0
@@ -1339,3 +1541,40 @@
 
 .index-content-footer__contacts-block
   text-align: center
+
+@media screen and (max-width: 1600px) and (min-width: 1100px)
+  .index-content__footer
+    height: 140px
+    padding: 14px
+
+  .index-content-footer__social-block
+    height: 31px
+    margin: 19px 0 18px
+
+@media screen and (max-width: 1100px) and (min-width: 900px)
+  .index-content__footer
+    height: 126px
+    padding: 10px
+
+  .index-content-footer
+    border-width: 1px
+
+  .index-content-footer__social-block
+    margin: 15px 0
+
+@media screen and (max-width: 900px)
+  .index-content__footer
+    background-color: rgba(0, 0, 0, .85)
+    &:after
+      display: none
+
+  .index-content-footer
+    border: none
+
+  .index-content-footer__contacts-block
+    .contacts-block__address
+      span:after
+        content: ""
+    .contacts-block__phone
+      display: block
+      margin-top: 4px

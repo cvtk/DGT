@@ -82,7 +82,7 @@ module.exports = function(grunt) {
         }]
       }
     },
-    concat: {
+    // concat: {
       // js: {
       //   src: [
       //     'src/assets/vendor/tiny-slider.js',
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
       //     ],
       //   dest: 'dist/base.css',
       // },
-    },
+    // },
     uglify: {
       js: {
         files: [{
@@ -176,7 +176,7 @@ module.exports = function(grunt) {
     watch: {
       assets: {
         files: 'src/**/*.*',
-        tasks: ['assemble', 'jshint', 'copy', 'uglify', 'sass', 'concat', 'rcs'],
+        tasks: ['assemble', 'jshint', 'copy', 'uglify', 'sass', 'rcs'],
         options: {
           spawn: false,
           livereload: true
@@ -196,6 +196,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-cache-bust');
-  grunt.registerTask('default', ['assemble', 'jshint', 'copy', 'uglify', 'sass', 'rcs', 'htmlmin', 'concat', 'cacheBust']);
+  grunt.registerTask('default', ['assemble', 'jshint', 'copy', 'uglify', 'sass', 'rcs', 'htmlmin', 'cacheBust']);
   grunt.registerTask('dev', ['connect', 'watch']);
 };
