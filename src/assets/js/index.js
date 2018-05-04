@@ -1,29 +1,32 @@
 (function() {
-  var navs = document.querySelectorAll('.index-content-services-body__item'),
-      wrapper = document.querySelector('.index-content-services-description__wrapper'),
-      articles = document.querySelectorAll('.index-content-services-description__item');
 
-  function removeActiveClasses() {
-    [].forEach.call(navs, function(nav) {
-      nav.classList.remove('_active');
-    });
-  }
+new tinySwipe({
+  container: '.index-content-reviews-content-slider',
+  next: '.index-content-reviews-content-slider-item-footer-nav__next',
+  previos: '.index-content-reviews-content-slider-item-footer-nav__prev'
+});
 
-  [].forEach.call(navs, function(nav) {
-    nav.addEventListener('click', function() {
-      var target = this.dataset.target;
-      removeActiveClasses();
-      this.classList.add('_active');
-      wrapper.style.left = -1 * articles[target - 1].offsetLeft + 'px';
-    });
-  });
+new tinySwipe({
+  container: '.index-content-services-description__wrapper',
+  onWheel: true
+});
 
 if ( window.screen.availWidth <= 900 ) {
+
+  new tinySwipe({
+    container: '.index-content-reviews-banners',
+    onWheel: true
+  });
+
+  new tinySwipe({
+    container: '.index-content-rates-list',
+    onWheel: true
+  });
+
   new tinySwipe({
     container: '.index-content-advantage-cases',
     onWheel: true
   });
 }
-
 
 })();

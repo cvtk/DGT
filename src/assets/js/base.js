@@ -5,6 +5,23 @@ function hasClass(el, cl) {
 function tinySwipe(args) {
   if ( typeof args !== 'object' && !args.hasOwnProperty('container') ) return;
 
+  var isRepeated = false,
+      touchX = null,
+      touchY = null;
+
+  function preventRepeate(delay, callback) {
+    delay = delay || 250;
+    if ( isRepeated ) { return false; }
+
+    isRepeated = true;
+
+    setTimeout(function() {
+      isRepeated = false;
+    }, delay);
+
+    return callback();
+  }
+
   function queryBySelectorAll(selector) {
     return Array.prototype.slice.call( document.querySelectorAll(selector) );
   }
@@ -16,11 +33,56 @@ function tinySwipe(args) {
     });
   }
 
+  function onMouseDown(e) {
+    touchX = e.clientX;
+    touchY = e.clientY;
+  }
+
+  function onMouseUp(e) {
+    touchX = null;
+    touchY = null;
+  }
+
+  function onMouseMove(e) {
+    return preventRepeate(50, function() {
+      if ( !touchX || !touchY ) { return; }
+      var deltaX = touchX - e.clientX,
+          deltaY = touchY - e.clientY;
+      if ( Math.abs(deltaX) > Math.abs(deltaY) ) {
+        if ( deltaX > 0 ) { self.nextSlide(); }
+        else { self.prevSlide(); }
+      }
+      touchX = null;
+      touchY = null;
+    });
+  }
+
+  function onTouchStart(e) {
+    touchX = e.touches[0].clientX;
+    touchY = e.touches[0].clientY;
+  }
+
+  function onTouchMove(e) {
+    return preventRepeate(500, function() {
+      if ( !touchX || !touchY ) { return; }
+      var deltaX = touchX - e.touches[0].clientX,
+          deltaY = touchY - e.touches[0].clientY;
+      if ( Math.abs(deltaX) > Math.abs(deltaY) ) {
+        if ( deltaX > 0 ) { self.nextSlide(); }
+        else { self.prevSlide(); }
+      }
+      touchX = null;
+      touchY = null;
+    });
+  }
+
   function onWheel(e) {
-    var delta = e.deltaY || e.detail || e.wheelDelta;
-    if ( delta > 0 ) { self.nextSlide(); }
-    else { self.prevSlide(); }
     e.preventDefault();
+    return preventRepeate(350, function() {
+      var delta = e.deltaY || e.detail || e.wheelDelta;
+      if ( delta > 0 ) { self.nextSlide(); }
+      else { self.prevSlide(); }
+    });
   }
 
   var self = this,
@@ -69,13 +131,13 @@ function tinySwipe(args) {
       container.attachEvent("onmousewheel", onWheel);
     }
   }
-}
 
-var swipe = new tinySwipe({
-  container: '.index-content-reviews-content-slider',
-  next: '.index-content-reviews-content-slider-item-footer-nav__next',
-  previos: '.index-content-reviews-content-slider-item-footer-nav__prev'
-});
+  container.addEventListener('touchstart', onTouchStart, false);        
+  container.addEventListener('touchmove', onTouchMove, false);
+  container.addEventListener('mousedown', onMouseDown, false);
+  container.addEventListener('mouseup', onMouseUp, false);       
+  container.addEventListener('mousemove', onMouseMove, false);
+}
 
 (function() {
   var feedback = document.querySelector('.feedback'),

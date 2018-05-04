@@ -922,6 +922,10 @@
     width: 100%
     height: 645px
 
+  .index-content-rates-list
+    left: 0
+    transition: left .75s ease
+
   .index-content-rates-list-item
     height: 510px
     padding: 13px
@@ -1101,7 +1105,7 @@
 .index-content-reviews-content-slider
   position: relative
   left: 0
-  transition: left .35s ease
+  transition: left .75s ease
 
 .index-content-reviews-content-slider__item
   position: relative
@@ -1346,6 +1350,76 @@
   .index-content-reviews-banners__item
     border-width: 1px
     margin: -1px -1px 0 0
+
+@media screen and (max-width: 900px)
+  .index-content-reviews__content
+    width: 100%
+    height: auto
+    float: none
+
+  .index-content-reviews-content__header-block
+    padding: 35px 0 70px
+
+  .index-content-reviews-content__slider
+    margin: 0 30px 27px
+    height: auto
+
+  .index-content-reviews-content-slider__item
+    border-width: 1px
+    height: 310px
+
+  .index-content-reviews-content-slider-item__body
+    padding: 27px 27px 81px
+
+  .index-content-reviews-content-slider-item-body__text
+    margin: 21px 0
+    font-size: 15px
+    line-height: 21px
+
+  .index-content-reviews-content-slider-item__footer:after
+    display: none
+
+  .index-content-reviews-content-slider-item-footer
+    height: 54px
+    line-height: 54px
+    padding: 0 27px
+    white-space: nowrap
+    overflow: hidden
+
+  .index-content-reviews-content-slider-item-footer__name
+    font-size: 16px
+    padding: 0
+
+  .index-content-reviews-content-slider-item-footer__position
+    font-size: 16px
+    padding: 0
+
+  .index-content-reviews-content-slider-item-footer__nav
+    display: none
+
+  .index-content-reviews__banners
+    width: 100%
+    height: auto
+    float: none
+  
+  .index-content-reviews-banners
+    overflow: hidden
+    width: 9999px
+    left: 0
+    transition: left .75s ease
+
+  .index-content-reviews-banners__item
+    height: 164px
+    width: 146px
+    margin: 0px -2px 0 0
+
+@media screen and (max-width: 600px)
+  .index-content-reviews-content__header-block
+    padding: 35px 0 25px
+
+  .index-content-reviews-content__slider
+    margin: 0 20px 27px
+    height: auto
 
 .index-content__feedback
   height: 960px
