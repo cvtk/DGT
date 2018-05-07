@@ -85,22 +85,44 @@ function tinySwipe(args) {
     });
   }
 
+  function setSlide(slide) {
+    if ( slide >= 0 && slide <= slides.length ) {
+      self.currentSlide = slide;
+      if ( args.hasOwnProperty('navButtons') ) {
+        navs.forEach(function(nav) {
+          if ( nav.dataset.jt == slide ) {
+            nav.classList.add('_active');
+          }
+          else {
+            nav.classList.remove('_active');
+          }
+        });
+      }
+      container.style.left = -1 * slides[slide].offsetLeft + 'px';
+    }
+  }
+
   var self = this,
       container = document.querySelector(args.container),
-      slides = Array.prototype.slice.call( document.querySelectorAll(args.container + '>*') );
+      slides = queryBySelectorAll(args.container + '>*'),
+      navs = null;
 
   if ( !container || !slides ) return;
 
   this.currentSlide = 0;
 
+  this.to = function(e) {
+    setSlide(e.target.dataset.jt);
+  };
+
   this.nextSlide = function() {
     if ( self.currentSlide >= slides.length - 1 ) return;
-    container.style.left = -1 * slides[++self.currentSlide].offsetLeft + 'px';
+    setSlide(++self.currentSlide);
   };
 
   this.prevSlide = function() {
     if ( !self.currentSlide ) return;
-    container.style.left = -1 * slides[--self.currentSlide].offsetLeft + 'px';
+    setSlide(--self.currentSlide);
   };
 
   // init slider
@@ -109,6 +131,11 @@ function tinySwipe(args) {
     current.style.width = current.offsetWidth + 'px';
     return result;
   }, 0) + 'px';
+
+  if ( args.hasOwnProperty('navButtons') ) {
+    navs = queryBySelectorAll(args.navButtons);
+    addEventToArray( navs, 'click', this.to );
+  }
 
   if ( args.hasOwnProperty('next') ) {
     addEventToArray( queryBySelectorAll(args.next), 'click', this.nextSlide );

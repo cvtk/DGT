@@ -31,10 +31,14 @@
 
 .about-content-info__header-block
   position: absolute
-  top: -49px
-  left: 50%
-  margin-left: -134px
-  overflow: hidden
+  left: 0
+  right: 0
+  margin: 0 auto
+  top: -60px
+  width: 320px
+  padding: 0
+  background-color: #fff
+  text-align: center
 
 .about-content-info__text
   width: 100%
@@ -210,3 +214,42 @@
   background: url(/company-banner.jpg) center center no-repeat
   background-size: cover
   box-shadow: inset 3px 0 6px rgba(0, 0, 0, 0.25)
+
+@media screen and (max-width: 1600px)
+  .about-content__info
+    padding-top: 150px
+
+  .about-content-info__header-block
+    width: 270px
+    top: -48px
+
+  .about-content-info__text
+    padding: 110px 7% 0
+
+  .about-content-info-text
+    font-size: 15px
+    line-height: 21px
+
+@media screen and (max-width: 1100px)
+  .about-content-info
+    margin-left: 5%
+    width: 90%
+    height: 80%
+
+@media screen and (max-width: 900px)
+  .about-content
+    width: 100%
+
+  .about-banner
+    display: none
+
+  .about-content__info
+    padding: 130px 45px 0
+
+  .about-content-info
+    margin: 0
+    width: 100%
+
+@media screen and (max-width: 600px)
+  .about-content__info
+    padding: 130px 15px 0

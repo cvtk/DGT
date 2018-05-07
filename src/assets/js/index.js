@@ -8,6 +8,7 @@ new tinySwipe({
 
 new tinySwipe({
   container: '.index-content-services-description__wrapper',
+  navButtons: '.index-content-services-body__item',
   onWheel: true
 });
 
