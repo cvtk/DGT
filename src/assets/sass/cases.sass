@@ -1,6 +1,6 @@
 .cases-content
+  position: relative
   width: 100%
-  box-sizing: border-box
   padding-left: 88px
 
 .cases-content__title
@@ -16,7 +16,6 @@
   left: 0
   width: 88px
   height: 100%
-  box-sizing: border-box
   padding-top: 88px
   background-color: #ff4f4f
   z-index: 50
@@ -26,7 +25,6 @@
   width: 100%
   height: 94%
   border-top: 1px solid #c84040
-  box-sizing: border-box
   padding: 25px 0
   &:before
     content: ''
@@ -43,6 +41,8 @@
   width: 100%
   text-align: center
   position: relative
+  &:last-child
+    height: 0
 
 .cases-content-nav-item
   display: inline-block
@@ -92,3 +92,56 @@
 
 .cases-content__list
   position: relative
+
+@media screen and (max-width: 1100px)
+  .cases-content
+    padding-left: 75px
+
+  .cases-content__nav
+    position: absolute
+    width: 75px
+    padding-top: 75px
+
+@media screen and (max-width: 900px)
+  .cases-content
+    padding-left: 50px
+
+  .cases-content__nav
+    position: absolute
+    width: 50px
+    padding-top: 35px
+
+  .cases-content-nav
+    border-top: none
+
+  .cases-content-nav-item
+    &:after
+      display: none
+    &:hover:before
+      opacity: 1
+    &:before
+      opacity: 0
+
+  .cases-content__list
+    padding-top: 50px
+
+  .cases-content-list-item__meta
+    bottom: 0
+
+  .cases-content-list-item-meta__year
+    display: none
+    width: 0
+
+  .cases-content-list-item-meta__header
+    width: 100%
+
+@media screen and (max-width: 600px)
+  .cases-content
+    padding-left: 0
+
+  .cases-content__nav
+    display: none
+
+
+
+

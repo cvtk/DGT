@@ -646,6 +646,30 @@ button, input
   transition: opacity .25s ease
   z-index: 2
 
+@media screen and (max-width: 900px)
+  .cases-content-list__item
+    width: 50%
+
+  .cases-content-list-item-meta-header__title
+    font-size: 36px
+    line-height: 37px
+
+  .cases-content-list-item-meta-header__subtitle
+    font-size: 15px
+    line-height: 21px
+
+@media screen and (max-width: 600px)
+  .cases-content-list__item
+    width: 100%
+    float: none
+    height: 250px
+
+  .cases-content-list-item__image
+    height: 250px
+
+  .cases-content-list-item-meta__header
+    padding: 14px 20px
+
 ._white .header-block
   .header-block__title
     color: #fff
