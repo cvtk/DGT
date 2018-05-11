@@ -2,6 +2,27 @@ function hasClass(el, cl) {
   return (' ' + el.className + ' ').indexOf(' ' + cl + ' ') > -1;
 }
 
+function query(selector) {
+  if ( !selector && typeof(selector) !== 'string' ) return;
+
+  var nodeList = document.querySelectorAll(selector),
+      array = Array.prototype.slice.call(nodeList);
+
+  if ( !array.length ) return;
+
+  var addEvent = function(event, handler) {
+    array.forEach(function(el) {
+      el.addEventListener(event, handler);
+    });
+  };
+
+  return {
+    el: array[0],
+    array: array,
+    click: function(handler) { return addEvent('click', handler); }
+  };
+}
+
 function queryBySelectorAll(selector) {
   return Array.prototype.slice.call( document.querySelectorAll(selector) );
 }
@@ -181,17 +202,28 @@ function tinySwipe(args) {
 })();
 
 (function() {
-  var currentTime = function() { return Math.floor(Date.now() / 1000); };
+  function currentTime() { return Math.floor(Date.now() / 1000); }
+  function secondsHasPassed(loadedAt, currentTime) { return currentTime - loadedAt; }
+  function isFulfilled(el) {
+    if ( el.type === 'checkbox' ) { return el.checked; }
+    else { return !!el.value; }
+  }
+  function isRequired(name) {
+    return ( ['name', 'email', 'personal'].indexOf(name) !== -1 );
+  }
+
   var loadedAt = currentTime();
   var threshold = 15;
-  var secondsHasPassed = function(loadedAt, currentTime) {
-    return currentTime - loadedAt;
-  };
+  var fields = query('.feedback-block input');
 
-  var submitButtons = queryBySelectorAll('.feedback-block-form-button');
-
-  addEventToArray(submitButtons, 'click', function(e) {
+  query('.feedback-block-form-button').click(function(e) {
     e.preventDefault();
+
+    fields.array.forEach(function(el) {
+      if ( isRequired(el.name) && !isFulfilled(el) ) {
+        console.log('Поле ' + el.placeholder + ' не может быть пустым');
+      }
+    });
 
     var timeCheckPassed = ( secondsHasPassed(loadedAt, currentTime()) > threshold ),
         fieldCheckPassed = ( 1 === 1 );
