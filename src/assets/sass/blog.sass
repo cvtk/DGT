@@ -287,6 +287,18 @@
     color: #3a3a3a
     border-color: #3a3a3a
 
+.blog-content-posts__comments
+  position: relative
+  padding-top: 35px
+
+.blog-content-posts-comments
+  display: inline-block
+  position: relative
+  vertical-align: top
+  width: 700px
+  text-align: left
+  margin-left: -80px
+
 @media screen and (max-width: 1600px)
 
   .blog-content-posts-item__title
@@ -321,7 +333,11 @@
 
   .blog-content-posts-item__back
     right: 75px
-    top: -60px
+
+  .blog-content-posts-comments
+    padding: 0 75px
+    margin-left: 0
+    width: 100%
 
   .blog-content-posts-item__title
     font-size: 40px
@@ -337,7 +353,15 @@
   .blog-content-posts-item-preview__image img
     max-width: 100%
 
+@media screen and (max-width: 900px)
+  .blog-content-posts-item__back
+    right: 15px
+    top: -20px
+
 @media screen and (max-width: 600px)
+  .blog-content-posts-comments
+    padding: 0 15px
+
   .blog-content-posts-item
     padding: 0 15px
 

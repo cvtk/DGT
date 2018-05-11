@@ -1,5 +1,5 @@
 <ul class="cases-content-list{{#if listLength}} _listLength-{{listLength}}{{/if}}">
-  {{#each posts}}{{#is post "cases"}}{{#pages}}
+  {{#each obj}}
   <li class="cases-content-list__item" data-year="{{moment  data.created  lang ="ru"  format ="YYYY" }}">
     <a href="/cases/{{this.filename}}" class="cases-content-list-item" title="{{data.title}}">
       <div class="cases-content-list-item__image" style="background-image: url(/{{this.basename}}.jpg)"></div>
@@ -19,5 +19,5 @@
       <div class="cases-content-list-item__bg"></div>
     </a>
   </li>
-  {{/pages}}{{/is}}{{/each}}
+  {{/each}}
 </ul>

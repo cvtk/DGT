@@ -27,7 +27,25 @@ layout: default.hbs
           </div>
         </div>
       </div>
+      <div class="blog-content-posts__comments">
+        <div class="blog-content-posts-comments">
+          <div id="disqus_thread"></div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="blog-content__banner"></div>
 </div>
+<script>
+  var disqus_config = function () {
+    this.page.url = "https://digit-it.ru/blog/{{this.filename}}";
+  };
+
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://pblanding.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<script id="dsq-count-scr" src="//pblanding.disqus.com/count.js" async></script>

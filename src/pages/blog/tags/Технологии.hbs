@@ -10,7 +10,7 @@ layout: default.hbs
   </div>
   <div class="blog-content__posts">
     <div class="blog-content-posts">
-      {{#each posts}}{{#is post "test"}}{{#pages}}{{#inArray this.data.tags "Технологии"}}{{log this}}
+      {{#each posts}}{{#is post "test"}}{{#pages}}{{#inArray this.data.tags "Технологии"}}
       <div class="blog-content-posts__item">
         <div class="blog-content-posts-item">
           <a href="/blog" class="blog-content-posts-item__back" title="к статьям">к статьям</a>

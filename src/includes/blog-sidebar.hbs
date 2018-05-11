@@ -7,9 +7,9 @@
   </div>
   <div class="blog-content-sidebar__tags">
     <noindex>
-      {{#tags}}
-      <a href="/blog/tags/{{tag}}.html" class="blog-content-sidebar-tags__item" rel="nofollow">{{tag}}</a>
-      {{/tags}}
+      {{#each posts}}{{#is post "news"}}{{#pages}}{{#each data.tags}}
+      <a href="/blog/tags/{{this}}.html" class="blog-content-sidebar-tags__item" rel="nofollow">{{this}}</a>
+      {{/each}}{{/pages}}{{/is}}{{/each}}
     </noindex>
   </div>
   <div class="blog-content-sidebar__social-block _light">{{> social-block }}</div>

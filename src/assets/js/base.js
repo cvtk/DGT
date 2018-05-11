@@ -2,6 +2,17 @@ function hasClass(el, cl) {
   return (' ' + el.className + ' ').indexOf(' ' + cl + ' ') > -1;
 }
 
+function queryBySelectorAll(selector) {
+  return Array.prototype.slice.call( document.querySelectorAll(selector) );
+}
+
+function addEventToArray(array, event, handler) {
+  if ( !array.length ) return;
+  array.forEach(function(item) {
+    item.addEventListener(event, handler);
+  });
+}
+
 function tinySwipe(args) {
   if ( typeof args !== 'object' && !args.hasOwnProperty('container') ) return;
 
@@ -20,17 +31,6 @@ function tinySwipe(args) {
     }, delay);
 
     return callback();
-  }
-
-  function queryBySelectorAll(selector) {
-    return Array.prototype.slice.call( document.querySelectorAll(selector) );
-  }
-
-  function addEventToArray(array, event, handler) {
-    if ( !array.length ) return;
-    array.forEach(function(item) {
-      item.addEventListener(event, handler);
-    });
   }
 
   function onMouseDown(e) {
@@ -177,5 +177,26 @@ function tinySwipe(args) {
 
   feedbackClose.addEventListener('click', function() {
     feedback.classList.remove('feedback_visible');
+  });
+})();
+
+(function() {
+  var currentTime = function() { return Math.floor(Date.now() / 1000); };
+  var loadedAt = currentTime();
+  var threshold = 15;
+  var secondsHasPassed = function(loadedAt, currentTime) {
+    return currentTime - loadedAt;
+  };
+
+  var submitButtons = queryBySelectorAll('.feedback-block-form-button');
+
+  addEventToArray(submitButtons, 'click', function(e) {
+    e.preventDefault();
+
+    var timeCheckPassed = ( secondsHasPassed(loadedAt, currentTime()) > threshold ),
+        fieldCheckPassed = ( 1 === 1 );
+
+    if ( timeCheckPassed && fieldCheckPassed )
+      { console.log('Yep!', secondsHasPassed(loadedAt, currentTime())); }
   });
 })();

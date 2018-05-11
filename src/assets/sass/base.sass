@@ -882,3 +882,221 @@ button, input
 
 .social-block__link._vk:hover:after
   background-position: -31px -41px
+
+.feedback-block
+  margin: 0 auto
+  position: relative
+  width: 412px
+  height: auto
+  z-index: 2
+  background-color: rgba(20, 20, 20, .75)
+  &:before
+    position: absolute
+    height: 100%
+    content: ''
+    width: 100%
+    top: 0
+    left: 0
+    display: block
+    z-index: 1
+    border: 2px solid #fff
+
+.feedback-block__header
+  position: relative
+  z-index: 1
+  color: #fff
+  text-align: center
+  padding: 45px 0
+  font: 400 55px/50px "Dgt Condensed"
+  text-transform: uppercase
+
+.feedback-block__form
+  position: relative
+  z-index: 1
+
+.feedback-block-form
+  position: relative
+
+.feedback-block-form__input
+  position: relative
+  z-index: 1
+  border: 2px solid rgba(255, 255, 255, .3)
+  width: 100%
+  margin-bottom: -2px
+  &:last-child
+    border-top: 0
+
+.feedback-block-form-input
+  position: relative
+  z-index: 2
+  height: 50px
+  padding: 0 20px
+  font-size: 16px
+  background: 0 0
+  color: #fff
+  &._comment
+    height: 100px
+    padding: 15px 20px
+    font-size: 16px
+
+.feedback-block-form-input-info
+  position: absolute
+  top: 50%
+  transform: translate(0,-50%)
+  right: 14px
+  width: 26px
+  height: 26px
+  border-radius: 50%
+  border: 1px solid #ff5c5c
+  color: #ff5c5c
+  line-height: 24px
+  font-family: "Roboto Condensed"
+  font-size: 15px
+  text-align: center
+  cursor: pointer
+  z-index: 3
+  transition: border .6s ease-out, color .6s ease-out
+
+.feedback-block-form-checkbox
+  display: none
+
+#cpns + .feedback-block-form-label
+  display: none
+
+.feedback-block-form-checkbox:checked + .feedback-block-form-label:after
+  width: 14px
+  height: 14px
+  left: 19px
+  border: 1px solid rgba(255, 255, 255, .5)
+
+.feedback-block-form-checkbox:checked + .feedback-block-form-label
+  color: rgba(255,255,255,.75)
+  &:before
+    border-color: rgba(255,255,255,.75)
+
+.feedback-block-form-label
+  position: relative
+  color: rgba(255,255,255,.5)
+  font-size: 15px
+  padding: 15px 20px 15px 52px
+  display: block
+  cursor: pointer
+  transition: color .2s ease-in-out
+  user-select: none
+  &:hover
+    color: rgba(255,255,255,.75)
+  &:hover:before
+    border-color: rgba(255,255,255,.75)
+  &:before
+    content: ''
+    width: 22px
+    height: 22px
+    position: absolute
+    top: 0
+    left: 15px
+    bottom: 0
+    margin: auto
+    border: 1px solid rgba(255,255,255,.5)
+    transition: border-color .2s ease-in-out
+  &:after
+    content: ''
+    width: 0px
+    height: 0px
+    background-color: rgba(255,255,255,.75)
+    position: absolute
+    top: 0
+    left: 26px
+    bottom: 0
+    margin: auto
+    border-radius: 8px
+    border: 0
+    transition: width .15s ease-in-out, height .15s ease-in-out, left .15s ease-in-out
+
+.feedback-block-form-button
+  font-size: 16px
+  background: #fff
+  height: 58px
+  color: #343434
+  cursor: pointer
+
+@media screen and (max-width: 1600px) and (min-width: 1100px)
+  .feedback-block
+    width: 322px
+
+  .feedback-block__header
+    padding: 33px 0
+    font-size: 45px
+    line-height: 40px
+
+  .feedback-block-form-input
+    height: 40px
+    padding: 0 16px
+    font-size: 15px
+
+  .feedback-block-form-input._comment
+    height: 80px
+    padding: 10px 16px
+    font-size: 15px
+
+  .feedback-block-form-button
+    height: 35px
+    font-size: 15px
+
+@media screen and (max-width: 1100px) and (min-width: 900px)
+  .feedback-block
+    width: 284px
+    &:before
+      border-width: 1px
+
+  .feedback-block__header
+    padding: 33px 0
+    font-size: 40px
+    line-height: 36px
+
+  .feedback-block-form__input
+    margin-bottom: -1px
+    border-width: 1px
+
+  .feedback-block-form-input
+    height: 50px
+    padding: 0 20px
+    font-size: 15px
+
+  .feedback-block-form-input._comment
+    height: 100px
+    padding: 15px 20px
+    font-size: 15px
+
+  .feedback-block-form-button
+    height: 45px
+    font-size: 15px
+
+@media screen and (max-width: 900px)
+
+  .feedback-block
+    width: 282px
+    &:before
+      border-width: 1px
+
+  .feedback-block__header
+    padding: 33px 0
+    font-size: 40px
+    line-height: 36px
+
+  .feedback-block-form__input
+    margin-bottom: -1px
+    border-width: 1px
+
+  .feedback-block-form-input
+    height: 50px
+    padding: 0 20px
+    font-size: 15px
+
+  .feedback-block-form-input._comment
+    height: 100px
+    padding: 15px 20px
+    font-size: 15px
+
+  .feedback-block-form-button
+    height: 45px
+    font-size: 15px

@@ -35,7 +35,5 @@ layout: default.hbs
       </li>
     </ul>
   </div>
-  <div class="cases-content__list">
-    {{> cases-content-list }}
-  </div>
+  <div class="cases-content__list">{{#each posts}}{{#is post "cases"}}{{> cases-content-list obj=pages}}{{/is}}{{/each}}</div>
 </div>

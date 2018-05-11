@@ -411,8 +411,7 @@ layout: default.hbs
           <div class="header-block__subtitle">результаты говорят сами за себя</div>
         </div>
       </div>
-      <div class="index-content-cases__list _index-page">
-        {{> cases-content-list }}
+      <div class="index-content-cases__list _index-page">{{#each posts}}{{#is post "top"}}{{> cases-content-list obj=pages}}{{/is}}{{/each}}
       </div>
     </div>
   </div>
@@ -579,36 +578,7 @@ layout: default.hbs
       </div>
     </div>
   </div>
-  <div class="index-content__feedback">
-    <div class="index-content-feedback">
-      <div class="index-content-feedback__header">Оставить заявку</div>
-      <div class="index-content-feedback__form">
-        <form action="#" class="index-content-feedback-form">
-          <div class="index-content-feedback-form__input">
-            <input type="text" name="name" placeholder="Имя *" class="index-content-feedback-form-input">
-            <div class="index-content-feedback-form-input-info">?</div>
-          </div>
-          <div class="index-content-feedback-form__input">
-            <input type="text" name="phone" placeholder="Телефон *" pattern="[ 0-9\- \(\)\+]+" class="index-content-feedback-form-input">
-            <div class="index-content-feedback-form-input-info">?</div>
-          </div>
-          <div class="index-content-feedback-form__input">
-            <input type="email" name="email" placeholder="Email *" class="index-content-feedback-form-input">
-            <div class="index-content-feedback-form-input-info">?</div>
-          </div>
-          <div class="index-content-feedback-form__input">
-            <textarea name="comment" placeholder="Ваши пожелания" class="index-content-feedback-form-input _comment"></textarea>
-          </div>
-          <div class="index-content-feedback-form__input">
-            <input name="personal" id="prsn" type="checkbox" class="index-content-feedback-form-checkbox">
-            <label for="prsn" class="index-content-feedback-form-label">Согласен на обработку персональных данных</label>
-          </div>
-          <div class="index-content-feedback-form__input">
-            <button class="index-content-feedback-form-button" type="submit">Отправить</button>
-          </div>
-        </form>
-      </div>
-  </div>
+  <div class="index-content__feedback-block">{{>feedback-block}}</div>
   <div class="index-content__footer">
     <div class="index-content-footer">
       <div class="index-content-footer__social-block _dark">{{> social-block }}</div>

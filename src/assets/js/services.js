@@ -123,7 +123,7 @@
   var hash = window.location.hash.split('#')[1];
 
   if ( hash ) {
-    var target = document.querySelector('[data-ctgr="' + hash + '"]');
+    var target = document.querySelector('[data-ctgr="' + decodeURIComponent(hash) + '"]');
     scrollTo( target, 250 );
     currentPage = [].reduce.call(pages, function(res, cur, i) {
         return ( cur.dataset.ctgr ===  target.dataset.ctgr) ? i : res;
