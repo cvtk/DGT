@@ -2,6 +2,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    clean: ['dist'],
+
     assemble: {
       options: {
         plugins: ['grunt-assemble-sitemap'],
@@ -126,7 +128,16 @@ module.exports = function(grunt) {
       all: {
         files: [{
           expand: true,
-          src: ['dist/**/*.js', 'dist/**/*.html'],
+          src: [
+            'dist/**/*.js',
+            'dist/index.html',
+            'dist/about/index.html',
+            'dist/blog/index.html',
+            'dist/cases/index.html',
+            'dist/contacts/index.html',
+            'dist/services/index.html',
+            'dist/**/*.html'
+          ],
           dest: './'
         }]
       }
@@ -177,7 +188,7 @@ module.exports = function(grunt) {
     watch: {
       assets: {
         files: 'src/**/*.*',
-        tasks: ['assemble', 'jshint', 'copy', 'uglify', 'sass', 'rcs'],
+        tasks: ['assemble', 'jshint', 'copy', 'uglify', 'sass'],
         options: {
           spawn: false,
           livereload: true
@@ -186,6 +197,7 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-assemble');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -197,6 +209,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-cache-bust');
-  grunt.registerTask('default', ['assemble', 'jshint', 'copy', 'uglify', 'sass', 'rcs', 'htmlmin', 'cacheBust']);
+  grunt.registerTask('default', ['clean', 'assemble', 'jshint', 'copy', 'uglify', 'sass', 'rcs', 'htmlmin', 'cacheBust']);
   grunt.registerTask('dev', ['connect', 'watch']);
 };

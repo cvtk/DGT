@@ -2,13 +2,49 @@ function hasClass(el, cl) {
   return (' ' + el.className + ' ').indexOf(' ' + cl + ' ') > -1;
 }
 
-function query(selector) {
+function _q(selector) {
   if ( !selector && typeof(selector) !== 'string' ) return;
 
   var nodeList = document.querySelectorAll(selector),
       array = Array.prototype.slice.call(nodeList);
 
   if ( !array.length ) return;
+
+  var containsClass = function(el, cl) {
+    return !!~el.className.split(/\s+/).indexOf(cl);
+  };
+
+  var addClass = function(cl) {
+    array.forEach(function(el) {
+      if ( !containsClass(el, cl) ) {
+        el.className += ' ' + cl;
+      }
+    });
+  };
+
+  var toggleClass = function(el, cl) {
+    array.forEach(function(el) {
+      if ( containsClass(el, cl) ) {
+        var classes = el.className.split(/\s+/),
+            index = classes.indexOf(cl);
+
+        el.className = classes.splice(index, 1).join(' ');
+      }
+      else {
+        el.className += ' ' + cl;
+      };
+    });
+  };
+
+  var removeClass = function(cl) {
+    array.forEach(function(el) {
+      if ( containsClass(el, cl) ) {
+        var classes = el.className.split(/\s+/),
+            index = classes.indexOf(cl);
+        el.className = classes.splice(index, 1).join(' ');
+      }
+    })
+  }
 
   var addEvent = function(event, handler) {
     array.forEach(function(el) {
@@ -17,8 +53,9 @@ function query(selector) {
   };
 
   return {
-    el: array[0],
+    nodeList: nodeList,
     array: array,
+    addClass: 
     click: function(handler) { return addEvent('click', handler); }
   };
 }
@@ -188,47 +225,47 @@ function tinySwipe(args) {
 }
 
 (function() {
-  var feedback = document.querySelector('.feedback'),
-      feedbackToggler = document.querySelector('.nav-actions__link'),
-      feedbackClose = document.querySelector('.feedback__close');
+  var feedback = _q('.feedback'),
+      feedbackToggler = _q('.nav-actions__link'),
+      feedbackClose = _q('.feedback__close');
 
-  feedbackToggler.addEventListener('click', function() {
-    feedback.classList.toggle('feedback_visible');
+  feedbackToggler.click(function() {
+    feedback.toggleClass('feedback_visible');
   });
 
-  feedbackClose.addEventListener('click', function() {
-    feedback.classList.remove('feedback_visible');
-  });
-})();
-
-(function() {
-  function currentTime() { return Math.floor(Date.now() / 1000); }
-  function secondsHasPassed(loadedAt, currentTime) { return currentTime - loadedAt; }
-  function isFulfilled(el) {
-    if ( el.type === 'checkbox' ) { return el.checked; }
-    else { return !!el.value; }
-  }
-  function isRequired(name) {
-    return ( ['name', 'email', 'personal'].indexOf(name) !== -1 );
-  }
-
-  var loadedAt = currentTime();
-  var threshold = 15;
-  var fields = query('.feedback-block input');
-
-  query('.feedback-block-form-button').click(function(e) {
-    e.preventDefault();
-
-    fields.array.forEach(function(el) {
-      if ( isRequired(el.name) && !isFulfilled(el) ) {
-        console.log('Поле ' + el.placeholder + ' не может быть пустым');
-      }
-    });
-
-    var timeCheckPassed = ( secondsHasPassed(loadedAt, currentTime()) > threshold ),
-        fieldCheckPassed = ( 1 === 1 );
-
-    if ( timeCheckPassed && fieldCheckPassed )
-      { console.log('Yep!', secondsHasPassed(loadedAt, currentTime())); }
+  feedbackClose.click(function() {
+    feedback.removeClass('feedback_visible');
   });
 })();
+
+// (function() {
+//   function currentTime() { return Math.floor(Date.now() / 1000); }
+//   function secondsHasPassed(loadedAt, currentTime) { return currentTime - loadedAt; }
+//   function isFulfilled(el) {
+//     if ( el.type === 'checkbox' ) { return el.checked; }
+//     else { return !!el.value; }
+//   }
+//   function isRequired(name) {
+//     return ( ['name', 'email', 'personal'].indexOf(name) !== -1 );
+//   }
+
+//   var loadedAt = currentTime();
+//   var threshold = 15;
+//   var fields = query('.feedback-block input');
+
+//   query('.feedback-block-form-button').click(function(e) {
+//     e.preventDefault();
+
+//     fields.array.forEach(function(el) {
+//       if ( isRequired(el.name) && !isFulfilled(el) ) {
+//         console.log('Поле ' + el.placeholder + ' не может быть пустым');
+//       }
+//     });
+
+//     var timeCheckPassed = ( secondsHasPassed(loadedAt, currentTime()) > threshold ),
+//         fieldCheckPassed = ( 1 === 1 );
+
+//     if ( timeCheckPassed && fieldCheckPassed )
+//       { console.log('Yep!', secondsHasPassed(loadedAt, currentTime())); }
+//   });
+// })();

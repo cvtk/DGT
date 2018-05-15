@@ -101,592 +101,7 @@ button, input
 *, :after, :before
   box-sizing: border-box
   
-.page
-  position: relative
-
-.logo
-  display: block
-  position: fixed
-  z-index: 96
-  top: 0
-  left: 0
-  width: 88px
-  height: 88px
-  background: #ff4f4f url(logo.png) 50% 50% no-repeat
-  background-size: 58px
-  cursor: pointer
-  animation: logo 6s linear infinite
-  transition: all .15s ease-in-out
-
-  &:after
-    content: ''
-    display: block
-    position: absolute
-    left: 25px
-    top: 31px
-    width: 1.3em
-    height: 0
-    opacity: 0
-    background: white
-    box-shadow: 0 0.39em 0 0 white, 0 0.78em 0 0 white
-    font-size: 28px
-    animation: navicon 6s linear infinite
-
-  &:hover
-    animation: none
-    background-size: 0
-
-  &:hover:after
-    height: .1em
-    opacity: 1
-    animation: none
-
-  @keyframes logo
-    47%
-      background-size: 58px
-    50%
-      background-size: 0
-    97%
-      background-size: 0
-    100%
-      background-size: 58px
-
-  @keyframes navicon
-    47%
-      height: 0
-      opacity: 1
-    50%
-      height: .1em
-    97%
-      height: .1em
-    100%
-      height: 0
-      opacity: 0
-
-@media screen and (max-width: 1100px)
-  .logo
-    width: 75px
-    height: 75px
-    background-size: 50px
-
-    &:after
-      left: 19px
-      top: 25px
-
-    @keyframes logo
-      47%
-        background-size: 50px
-      50%
-        background-size: 0
-      97%
-        background-size: 0
-      100%
-        background-size: 50px
-
-@media screen and (max-width: 900px)
-  .logo
-    position: fixed
-    width: 50px
-    height: 50px
-    background-size: 35px
-    border-bottom: 1px solid rgba(255, 255, 255, .19)
-    &:after
-      left: 11px
-      top: 17px
-      width: 26px
-      font-size: 20px
-    @keyframes logo
-      47%
-        background-size: 35px
-      50%
-        background-size: 0
-      97%
-        background-size: 0
-      100%
-        background-size: 35px
-
-.bar
-  position: fixed
-  display: none
-  top: 0
-  right: 0
-  width: 100%
-  height: 50px
-  margin-left: 50px
-  background-color: #ff4e4e
-  z-index: 96
-  border-bottom: 1px solid rgba(255, 255, 255, .19)
-
-.bar__phone
-  display: block
-  position: absolute
-  right: 15px
-  font-family: "Dgt Condensed"
-  color: #fff
-  font-weight: 400
-  text-decoration: none
-  font-size: 22px
-  line-height: 50px
-  text-align: right
-  &:hover, &:visited
-    color: #fff
-
-@media screen and (max-width: 900px)
-  .bar
-    display: block
-
-.menu_toggler
-  display: none
-  user-select: none
-
-.menu_toggler:checked ~ .nav
-  left: 0
-
-.menu_toggler:checked ~ .info
-  left: 333px
-
-.menu_toggler:checked ~ .overlay
-  opacity: 1
-  left: 0
-  visibility: visible
-  transition: opacity .3s ease-in-out
-
-.menu_toggler:checked ~ .close
-  opacity: 1
-  visibility: visible
-  transition: opacity .75s ease-in-out
-
-.menu_toggler:not(:checked) ~ .feedback
-  left: -700px
-
-@media screen and (max-width: 900px)
-  .menu_toggler:checked ~ .nav
-    top: 0
-
-  .menu_toggler:checked ~ .info
-    left: 0
-    top: 458px
-  
-  .menu_toggler:checked ~ .overlay
-    opacity: 0
-    visibility: none
-
-@media screen and (max-width: 600px)
-  .menu_toggler:checked ~ .info
-    top: 423px
-
-.close
-  position: fixed
-  top: 20px
-  left: 20px
-  width: 21px
-  height: 21px
-  background: url(sprite.png) 0 0 no-repeat
-  cursor: pointer
-  z-index: 100
-  visibility: hidden
-  opacity: 0
-  user-select: none
-  transition: all 0s .3s, opacity .3s ease-in-out
-
-@media screen and (max-width: 900px)
-  .close
-    top: 15px
-    left: 15px
-
-@media screen and (max-width: 600px)
-  .close
-    top: 13px
-
-.nav
-  position: fixed
-  z-index: 99
-  top: 0
-  left: -350px
-  height: 100%
-  min-height: 510px
-  width: 333px
-  background-color: #ff4f4f
-  will-change: left
-  user-select: none
-  transition: left .3s ease-in-out
-
-.nav__menu
-  width: 100%
-  margin-top: 40%
-
-.nav-menu
-  position: relative
-  
-.nav-menu__item
-  display: block
-  width: 100%
-  border-bottom: 1px solid #ed4a4a
-  &:first-child
-    border-top: 1px solid #ed4a4a
-
-.nav-menu__link
-  display: block
-  font: 16px/45px "Roboto Condensed"
-  color: white
-  height: 45px
-  margin-left: 20px
-  text-transform: uppercase
-  &:visited, &:hover
-    color: white
-
-.nav__actions
-  width: 100%
-  position: absolute
-  bottom: 0
-  left: 0
-
-.nav-actions
-  position: relative
-
-.nav-actions__item
-  display: block
-  border-top: 1px solid #cb3d3d
-  background-color: #e73636
-  transition: background-color .2s ease-in-out
-  &:hover
-    background-color: #de2828
-
-.nav-actions__link
-  display: block
-  height: 50px
-  margin-left: 20px
-  line-height: 50px
-  font-size: 16px
-  cursor: pointer
-  color: white
-  &:visited, &:hover
-    color: white
-
-@media screen and (max-width: 900px)
-  .nav
-    position: fixed
-    top: -480px
-    left: 0
-    width: 100%
-    height: 408px
-    min-height: 0
-    transition: top .3s ease-in-out
-    border-bottom: 1px solid rgba(255, 255, 255, .19)
-
-  .nav__menu
-    margin: 50px 0 105px 0
-    text-align: center
-
-  .nav-menu__link
-    height: 50px
-    line-height: 50px
-    margin-left: 0
-
-  .nav__actions
-    display: none
-
-@media screen and (max-width: 600px)
-  .nav
-    height: 368px
-
-  .nav__menu
-    margin-top: 45px
-
-  .nav-menu__link
-    height: 45px
-    line-height: 45px
-
-.info
-  position: fixed
-  z-index: 97
-  top: 0
-  left: -700px
-  width: 633px
-  min-height: 480px
-  height: 100%
-  background-color: white
-  box-shadow: 2px -1px 5px rgba(0, 0, 0, 0.25)
-  text-align: center
-  opacity: 1
-  will-change: left
-  transition: left .5s ease-in-out
-
-.info__content
-  width: 80%
-  position: absolute
-  top: 20%
-  left: 10%
-
-.info-content
-  position: relative
-
-.info-content__header-block
-  position: relative
-
-.info-content__desc
-  font-size: 17px
-  line-height: 23px
-  margin: 20px 0 5px 0
-
-.info-content__social-block
-  margin-top: 20px
-
-.info__contacts-block
-  position: absolute
-  bottom: 20px
-  width: 100%
-
-@media screen and (max-width: 1600px) and (min-width: 1100px)
-  .info-content__desc
-    font-size: 15px
-    line-height: 21px
-    margin: 17px 0 5px 0
-
-@media screen and (max-width: 1100px) and (min-width: 900px)
-  .info
-    width: 550px
-
-  .info-content__desc
-    font-size: 15px
-    line-height: 21px
-    margin: 17px 0 5px 0
-
-@media screen and (max-width: 900px)
-  .info
-    display: none
-
-.feedback
-  position: fixed
-  z-index: 98
-  top: 0
-  left: -700px
-  width: 633px
-  min-height: 400px
-  height: 100%
-  background-color: white
-  text-align: center
-  box-shadow: 2px -1px 5px rgba(0, 0, 0, 0.25)
-  will-change: left
-  transition: left .5s ease-in-out
-
-.feedback_visible
-  left: 333px
-
-.feedback_visible_right
-  left: auto
-  right: -700px
-  margin-right: 700px
-  will-change: margin-right
-  transition: margin-right .5s ease-in-out
-
-.feedback__close
-  position: absolute
-  top: 20px
-  right: 20px
-  width: 21px
-  height: 21px
-  background: url(sprite.png) 0 -130px no-repeat
-  opacity: .7
-  cursor: pointer
-  transition: opacity .2s ease-in-out
-  &:hover
-    opacity: 1
-
-.feedback__content
-  padding: 5%
-  height: 90%
-  text-align: center
-
-.feedback-content
-  display: inline-block
-  vertical-align: middle
-  width: 470px
-
-.feedback-content__form
-  position: relative
-
-.feedback-content-form
-  position: relative
-
-.overlay
-  display: block
-  visibility: hidden
-  position: fixed
-  z-index: 96
-  top: 0
-  left: -100%
-  width: 100%
-  height: 100%
-  background-color: rgba(0, 0, 0, 0.75)
-  opacity: 0
-  will-change: opacity
-  transition: all 0s .3s, opacity .3s ease-in-out
-
-._index-page
-  .cases-content-list-item-meta__year
-    display: none
-    width: 0
-  .cases-content-list-item-meta__header
-    width: 100%
-  .cases-content-list-item__meta
-    bottom: 0
-
-.cases-content-list._listLength-3
-  position: relative
-  height: 100%
-  &:after
-    content: ''
-    display: block
-    width: 10px
-    height: 100%
-    position: absolute
-    z-index: 5
-    top: 0
-    left: -10px
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2)
-  .cases-content-list__item
-    position: relative
-    width: 100%
-    height: 33.3333%
-  .cases-content-list-item
-    height: 100%
-  .cases-content-list-item__image
-    height: 100%
-
-  @media screen and (max-width: 900px)
-    overflow: hidden
-    &:after
-      display: none
-    .cases-content-list__item
-      width: 50%
-      height: 100%
-    .cases-content-list-item__meta
-      bottom: 0
-    .cases-content-list-item-meta__year
-      display: none
-    .cases-content-list-item-meta__header
-      width: 100%
-
-  @media screen and (max-width: 600px)
-    .cases-content-list__item
-      width: 100%
-
-.cases-content-list
-  width: 100%
-  font-size: 0
-  overflow: hidden
-  &:hover .cases-content-list-item__bg
-    opacity: .55
-
-.cases-content-list__item
-  position: relative
-  width: 33.33%
-  height: 310px
-  display: block
-  float: left
-  vertical-align: top
-  font-size: 16px
-  overflow: hidden
-  background-color: #000
-
-.cases-content-list-item
-  display: block
-  position: relative
-  &:hover > .cases-content-list-item__meta
-    bottom: 0
-  &:hover > .cases-content-list-item__bg
-    opacity: 0
-
-.cases-content-list-item__image
-  position: relative
-  width: 100%
-  height: 310px
-  background-position: 50% 50%
-  background-repeat: no-repeat
-  background-size: cover
-
-.cases-content-list-item__meta
-  position: absolute
-  width: 100%
-  bottom: -100%
-  left: 0
-  background-color: #ff4f4f
-  color: white
-  z-index: 1
-  transition: bottom .35s ease-in-out
-
-.cases-content-list-item-meta
-  position: relative
-
-.cases-content-list-item-meta__year
-  display: inline-block
-  vertical-align: middle
-  font-size: 50px
-  font-family: 'Dgt Condensed'
-  width: 17%
-  text-align: center
-  padding: 0 1%
-
-.cases-content-list-item-meta__header
-  display: inline-block
-  vertical-align: middle
-  width: 80%
-  border-left: 1px solid #e94242
-  padding: 4.75% 0 4.75% 5%
-
-.cases-content-list-item-meta-header
-  position: relative
-
-.cases-content-list-item-meta-header__title
-  font-family: 'Dgt Condensed'
-  font-size: 2.5em
-  line-height: .85em
-
-.cases-content-list-item-meta-header__subtitle
-  display: inline-block
-  line-height: .9em
-  font-size: 1em
-  padding-right: 8px
-  margin-right: 5px
-  border-right: 1px solid white
-  &:last-child
-    border-right: 0
-
-.cases-content-list-item__bg
-  position: absolute
-  left: 0
-  top: 0
-  width: 100%
-  height: 100%
-  background-color: #000
-  opacity: 0
-  transition: opacity .25s ease
-  z-index: 2
-
-@media screen and (max-width: 900px)
-  .cases-content-list__item
-    width: 50%
-
-  .cases-content-list-item-meta-header__title
-    font-size: 36px
-    line-height: 37px
-
-  .cases-content-list-item-meta-header__subtitle
-    font-size: 15px
-    line-height: 21px
-
-@media screen and (max-width: 600px)
-  .cases-content-list__item
-    width: 100%
-    float: none
-    height: 250px
-
-  .cases-content-list-item__image
-    height: 250px
-
-  .cases-content-list-item-meta__header
-    padding: 14px 20px
+/* Blocks start */
 
 ._white .header-block
   .header-block__title
@@ -733,14 +148,6 @@ button, input
 .contacts-block
   position: relative
   line-height: 1
-
-._dark .contacts-block
-  svg 
-    fill: #373737
-  .contacts-block__address, .contacts-block__phone
-    color: #373737
-    &:hover
-      color: #373737
 
 .contacts-block svg
   fill: #fff
@@ -796,6 +203,14 @@ button, input
     margin: -1px 7px 0 0
     background: url(icon_email.png) 0px 0px no-repeat
 
+.contacts-block_dark
+  svg 
+    fill: #373737
+  .contacts-block__address, .contacts-block__phone
+    color: #373737
+    &:hover
+      color: #373737
+
 @media screen and (max-width: 1600px)
   .contacts-block__address
     font-size: 15px
@@ -805,6 +220,8 @@ button, input
 
   .contacts-block__mail
     font-size: 15px
+
+// TODO!!
 
 ._light .social-block
   
@@ -1151,3 +568,580 @@ button, input
     color: #fff
   &:hover
     background-color: #e73636
+
+/* Blocks end */
+
+.page
+  position: relative
+
+.logo
+  display: block
+  position: fixed
+  z-index: 96
+  top: 0
+  left: 0
+  width: 88px
+  height: 88px
+  background: #ff4f4f url(logo.png) 50% 50% no-repeat
+  background-size: 58px
+  cursor: pointer
+  animation: logo 6s linear infinite
+  transition: all .15s ease-in-out
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    left: 25px
+    top: 31px
+    width: 1.3em
+    height: 0
+    opacity: 0
+    background: white
+    box-shadow: 0 0.39em 0 0 white, 0 0.78em 0 0 white
+    font-size: 28px
+    animation: navicon 6s linear infinite
+
+  &:hover
+    animation: none
+    background-size: 0
+
+  &:hover:after
+    height: .1em
+    opacity: 1
+    animation: none
+
+  @keyframes logo
+    47%
+      background-size: 58px
+    50%
+      background-size: 0
+    97%
+      background-size: 0
+    100%
+      background-size: 58px
+
+  @keyframes navicon
+    47%
+      height: 0
+      opacity: 1
+    50%
+      height: .1em
+    97%
+      height: .1em
+    100%
+      height: 0
+      opacity: 0
+
+@media screen and (max-width: 1100px)
+  .logo
+    width: 75px
+    height: 75px
+    background-size: 50px
+
+    &:after
+      left: 19px
+      top: 25px
+
+    @keyframes logo
+      47%
+        background-size: 50px
+      50%
+        background-size: 0
+      97%
+        background-size: 0
+      100%
+        background-size: 50px
+
+@media screen and (max-width: 900px)
+  .logo
+    position: fixed
+    width: 50px
+    height: 50px
+    background-size: 35px
+    border-bottom: 1px solid rgba(255, 255, 255, .19)
+    &:after
+      left: 11px
+      top: 17px
+      width: 26px
+      font-size: 20px
+    @keyframes logo
+      47%
+        background-size: 35px
+      50%
+        background-size: 0
+      97%
+        background-size: 0
+      100%
+        background-size: 35px
+
+.bar
+  position: fixed
+  display: none
+  top: 0
+  right: 0
+  width: 100%
+  height: 50px
+  margin-left: 50px
+  background-color: #ff4e4e
+  z-index: 96
+  border-bottom: 1px solid rgba(255, 255, 255, .19)
+
+.bar__phone
+  display: block
+  position: absolute
+  right: 15px
+  font-family: "Dgt Condensed"
+  color: #fff
+  font-weight: 400
+  text-decoration: none
+  font-size: 22px
+  line-height: 50px
+  text-align: right
+  &:hover, &:visited
+    color: #fff
+
+@media screen and (max-width: 900px)
+  .bar
+    display: block
+
+.menu-toggler
+  display: none
+  user-select: none
+
+.menu-toggler:checked ~ .nav
+  left: 0
+
+.menu-toggler:checked ~ .info
+  left: 333px
+
+.menu-toggler:checked ~ .overlay
+  opacity: 1
+  left: 0
+  visibility: visible
+  transition: opacity .3s ease-in-out
+
+.menu-toggler:checked ~ .close
+  opacity: 1
+  visibility: visible
+  transition: opacity .75s ease-in-out
+
+.menu-toggler:not(:checked) ~ .feedback
+  left: -700px
+
+@media screen and (max-width: 900px)
+  .menu-toggler:checked ~ .nav
+    top: 0
+
+  .menu-toggler:checked ~ .info
+    left: 0
+    top: 458px
+  
+  .menu-toggler:checked ~ .overlay
+    opacity: 0
+    visibility: none
+
+@media screen and (max-width: 600px)
+  .menu-toggler:checked ~ .info
+    top: 423px
+
+.close
+  position: fixed
+  top: 20px
+  left: 20px
+  width: 21px
+  height: 21px
+  background: url(sprite.png) 0 0 no-repeat
+  cursor: pointer
+  z-index: 100
+  visibility: hidden
+  opacity: 0
+  user-select: none
+  transition: all 0s .3s, opacity .3s ease-in-out
+
+@media screen and (max-width: 900px)
+  .close
+    top: 15px
+    left: 15px
+
+@media screen and (max-width: 600px)
+  .close
+    top: 13px
+
+.nav
+  position: fixed
+  z-index: 99
+  top: 0
+  left: -350px
+  height: 100%
+  min-height: 510px
+  width: 333px
+  background-color: #ff4f4f
+  will-change: left
+  user-select: none
+  transition: left .3s ease-in-out
+
+.nav-menu
+  margin-top: 40%
+  
+.nav-menu__item
+  display: block
+  width: 100%
+  border-bottom: 1px solid #ed4a4a
+  &:first-child
+    border-top: 1px solid #ed4a4a
+
+.nav-menu__link
+  display: block
+  font: 16px/45px "Roboto Condensed"
+  color: white
+  height: 45px
+  margin-left: 20px
+  text-transform: uppercase
+  &:visited, &:active, &:focus, &:focus-within
+    color: white
+
+.nav-actions
+  width: 100%
+  position: absolute
+  bottom: 0
+  left: 0
+
+.nav-actions__link
+  display: block
+  height: 50px
+  padding-left: 20px
+  line-height: 50px
+  font-size: 16px
+  cursor: pointer
+  color: white
+  border-top: 1px solid #cb3d3d
+  background-color: #e73636
+  transition: background-color .2s ease-in-out
+  &:hover
+    color: white
+    background-color: #de2828
+  &:visited, &:active, &:focus, &:focus-within
+    color: white
+
+@media screen and (max-width: 900px)
+  .nav
+    position: fixed
+    top: -480px
+    left: 0
+    width: 100%
+    height: 408px
+    min-height: 0
+    transition: top .3s ease-in-out
+    border-bottom: 1px solid rgba(255, 255, 255, .19)
+
+  .nav-menu
+    margin: 50px 0 105px 0
+    text-align: center
+
+  .nav-menu__link
+    height: 50px
+    line-height: 50px
+    margin-left: 0
+
+  .nav-actions
+    display: none
+
+@media screen and (max-width: 600px)
+  .nav
+    height: 369px
+
+  .nav-menu
+    margin: 46px 0 0
+
+  .nav-menu__link
+    height: 45px
+    line-height: 45px
+
+.info
+  position: fixed
+  z-index: 97
+  top: 0
+  left: -700px
+  width: 633px
+  min-height: 480px
+  height: 100%
+  background-color: white
+  box-shadow: 2px -1px 5px rgba(0, 0, 0, 0.25)
+  text-align: center
+  opacity: 1
+  will-change: left
+  transition: left .5s ease-in-out
+  
+.info-content
+  position: relative
+  width: 80%
+  position: absolute
+  top: 20%
+  left: 10%
+
+.info-content__desc
+  font-size: 17px
+  line-height: 23px
+  margin: 20px 0 5px 0
+
+.info-content__social-block
+  margin-top: 20px
+
+.info__contacts-block
+  position: absolute
+  bottom: 15px
+  width: 100%
+
+@media screen and (max-width: 1600px) and (min-width: 1100px)
+  .info-content__desc
+    font-size: 15px
+    line-height: 21px
+    margin: 17px 0 5px 0
+
+@media screen and (max-width: 1100px) and (min-width: 900px)
+  .info
+    width: 550px
+
+  .info-content__desc
+    font-size: 15px
+    line-height: 21px
+    margin: 17px 0 5px 0
+
+@media screen and (max-width: 900px)
+  .info
+    display: none
+
+.feedback
+  position: fixed
+  z-index: 98
+  top: 0
+  left: -700px
+  width: 633px
+  min-height: 400px
+  height: 100%
+  background-color: white
+  text-align: center
+  box-shadow: 2px -1px 5px rgba(0, 0, 0, 0.25)
+  will-change: left
+  transition: left .5s ease-in-out
+
+.feedback_visible
+  left: 333px
+
+.feedback_visible_right
+  left: auto
+  right: -700px
+  margin-right: 700px
+  will-change: margin-right
+  transition: margin-right .5s ease-in-out
+
+.feedback__close
+  position: absolute
+  top: 20px
+  right: 20px
+  width: 21px
+  height: 21px
+  background: url(sprite.png) 0 -130px no-repeat
+  opacity: .7
+  cursor: pointer
+  transition: opacity .2s ease-in-out
+  &:hover
+    opacity: 1
+
+.feedback__content
+  padding: 5%
+  height: 90%
+  text-align: center
+
+.feedback-content
+  display: inline-block
+  vertical-align: middle
+  width: 470px
+
+.feedback-content__form
+  position: relative
+
+.feedback-content-form
+  position: relative
+
+.overlay
+  display: block
+  visibility: hidden
+  position: fixed
+  z-index: 96
+  top: 0
+  left: -100%
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.75)
+  opacity: 0
+  will-change: opacity
+  transition: all 0s .3s, opacity .3s ease-in-out
+
+// TODO!!!!
+
+._index-page
+  .cases-content-list-item-meta__year
+    display: none
+    width: 0
+  .cases-content-list-item-meta__header
+    width: 100%
+  .cases-content-list-item__meta
+    bottom: 0
+
+.cases-content-list._listLength-3
+  position: relative
+  height: 100%
+  &:after
+    content: ''
+    display: block
+    width: 10px
+    height: 100%
+    position: absolute
+    z-index: 5
+    top: 0
+    left: -10px
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2)
+  .cases-content-list__item
+    position: relative
+    width: 100%
+    height: 33.3333%
+  .cases-content-list-item
+    height: 100%
+  .cases-content-list-item__image
+    height: 100%
+
+  @media screen and (max-width: 900px)
+    overflow: hidden
+    &:after
+      display: none
+    .cases-content-list__item
+      width: 50%
+      height: 100%
+    .cases-content-list-item__meta
+      bottom: 0
+    .cases-content-list-item-meta__year
+      display: none
+    .cases-content-list-item-meta__header
+      width: 100%
+
+  @media screen and (max-width: 600px)
+    .cases-content-list__item
+      width: 100%
+
+.cases-content-list
+  width: 100%
+  font-size: 0
+  overflow: hidden
+  &:hover .cases-content-list-item__bg
+    opacity: .55
+
+.cases-content-list__item
+  position: relative
+  width: 33.33%
+  height: 310px
+  display: block
+  float: left
+  vertical-align: top
+  font-size: 16px
+  overflow: hidden
+  background-color: #000
+
+.cases-content-list-item
+  display: block
+  position: relative
+  &:hover > .cases-content-list-item__meta
+    bottom: 0
+  &:hover > .cases-content-list-item__bg
+    opacity: 0
+
+.cases-content-list-item__image
+  position: relative
+  width: 100%
+  height: 310px
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  background-size: cover
+
+.cases-content-list-item__meta
+  position: absolute
+  width: 100%
+  bottom: -100%
+  left: 0
+  background-color: #ff4f4f
+  color: white
+  z-index: 1
+  transition: bottom .35s ease-in-out
+
+.cases-content-list-item-meta
+  position: relative
+
+.cases-content-list-item-meta__year
+  display: inline-block
+  vertical-align: middle
+  font-size: 50px
+  font-family: 'Dgt Condensed'
+  width: 17%
+  text-align: center
+  padding: 0 1%
+
+.cases-content-list-item-meta__header
+  display: inline-block
+  vertical-align: middle
+  width: 80%
+  border-left: 1px solid #e94242
+  padding: 4.75% 0 4.75% 5%
+
+.cases-content-list-item-meta-header
+  position: relative
+
+.cases-content-list-item-meta-header__title
+  font-family: 'Dgt Condensed'
+  font-size: 2.5em
+  line-height: .85em
+
+.cases-content-list-item-meta-header__subtitle
+  display: inline-block
+  line-height: .9em
+  font-size: 1em
+  padding-right: 8px
+  margin-right: 5px
+  border-right: 1px solid white
+  &:last-child
+    border-right: 0
+
+.cases-content-list-item__bg
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: #000
+  opacity: 0
+  transition: opacity .25s ease
+  z-index: 2
+
+@media screen and (max-width: 900px)
+  .cases-content-list__item
+    width: 50%
+
+  .cases-content-list-item-meta-header__title
+    font-size: 36px
+    line-height: 37px
+
+  .cases-content-list-item-meta-header__subtitle
+    font-size: 15px
+    line-height: 21px
+
+@media screen and (max-width: 600px)
+  .cases-content-list__item
+    width: 100%
+    float: none
+    height: 250px
+
+  .cases-content-list-item__image
+    height: 250px
+
+  .cases-content-list-item-meta__header
+    padding: 14px 20px

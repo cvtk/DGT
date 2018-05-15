@@ -1,53 +1,39 @@
 <div class="nav">
-  <div class="nav__menu">
-    <ul class="nav-menu">
-      <li class="nav-menu__item">
-        <a href="/" class="nav-menu__link" title="DIGIT Главная">Главная</a>
-      </li>
-      <li class="nav-menu__item">
-        <a href="/services" class="nav-menu__link" title="DIGIT Услуги">Услуги</a>
-      </li>
-      <li class="nav-menu__item">
-        <a href="/about" class="nav-menu__link" title="DIGIT Компания">Компания</a>
-      </li>
-      <li class="nav-menu__item">
-        <a href="/cases" class="nav-menu__link" title="DIGIT Кейсы">Кейсы</a>
-      </li>
-      <li class="nav-menu__item">
-        <a href="/blog" class="nav-menu__link" title="DIGIT Блог">Блог</a>
-      </li>
-      <li class="nav-menu__item">
-        <a href="/contacts" class="nav-menu__link" title="DIGIT Контакты">Контакты</a>
-      </li>
-    </ul>
-  </div>
-  <div class="nav__actions">
-    <ul class="nav-actions">
-      <li class="nav-actions__item">
-        <span class="nav-actions__link" title="Отправить заявку / письмо">Отправить заявку / письмо</span>
-      </li>
-      <li class="nav-actions__item">
-        <a class="nav-actions__link" target="_blank" download title="Скачать pdf-презентацию">Скачать pdf-презентацию</a>
-      </li>
-    </ul>
+  <ul class="nav-menu">
+    <li class="nav-menu__item">
+      <a href="/" class="nav-menu__link" title="DIGIT Главная">Главная</a>
+    </li>
+    <li class="nav-menu__item">
+      <a href="/services" class="nav-menu__link" title="DIGIT Услуги">Услуги</a>
+    </li>
+    <li class="nav-menu__item">
+      <a href="/about" class="nav-menu__link" title="DIGIT Компания">Компания</a>
+    </li>
+    <li class="nav-menu__item">
+      <a href="/cases" class="nav-menu__link" title="DIGIT Кейсы">Кейсы</a>
+    </li>
+    <li class="nav-menu__item">
+      <a href="/blog" class="nav-menu__link" title="DIGIT Блог">Блог</a>
+    </li>
+    <li class="nav-menu__item">
+      <a href="/contacts" class="nav-menu__link" title="DIGIT Контакты">Контакты</a>
+    </li>
+  </ul>
+  <div class="nav-actions">
+    <a href="/#request" class="nav-actions__link" title="Отправить заявку / письмо">Отправить заявку / письмо</a>
+    <a href="/" class="nav-actions__link" target="_blank" download title="Скачать pdf-презентацию">Скачать pdf-презентацию</a>
   </div>
 </div>
 <div class="info">
-  <div class="info__content">
-    <div class="info-content">
-      <div class="info-content__header-block">
-        <div class="header-block">
-          <h3 class="header-block__title">Цифровые идеи<br>для бизнеса</h3>
-          <h4 class="header-block__subtitle">Работаем с 2004</h4>
-        </div>
-      </div>
-      <p class="info-content__desc">
-        MST — <a href="/agency/">full service digital agency</a>. Качество <a href="/services/">наших услуг</a> проверено временем — мы работаем с <a href="/portfolio/">ведущими брендами</a> уже 13 лет. В нашей команде: более 80 талантов, большой опыт и почти неограниченные возможности. Мы занимаем 7-е место в рейтинге ведущих компаний, входим в группу компаний Red Keds.
-      </p>
-      <div class="info-content__social-block">{{> social-block }}</div>
+  <div class="info-content">
+    <div class="header-block">
+      <h3 class="header-block__title">Цифровые идеи<br>для бизнеса</h3>
+      <h4 class="header-block__subtitle">Работаем с 2004</h4>
     </div>
+    <p class="info-content__desc">MST — <a href="/agency/">full service digital agency</a>. Качество <a href="/services/">наших услуг</a> проверено временем — мы работаем с <a href="/portfolio/">ведущими брендами</a> уже 13 лет. В нашей команде: более 80 талантов, большой опыт и почти неограниченные возможности. Мы занимаем 7-е место в рейтинге ведущих компаний, входим в группу компаний Red Keds.</p>
+    {{> social-block class="info-content__social-block" }}
   </div>
-  <div class="info__contacts-block _dark">{{> contacts-block }}</div>
+  {{> contacts-block class="contacts-block_dark info__contacts-block"}}
 </div>
 <div class="feedback">
   <div class="feedback__close"></div>

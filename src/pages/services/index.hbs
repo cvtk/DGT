@@ -21,11 +21,11 @@ layout: default.hbs
       <div class="services-content__middleline"></div>
       <div class="services-content__wrap">
         <div class="services-item">
-          <h3 class="services-item__title">{{ title }}</h2>
+          <h3 class="services-item__title">{{ title }}</h3>
           <p class="services-item__description">{{ description }}</p>
           <h5 class="services-item__cases">Лучшие кейсы</h5>
           {{#each @root.tags}}{{#is tag ../title}}{{#pages}}
-            <a href="/{{relativeLink}}" class="tag services-item__tag" title="{{data.title}}">{{data.title}}</a>
+            <a href="/{{ relativeLink }}" class="tag services-item__tag" title="{{ data.title }}">{{ data.title }}</a>
           {{/pages}}{{/is}}{{/each}}
         </div>
       </div>
