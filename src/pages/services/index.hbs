@@ -4,229 +4,45 @@ shortname: services
 layout: default.hbs
 ---
 
+<h1 class="services-title">{{ services.title }}</h1>
 <div class="services-nav">
-  <h1 class="services-nav__title">Основные услуги</h1>
-  <div class="services-nav__categories">
-    <ul class="services-nav-categories">
-      <li class="services-nav-categories__item">
-        <button class="services-nav-categories__button services-nav-categories__button_1 services-nav-categories__button_active" title="Обслуживание рабочих мест" data-ctn="Обслуживание-рабочих-мест">Обслуживание<br>рабочих мест</button>
-      </li>
-      <li class="services-nav-categories__item">
-        <button class="services-nav-categories__button services-nav-categories__button_2" title="Администрирование серверов" data-ctn="Администрирование-серверов">Администрирование<br>серверов</button>
-      </li>
-      <li class="services-nav-categories__item">
-        <button class="services-nav-categories__button services-nav-categories__button_3" title="Поддержка оргтехники" data-ctn="Поддержка-оргтехники">Поддержка<br>оргтехники</button>
-      </li>
-      <li class="services-nav-categories__item">
-        <button class="services-nav-categories__button services-nav-categories__button_4" title="IP-телефония" data-ctn="IP-телефония">IP-телефония</button>
-      </li>
-      <li class="services-nav-categories__item">
-        <button class="services-nav-categories__button services-nav-categories__button_5" title="Монтаж и настройка сети" data-ctn="Монтаж-и-настройка-сети">Монтаж и<br>настройка сети</button>
-      </li>
-      <li class="services-nav-categories__item">
-        <button class="services-nav-categories__button services-nav-categories__button_6" title="Web-разработка" data-ctn="Web-разработка">Web-разработка</button>
-      </li>
-      <li class="services-nav-categories__item">
-        <button class="services-nav-categories__button services-nav-categories__button_7" title="Seo-продвижение" data-ctn="Seo-продвижение">Seo-продвижение</button>
-      </li>
-      <li class="services-nav-categories__item">
-        <button class="services-nav-categories__button services-nav-categories__button_8" title="Внедрение и поддержка ПО" data-ctn="Внедрение-и-поддержка-ПО">Внедрение и<br>поддержка ПО</button>
-      </li>
-      <li class="services-nav-categories__item">
-        <button class="services-nav-categories__button services-nav-categories__button_9" title="Безопасность" data-ctn="Безопасность">Безопасность</button>
-      </li>
-    </ul>
-  </div>
+  <ul class="services-nav__items">
+    {{#each services.items }}
+    <li class="services-nav__item">
+      <button class="services-btn services-btn_type-{{ id }}" title="{{ title }}" data-ctn="{{ anchor }}">{{ title }}</button>
+    </li>
+    {{/each}}
+  </ul>
 </div>
 <div class="services-content">
-  <div class="services-content__categories">
-    <div class="services-content-categories">
-      <div class="services-content-categories__item" data-ctgr="Обслуживание-рабочих-мест">
-        <div class="services-content-categories-item">
-          <div class="services-content-categories-item__desc">
-            <div class="services-content-categories-item-desc_middle-line"></div>
-            <div class="services-content-categories-item-desc">
-              <h3 class="services-content-categories-item-desc__title">Обслуживание рабочих мест</h3>
-              <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
-              <div class="services-content-categories-item-desc__clients">
-                <div class="services-content-categories-item-desc-clients">
-                  <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
-                  {{#tags}}{{#is tag "Обслуживание рабочих мест"}}{{#pages}}
-                    <a href="/{{relativeLink}}" class="services-content-categories-item-desc-clients__name" title={{data.title}}>{{data.title}}</a>
-                  {{/pages}}{{/is}}{{/tags}}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="services-content-categories-item__cases-context-list">{{#tags}}{{#is tag "Обслуживание рабочих мест"}}{{> cases-content-list listLength=3 obj=pages}}{{/is}}{{/tags}}</div>
-        </div>
-      </div>
-      <div class="services-content-categories__item" data-ctgr="Администрирование-серверов">
-        <div class="services-content-categories-item">
-          <div class="services-content-categories-item__desc">
-            <div class="services-content-categories-item-desc_middle-line"></div>
-            <div class="services-content-categories-item-desc">
-              <h3 class="services-content-categories-item-desc__title">Администрирование серверов</h3>
-              <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
-              <div class="services-content-categories-item-desc__clients">
-                <div class="services-content-categories-item-desc-clients">
-                  <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
-                  {{#tags}}{{#is tag "Администрирование серверов"}}{{#pages}}
-                    <a href="/{{relativeLink}}" class="services-content-categories-item-desc-clients__name" title={{data.title}}>{{data.title}}</a>
-                  {{/pages}}{{/is}}{{/tags}}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="services-content-categories-item__cases-context-list">{{#tags}}{{#is tag "Администрирование серверов"}}{{> cases-content-list listLength=3 obj=pages}}{{/is}}{{/tags}}</div>
-        </div>
-      </div>
-      <div class="services-content-categories__item" data-ctgr="Поддержка-оргтехники">
-        <div class="services-content-categories-item">
-          <div class="services-content-categories-item__desc">
-            <div class="services-content-categories-item-desc_middle-line"></div>
-            <div class="services-content-categories-item-desc">
-              <h3 class="services-content-categories-item-desc__title">Поддержка оргтехники</h3>
-              <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
-              <div class="services-content-categories-item-desc__clients">
-                <div class="services-content-categories-item-desc-clients">
-                  <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
-                  {{#tags}}{{#is tag "Поддержка оргтехники"}}{{#pages}}
-                    <a href="/{{relativeLink}}" class="services-content-categories-item-desc-clients__name" title={{data.title}}>{{data.title}}</a>
-                  {{/pages}}{{/is}}{{/tags}}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="services-content-categories-item__cases-context-list">{{#tags}}{{#is tag "Поддержка оргтехники"}}{{> cases-content-list listLength=3 obj=pages}}{{/is}}{{/tags}}</div>
-        </div>
-      </div>
-      <div class="services-content-categories__item" data-ctgr="IP-телефония">
-        <div class="services-content-categories-item">
-          <div class="services-content-categories-item__desc">
-            <div class="services-content-categories-item-desc_middle-line"></div>
-            <div class="services-content-categories-item-desc">
-              <h3 class="services-content-categories-item-desc__title">IP-телефония</h3>
-              <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
-              <div class="services-content-categories-item-desc__clients">
-                <div class="services-content-categories-item-desc-clients">
-                  <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
-                  {{#tags}}{{#is tag "IP-телефония"}}{{#pages}}
-                    <a href="/{{relativeLink}}" class="services-content-categories-item-desc-clients__name" title={{data.title}}>{{data.title}}</a>
-                  {{/pages}}{{/is}}{{/tags}}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="services-content-categories-item__cases-context-list">{{#tags}}{{#is tag "IP-телефония"}}{{> cases-content-list listLength=3 obj=pages}}{{/is}}{{/tags}}</div>
-        </div>
-      </div>
-      <div class="services-content-categories__item" data-ctgr="Монтаж-и-настройка-сети">
-        <div class="services-content-categories-item">
-          <div class="services-content-categories-item__desc">
-            <div class="services-content-categories-item-desc_middle-line"></div>
-            <div class="services-content-categories-item-desc">
-              <h3 class="services-content-categories-item-desc__title">Монтаж и настройка сети</h3>
-              <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
-              <div class="services-content-categories-item-desc__clients">
-                <div class="services-content-categories-item-desc-clients">
-                  <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
-                  {{#tags}}{{#is tag "Монтаж и настройка сети"}}{{#pages}}
-                    <a href="/{{relativeLink}}" class="services-content-categories-item-desc-clients__name" title={{data.title}}>{{data.title}}</a>
-                  {{/pages}}{{/is}}{{/tags}}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="services-content-categories-item__cases-context-list">{{#tags}}{{#is tag "Монтаж и настройка сети"}}{{> cases-content-list listLength=3 obj=pages}}{{/is}}{{/tags}}</div>
-        </div>
-      </div>
-      <div class="services-content-categories__item" data-ctgr="Web-разработка">
-        <div class="services-content-categories-item">
-          <div class="services-content-categories-item__desc">
-            <div class="services-content-categories-item-desc_middle-line"></div>
-            <div class="services-content-categories-item-desc">
-              <h3 class="services-content-categories-item-desc__title">Web-разработка</h3>
-              <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
-              <div class="services-content-categories-item-desc__clients">
-                <div class="services-content-categories-item-desc-clients">
-                  <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
-                  {{#tags}}{{#is tag "Web-разработка"}}{{#pages}}
-                    <a href="/{{relativeLink}}" class="services-content-categories-item-desc-clients__name" title={{data.title}}>{{data.title}}</a>
-                  {{/pages}}{{/is}}{{/tags}}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="services-content-categories-item__cases-context-list">{{#tags}}{{#is tag "Web-разработка"}}{{> cases-content-list listLength=3 obj=pages}}{{/is}}{{/tags}}</div>
-        </div>
-      </div>
-      <div class="services-content-categories__item" data-ctgr="Seo-продвижение">
-        <div class="services-content-categories-item">
-          <div class="services-content-categories-item__desc">
-            <div class="services-content-categories-item-desc_middle-line"></div>
-            <div class="services-content-categories-item-desc">
-              <h3 class="services-content-categories-item-desc__title">Seo-продвижение</h3>
-              <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
-              <div class="services-content-categories-item-desc__clients">
-                <div class="services-content-categories-item-desc-clients">
-                  <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
-                  {{#tags}}{{#is tag "Seo-продвижение"}}{{#pages}}
-                    <a href="/{{relativeLink}}" class="services-content-categories-item-desc-clients__name" title={{data.title}}>{{data.title}}</a>
-                  {{/pages}}{{/is}}{{/tags}}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="services-content-categories-item__cases-context-list">{{#tags}}{{#is tag "Seo-продвижение"}}{{> cases-content-list listLength=3 obj=pages}}{{/is}}{{/tags}}</div>
-        </div>
-      </div>
-      <div class="services-content-categories__item" data-ctgr="Внедрение-и-поддержка-ПО">
-        <div class="services-content-categories-item">
-          <div class="services-content-categories-item__desc">
-            <div class="services-content-categories-item-desc_middle-line"></div>
-            <div class="services-content-categories-item-desc">
-              <h3 class="services-content-categories-item-desc__title">Внедрение и поддержка ПО</h3>
-              <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
-              <div class="services-content-categories-item-desc__clients">
-                <div class="services-content-categories-item-desc-clients">
-                  <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
-                  {{#tags}}{{#is tag "Внедрение и поддержка ПО"}}{{#pages}}
-                    <a href="/{{relativeLink}}" class="services-content-categories-item-desc-clients__name" title={{data.title}}>{{data.title}}</a>
-                  {{/pages}}{{/is}}{{/tags}}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="services-content-categories-item__cases-context-list">{{#tags}}{{#is tag "Внедрение и поддержка ПО"}}{{> cases-content-list listLength=3 obj=pages}}{{/is}}{{/tags}}</div>
-        </div>
-      </div>
-      <div class="services-content-categories__item" data-ctgr="Безопасность">
-        <div class="services-content-categories-item">
-          <div class="services-content-categories-item__desc">
-            <div class="services-content-categories-item-desc_middle-line"></div>
-            <div class="services-content-categories-item-desc">
-              <h3 class="services-content-categories-item-desc__title">Безопасность</h3>
-              <p class="services-content-categories-item-desc__text">Разработка стратегий присутствия в интерактивной среде – одна из ведущих экспертиз агентства. Наши клиенты пользуются услугами стратегического планирования при выводе в digital нового бренда или продукта, повышении узнаваемости бренда и при решении других бизнес задач . На основе аналитики мы формулируем месседж и глобальную идею продукта, а также подготавливаем общую стратегию развития бренда, которая включает детальный коммуникационный план продвижения.</p>
-              <div class="services-content-categories-item-desc__clients">
-                <div class="services-content-categories-item-desc-clients">
-                  <h5 class="services-content-categories-item-desc-clients__title">Лучшие кейсы</h5>
-                  {{#tags}}{{#is tag "Безопасность"}}{{#pages}}
-                    <a href="/{{relativeLink}}" class="services-content-categories-item-desc-clients__name" title={{data.title}}>{{data.title}}</a>
-                  {{/pages}}{{/is}}{{/tags}}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="services-content-categories-item__cases-context-list">{{#tags}}{{#is tag "Безопасность"}}{{> cases-content-list listLength=3 obj=pages}}{{/is}}{{/tags}}</div>
+{{#each services.items }}
+  <div class="services-content__page" data-ctgr="{{anchor}}">
+    <div class="services-content__item">
+      <div class="services-content__middleline"></div>
+      <div class="services-content__wrap">
+        <div class="services-item">
+          <h3 class="services-item__title">{{ title }}</h2>
+          <p class="services-item__description">{{ description }}</p>
+          <h5 class="services-item__cases">Лучшие кейсы</h5>
+          {{#each @root.tags}}{{#is tag ../title}}{{#pages}}
+            <a href="/{{relativeLink}}" class="tag services-item__tag" title="{{data.title}}">{{data.title}}</a>
+          {{/pages}}{{/is}}{{/each}}
         </div>
       </div>
     </div>
+    <div class="services-content__cases">
+      {{#each @root.tags}}{{#is tag ../title}}
+        {{> cases-content-list listLength=3 obj=pages}}
+      {{/is}}{{/each}}</div>
   </div>
+{{/each}}
 </div>
 <div class="services-feedback">
-  <div class="services-feedback__toggler">
-    <div class="services-feedback-toggler" title="Оставить заявку">Оставить заявку</div>
+  <div class="services-feedback__wrap">
+    <div class="header-block services-feedback__header-block">
+      <h3 class="header-block__title">Цифровые идеи<br>для бизнеса</h3>
+      <h4 class="header-block__subtitle">Оставить заявку</h4>
+    </div>
   </div>
-  <a href="/" class="services-feedback__presentation" target="_blank" download title="Скачать презентацию">Скачать презентацию</a>
+  <a href="/" class="btn services-feedback__presentation" target="_blank" download title="Скачать презентацию">Скачать презентацию</a>
 </div>

@@ -554,6 +554,24 @@ button, input
   .cases-content-list-item__image
     height: 100%
 
+  @media screen and (max-width: 900px)
+    overflow: hidden
+    &:after
+      display: none
+    .cases-content-list__item
+      width: 50%
+      height: 100%
+    .cases-content-list-item__meta
+      bottom: 0
+    .cases-content-list-item-meta__year
+      display: none
+    .cases-content-list-item-meta__header
+      width: 100%
+
+  @media screen and (max-width: 600px)
+    .cases-content-list__item
+      width: 100%
+
 .cases-content-list
   width: 100%
   font-size: 0
@@ -1100,3 +1118,36 @@ button, input
   .feedback-block-form-button
     height: 45px
     font-size: 15px
+
+.tag
+  display: inline-block
+  vertical-align: top
+  font-size: 16px
+  border: 1px solid #dedede
+  border-radius: 3px
+  color: #c2c2c2
+  padding: 1px 8px
+  transition: border-color .2s ease-in-out, color .2s ease-in-out
+  &:visited, &:active, &:focus, &:focus-within
+    color: #c2c2c2
+    border-color: #dedede
+  &:hover
+    color: #a2a2a2
+    border-color: #bebebe
+  
+.btn
+  display: inline-block
+  font-size: 17px
+  line-height: 43px
+  background-color: #ff4f4f
+  padding: 0 10px
+  color: #fff
+  text-align: center
+  text-decoration: none
+  border: 0
+  cursor: pointer
+  transition: background-color .1s ease-in-out
+  &:visited, &:active, &:focus, &:focus-within
+    color: #fff
+  &:hover
+    background-color: #e73636

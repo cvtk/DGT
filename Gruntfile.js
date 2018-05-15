@@ -5,6 +5,7 @@ module.exports = function(grunt) {
     assemble: {
       options: {
         plugins: ['grunt-assemble-sitemap'],
+        data: 'src/data/*.json',
         partials: ['src/includes/*.hbs'],
         layoutdir: 'src/layouts',
         collections: [

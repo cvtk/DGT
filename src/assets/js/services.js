@@ -1,8 +1,7 @@
 (function() {
-  var navs = document.querySelectorAll('.services-nav-categories__button'),
-      pages = document.querySelectorAll('.services-content-categories__item'),
-      articles = document.querySelectorAll('.services-content-categories-item-news-article__image'),
-      feedbackToggler = document.querySelector('.services-feedback-toggler'),
+  var navs = document.querySelectorAll('.services-btn'),
+      pages = document.querySelectorAll('.services-content__page'),
+      feedbackToggler = document.querySelector('.services-feedback__header-block'),
       feedback = document.querySelector('.feedback'),
       feedbackClose = document.querySelector('.feedback__close'),
       overlay = document.querySelector('.overlay'),
@@ -21,7 +20,7 @@
             nav = document.querySelector('[data-ctn="' + ctgr + '"]');
         window.location.hash = ctgr;
         removeActiveClasses();
-        nav.classList.add('services-nav-categories__button_active');
+        nav.classList.add('services-btn_active');
         return;
       }
       scrollTo(to, duration - 10);
@@ -42,23 +41,9 @@
     }
   }
 
-  function fadeInArticles(e) {
-    [].forEach.call(articles, function(article) {
-      if ( article !== e.target ) {
-        article.classList.add('_overlay');
-      }
-    });
-  }
-
-  function fadeOutArticles() {
-    [].forEach.call(articles, function(article) {
-      article.classList.remove('_overlay');
-    });
-  }
-
   function removeActiveClasses() {
     [].forEach.call(navs, function(nav) {
-      nav.classList.remove('services-nav-categories__button_active');
+      nav.classList.remove('services-btn_active');
     });
   }
 
@@ -93,16 +78,11 @@
           target = document.querySelector('[data-ctgr="' + ctn + '"]');
       scrollTo( target, 250 );
       removeActiveClasses();
-      this.classList.add('services-nav-categories__button_active');
+      this.classList.add('services-btn_active');
       currentPage = [].reduce.call(pages, function(res, cur, i) {
         return ( cur.dataset.ctgr ===  ctn) ? i : res;
       }, 0);
     });
-  });
-
-  [].forEach.call(articles, function(article) {
-    article.addEventListener('mouseover', fadeInArticles);
-    article.addEventListener('mouseout', fadeOutArticles);
   });
   
   feedbackToggler.addEventListener('click', showFeedbackForm);
