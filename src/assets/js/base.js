@@ -2,63 +2,63 @@ function hasClass(el, cl) {
   return (' ' + el.className + ' ').indexOf(' ' + cl + ' ') > -1;
 }
 
-function _q(selector) {
-  if ( !selector && typeof(selector) !== 'string' ) return;
+// function _q(selector) {
+//   if ( !selector && typeof(selector) !== 'string' ) return;
 
-  var nodeList = document.querySelectorAll(selector),
-      array = Array.prototype.slice.call(nodeList);
+//   var nodeList = document.querySelectorAll(selector),
+//       array = Array.prototype.slice.call(nodeList);
 
-  if ( !array.length ) return;
+//   if ( !array.length ) return;
 
-  var containsClass = function(el, cl) {
-    return !!~el.className.split(/\s+/).indexOf(cl);
-  };
+//   var containsClass = function(el, cl) {
+//     return !!~el.className.split(/\s+/).indexOf(cl);
+//   };
 
-  var addClass = function(cl) {
-    array.forEach(function(el) {
-      if ( !containsClass(el, cl) ) {
-        el.className += ' ' + cl;
-      }
-    });
-  };
+//   var addClass = function(cl) {
+//     array.forEach(function(el) {
+//       if ( !containsClass(el, cl) ) {
+//         el.className += ' ' + cl;
+//       }
+//     });
+//   };
 
-  var toggleClass = function(el, cl) {
-    array.forEach(function(el) {
-      if ( containsClass(el, cl) ) {
-        var classes = el.className.split(/\s+/),
-            index = classes.indexOf(cl);
+//   var toggleClass = function(el, cl) {
+//     array.forEach(function(el) {
+//       if ( containsClass(el, cl) ) {
+//         var classes = el.className.split(/\s+/),
+//             index = classes.indexOf(cl);
 
-        el.className = classes.splice(index, 1).join(' ');
-      }
-      else {
-        el.className += ' ' + cl;
-      };
-    });
-  };
+//         el.className = classes.splice(index, 1).join(' ');
+//       }
+//       else {
+//         el.className += ' ' + cl;
+//       };
+//     });
+//   };
 
-  var removeClass = function(cl) {
-    array.forEach(function(el) {
-      if ( containsClass(el, cl) ) {
-        var classes = el.className.split(/\s+/),
-            index = classes.indexOf(cl);
-        el.className = classes.splice(index, 1).join(' ');
-      }
-    })
-  }
+//   var removeClass = function(cl) {
+//     array.forEach(function(el) {
+//       if ( containsClass(el, cl) ) {
+//         var classes = el.className.split(/\s+/),
+//             index = classes.indexOf(cl);
+//         el.className = classes.splice(index, 1).join(' ');
+//       }
+//     })
+//   }
 
-  var addEvent = function(event, handler) {
-    array.forEach(function(el) {
-      el.addEventListener(event, handler);
-    });
-  };
+//   var addEvent = function(event, handler) {
+//     array.forEach(function(el) {
+//       el.addEventListener(event, handler);
+//     });
+//   };
 
-  return {
-    nodeList: nodeList,
-    array: array,
-    addClass: 
-    click: function(handler) { return addEvent('click', handler); }
-  };
-}
+//   return {
+//     nodeList: nodeList,
+//     array: array,
+//     addClass: 
+//     click: function(handler) { return addEvent('click', handler); }
+//   };
+// }
 
 function queryBySelectorAll(selector) {
   return Array.prototype.slice.call( document.querySelectorAll(selector) );
@@ -224,19 +224,19 @@ function tinySwipe(args) {
   container.addEventListener('mousemove', onMouseMove, false);
 }
 
-(function() {
-  var feedback = _q('.feedback'),
-      feedbackToggler = _q('.nav-actions__link'),
-      feedbackClose = _q('.feedback__close');
+// (function() {
+//   var feedback = _q('.feedback'),
+//       feedbackToggler = _q('.nav-actions__link'),
+//       feedbackClose = _q('.feedback__close');
 
-  feedbackToggler.click(function() {
-    feedback.toggleClass('feedback_visible');
-  });
+//   feedbackToggler.click(function() {
+//     feedback.toggleClass('feedback_visible');
+//   });
 
-  feedbackClose.click(function() {
-    feedback.removeClass('feedback_visible');
-  });
-})();
+//   feedbackClose.click(function() {
+//     feedback.removeClass('feedback_visible');
+//   });
+// })();
 
 // (function() {
 //   function currentTime() { return Math.floor(Date.now() / 1000); }

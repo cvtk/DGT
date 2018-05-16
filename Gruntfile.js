@@ -71,6 +71,14 @@ module.exports = function(grunt) {
           flatten: true
         }]
       },
+      favicon: {
+        files:[{
+          dest: 'dist/',
+          src: 'src/assets/favicon/*.*',
+          expand: true,
+          flatten: true
+        }]
+      },
     },
 
     sass: {
