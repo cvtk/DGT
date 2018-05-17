@@ -38,12 +38,10 @@
 <div class="feedback">
   <div class="feedback__close"></div>
   <div class="feedback__content">
-    <div class="feedback-content">
-      <div class="feedback-content__form">
-        <form class="feedback-content-form" name="feedback-content-form" action="/" method="POST" enctype="multipart/form-data">
-          <input type="hidden" name="sessid" id="sessid" value="4c681f74d53714c7103704ad5519e400">
-        </form>
-      </div>
+    <div class="header-block">
+      <h3 class="header-block__title">Отправить заявку<br>или письмо</h3>
+      <h4 class="header-block__subtitle">Мы свяжемся с Вами в ближайшее время</h4>
     </div>
+    {{>form-block class="feedback__form form-block_nav" id="fna"}}
   </div>
 </div>

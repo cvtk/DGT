@@ -1399,28 +1399,86 @@
     margin: 0 20px 27px
     height: auto
 
-.index-content__feedback-block
+.index-content__client-feedback
+  position: relative
   height: 960px
   padding: 157px 0 0
-  background-image: url(/index-content-feedback.jpg)
+  background-image: url(/index-content__client-feedback.jpg)
   background-size: 2560px
   background-position: center bottom
+
+.client-feedback
+  margin: 0 auto
   position: relative
+  width: 412px
+  height: auto
+  z-index: 2
+  background-color: rgba(20, 20, 20, .75)
+  &:before
+    position: absolute
+    height: 100%
+    content: ''
+    width: 100%
+    top: 0
+    left: 0
+    display: block
+    z-index: 1
+    border: 2px solid #fff
+
+.client-feedback__title
+  position: relative
+  z-index: 1
+  color: #fff
+  text-align: center
+  padding: 45px 0
+  font: 400 55px/50px "Dgt Condensed"
+  text-transform: uppercase
+
+.client-feedback__form-block
+  z-index: 1
 
 @media screen and (max-width: 1600px) and (min-width: 1100px)
-  .index-content__feedback-block
+  .index-content__client-feedback
     height: 700px
     padding: 103px 0 0
 
+  .client-feedback
+    width: 322px
+
+  .client-feedback__title
+    padding: 33px 0
+    font-size: 45px
+    line-height: 40px
+
 @media screen and (max-width: 1100px) and (min-width: 900px)
-  .index-content__feedback-block
+  .index-content__client-feedback
     height: 650px
     padding: 35px 0 0
 
+  .client-feedback
+    width: 284px
+    &:before
+      border-width: 1px
+
+  .client-feedback__title
+    padding: 33px 0
+    font-size: 40px
+    line-height: 36px
+
 @media screen and (max-width: 900px)
-  .index-content__feedback-block
+  .index-content__client-feedback
     height: 735px
     padding: 50px 0 0
+
+  .client-feedback
+    width: 282px
+    &:before
+      border-width: 1px
+
+  .client-feedback__title
+    padding: 33px 0
+    font-size: 40px
+    line-height: 36px
 
 .index-content__footer
   position: absolute

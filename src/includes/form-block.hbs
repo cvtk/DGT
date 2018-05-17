@@ -1,0 +1,29 @@
+<form action="#" class="form-block{{#if class}} {{class}}{{/if}}" id="{{id}}">
+  <div class="form-block__wrap">
+    <input type="text" name="name" placeholder="Имя *" class="form-block__input">
+    <div class="form-block__info" title="Обязательное поле">?</div>
+  </div>
+  <div class="form-block__wrap">
+    <input type="email" name="email" placeholder="Email *" class="form-block__input">
+    <div class="form-block__info" title="Обязательное поле">?</div>
+  </div>
+  <div class="form-block__wrap">
+    <input type="text" name="phone" placeholder="Телефон" class="form-block__input">
+  </div>
+  <div class="form-block__wrap">
+    <textarea name="comment" placeholder="Комментарий" class="form-block__input form-block__input_comment"></textarea>
+  </div>
+  <div class="form-block__wrap">
+    <input name="personal" id="prs_{{id}}" placeholder="Согласие на обработку" type="checkbox" class="form-block__checkbox">
+    <label for="prs_{{id}}" class="form-block__label" title="Обязательное поле">Согласен(-на) на обработку персональных данных</label>
+    <div class="form-block__info" title="Обязательное поле">?</div>
+  </div>
+  <div class="form-block__wrap">
+    <input name="companies" id="cpns" type="checkbox" class="form-block__checkbox">
+    <label for="cpns" class="form-block__label">Юр.лицо</label>
+  </div>
+  <div class="form-block__wrap">
+    <button class="form-block__button" type="submit" data-frm="{{id}}">Отправить</button>
+  </div>
+</form>
+

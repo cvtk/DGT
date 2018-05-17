@@ -318,41 +318,10 @@ button, input
 .social-block__link._vk:hover:after
   background-position: -31px -41px
 
-.feedback-block
-  margin: 0 auto
-  position: relative
-  width: 412px
-  height: auto
-  z-index: 2
-  background-color: rgba(20, 20, 20, .75)
-  &:before
-    position: absolute
-    height: 100%
-    content: ''
-    width: 100%
-    top: 0
-    left: 0
-    display: block
-    z-index: 1
-    border: 2px solid #fff
-
-.feedback-block__header
-  position: relative
-  z-index: 1
-  color: #fff
-  text-align: center
-  padding: 45px 0
-  font: 400 55px/50px "Dgt Condensed"
-  text-transform: uppercase
-
-.feedback-block__form
-  position: relative
-  z-index: 1
-
-.feedback-block-form
+.form-block
   position: relative
 
-.feedback-block-form__input
+.form-block__wrap
   position: relative
   z-index: 1
   border: 2px solid rgba(255, 255, 255, .3)
@@ -361,7 +330,7 @@ button, input
   &:last-child
     border-top: 0
 
-.feedback-block-form-input
+.form-block__input
   position: relative
   z-index: 2
   height: 50px
@@ -369,12 +338,14 @@ button, input
   font-size: 16px
   background: 0 0
   color: #fff
-  &._comment
-    height: 100px
-    padding: 15px 20px
-    font-size: 16px
 
-.feedback-block-form-input-info
+.form-block__input_comment
+  height: 100px
+  padding: 15px 20px
+  font-size: 16px
+
+.form-block__info
+  display: none
   position: absolute
   top: 50%
   transform: translate(0,-50%)
@@ -392,28 +363,34 @@ button, input
   z-index: 3
   transition: border .6s ease-out, color .6s ease-out
 
-.feedback-block-form-checkbox
+.form-block__info_visible
+  display: block
+
+.form-block__checkbox
   display: none
 
-#cpns + .feedback-block-form-label
+#cpns + .form-block__label
   display: none
 
-.feedback-block-form-checkbox:checked + .feedback-block-form-label:after
+.form-block__checkbox:checked
+  display: block
+
+.form-block__checkbox:checked + .form-block__label:after
   width: 14px
   height: 14px
   left: 19px
   border: 1px solid rgba(255, 255, 255, .5)
 
-.feedback-block-form-checkbox:checked + .feedback-block-form-label
+.form-block__checkbox:checked + .form-block__label
   color: rgba(255,255,255,.75)
   &:before
     border-color: rgba(255,255,255,.75)
 
-.feedback-block-form-label
+.form-block__label
   position: relative
   color: rgba(255,255,255,.5)
   font-size: 15px
-  padding: 15px 20px 15px 52px
+  padding: 15px 40px 15px 52px
   display: block
   cursor: pointer
   transition: color .2s ease-in-out
@@ -447,92 +424,122 @@ button, input
     border: 0
     transition: width .15s ease-in-out, height .15s ease-in-out, left .15s ease-in-out
 
-.feedback-block-form-button
+.form-block__button
   font-size: 16px
   background: #fff
-  height: 58px
+  height: 45px
   color: #343434
   cursor: pointer
 
-@media screen and (max-width: 1600px) and (min-width: 1100px)
-  .feedback-block
-    width: 322px
+.form-block_nav
+  .form-block__wrap
+    border: 1px solid #e8e8e8
+    border-top: none
+    &:first-child
+      border-top: 1px solid #e8e8e8
+    &:nth-last-child(-n+3)
+      border: none
 
-  .feedback-block__header
-    padding: 33px 0
-    font-size: 45px
+  .form-block__input
+    height: 50px
+    font-size: 16px
+    color: #3a3a3a
+
+  .form-block__input_comment
+    height: 100px
+    padding-top: 15px
+
+  .form-block__checkbox:checked + .form-block__label:before
+    border-color: #e8e8e8
+
+  .form-block__checkbox:checked + .form-block__label:after
+    border-color: #ff4f4f
+    background-color: #ff4f4f
+    left: 4px
+
+  .form-block__checkbox:checked + .form-block__label
+    color: #ff4f4f
+
+  .form-block__label
+    color: #3a3a3a
+    font-size: 16px
+    text-align: left
+    margin-top: 10px
+    padding: 15px 40px 16px 35px
+    &:hover
+      color: #ff4f4f
+    &:before
+      border-color: #e8e8e8
+      left: 0
+    &:after
+      background-color: #e8e8e8
+      left: 11px
+
+  .form-block__button
+    display: block
+    font-size: 16px
+    width: 200px
+    height: 45px
+    margin: 25px auto
     line-height: 40px
+    background-color: #ff4f4f
+    padding: 0 10px
+    color: white
+    text-align: center
+    transition: background-color .1s ease-in-out
+    &:hover
+      background-color: #e73636
 
-  .feedback-block-form-input
+@media screen and (max-width: 1600px) and (min-width: 1100px)
+  .form-block__input
     height: 40px
     padding: 0 16px
     font-size: 15px
 
-  .feedback-block-form-input._comment
+  .form-block__input_comment
     height: 80px
     padding: 10px 16px
     font-size: 15px
 
-  .feedback-block-form-button
+  .form-block__button
     height: 35px
     font-size: 15px
 
 @media screen and (max-width: 1100px) and (min-width: 900px)
-  .feedback-block
-    width: 284px
-    &:before
-      border-width: 1px
-
-  .feedback-block__header
-    padding: 33px 0
-    font-size: 40px
-    line-height: 36px
-
-  .feedback-block-form__input
+  .form-block__wrap
     margin-bottom: -1px
     border-width: 1px
 
-  .feedback-block-form-input
+  .form-block__input
     height: 50px
     padding: 0 20px
     font-size: 15px
 
-  .feedback-block-form-input._comment
+  .form-block__input_comment
     height: 100px
     padding: 15px 20px
     font-size: 15px
 
-  .feedback-block-form-button
+  .form-block__button
     height: 45px
     font-size: 15px
 
 @media screen and (max-width: 900px)
-
-  .feedback-block
-    width: 282px
-    &:before
-      border-width: 1px
-
-  .feedback-block__header
-    padding: 33px 0
-    font-size: 40px
-    line-height: 36px
-
-  .feedback-block-form__input
+  .form-block__wrap
     margin-bottom: -1px
     border-width: 1px
 
-  .feedback-block-form-input
+  .form-block__input
     height: 50px
     padding: 0 20px
     font-size: 15px
 
-  .feedback-block-form-input._comment
+  .form-block__input._comment
     height: 100px
     padding: 15px 20px
     font-size: 15px
 
-  .feedback-block-form-button
+  .form-block__button
     height: 45px
     font-size: 15px
 
@@ -950,20 +957,17 @@ button, input
     opacity: 1
 
 .feedback__content
-  padding: 5%
-  height: 90%
-  text-align: center
+  width: 80%
+  position: absolute
+  top: 20%
+  left: 10%
 
-.feedback-content
-  display: inline-block
-  vertical-align: middle
-  width: 470px
+.feedback__form
+  margin-top: 25px
 
-.feedback-content__form
-  position: relative
-
-.feedback-content-form
-  position: relative
+@media screen and (max-width: 1100px) and (min-width: 900px)
+  .feedback
+    width: 550px
 
 .overlay
   display: block

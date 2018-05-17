@@ -2,63 +2,71 @@ function hasClass(el, cl) {
   return (' ' + el.className + ' ').indexOf(' ' + cl + ' ') > -1;
 }
 
-// function _q(selector) {
-//   if ( !selector && typeof(selector) !== 'string' ) return;
+function _q(selector) {
+  if ( !selector && typeof(selector) !== 'string' ) return;
 
-//   var nodeList = document.querySelectorAll(selector),
-//       array = Array.prototype.slice.call(nodeList);
+  var nodeList = document.querySelectorAll(selector),
+      array = Array.prototype.slice.call(nodeList);
 
-//   if ( !array.length ) return;
+  if ( !array.length ) return;
 
-//   var containsClass = function(el, cl) {
-//     return !!~el.className.split(/\s+/).indexOf(cl);
-//   };
+  var addWord = function(str, word) {
+    return str + ' ' + word;
+  };
 
-//   var addClass = function(cl) {
-//     array.forEach(function(el) {
-//       if ( !containsClass(el, cl) ) {
-//         el.className += ' ' + cl;
-//       }
-//     });
-//   };
+  var removeWord = function(str, word) {
+    var words = str.split(/\s+/);
+    return words.filter(function(w) {
+      return w !== word;
+    }).join(' ');
+  };
 
-//   var toggleClass = function(el, cl) {
-//     array.forEach(function(el) {
-//       if ( containsClass(el, cl) ) {
-//         var classes = el.className.split(/\s+/),
-//             index = classes.indexOf(cl);
+  var hasClass = function(el, cl) {
+    return !!~el.className.split(/\s+/).indexOf(cl);
+  };
 
-//         el.className = classes.splice(index, 1).join(' ');
-//       }
-//       else {
-//         el.className += ' ' + cl;
-//       };
-//     });
-//   };
+  var addClass = function(cl) {
+    array.forEach(function(el) {
+      if ( !hasClass(el, cl) ) {
+        el.className = addWord(el.className, cl);
+      }
+    });
+  };
 
-//   var removeClass = function(cl) {
-//     array.forEach(function(el) {
-//       if ( containsClass(el, cl) ) {
-//         var classes = el.className.split(/\s+/),
-//             index = classes.indexOf(cl);
-//         el.className = classes.splice(index, 1).join(' ');
-//       }
-//     })
-//   }
+  var removeClass = function(cl) {
+    array.forEach(function(el) {
+      if ( hasClass(el, cl) ) {
+        el.className = removeWord(el.className, cl);
+      }
+    });
+  };
 
-//   var addEvent = function(event, handler) {
-//     array.forEach(function(el) {
-//       el.addEventListener(event, handler);
-//     });
-//   };
+  var toggleClass = function(cl) {
+    array.forEach(function(el) {
+      if ( hasClass(el, cl) ) {
+        el.className = removeWord(el.className, cl);
+      }
+      else {
+        el.className = addWord(el.className, cl);
+      }
+    });
+  };
 
-//   return {
-//     nodeList: nodeList,
-//     array: array,
-//     addClass: 
-//     click: function(handler) { return addEvent('click', handler); }
-//   };
-// }
+  var addEvent = function(event, handler) {
+    array.forEach(function(el) {
+      el.addEventListener(event, handler);
+    });
+  };
+
+  return {
+    nodeList: nodeList,
+    array: array,
+    addClass: addClass,
+    removeClass: removeClass,
+    toggleClass: toggleClass,
+    click: function(handler) { return addEvent('click', handler); }
+  };
+}
 
 function queryBySelectorAll(selector) {
   return Array.prototype.slice.call( document.querySelectorAll(selector) );
@@ -224,48 +232,73 @@ function tinySwipe(args) {
   container.addEventListener('mousemove', onMouseMove, false);
 }
 
-// (function() {
-//   var feedback = _q('.feedback'),
-//       feedbackToggler = _q('.nav-actions__link'),
-//       feedbackClose = _q('.feedback__close');
+(function() {
+  var feedback = _q('.feedback'),
+      feedbackToggler = _q('.nav-actions__link'),
+      feedbackClose = _q('.feedback__close');
 
-//   feedbackToggler.click(function() {
-//     feedback.toggleClass('feedback_visible');
-//   });
+  feedbackToggler.click(function(e) {
+    e.preventDefault();
+    feedback.toggleClass('feedback_visible');
+  });
 
-//   feedbackClose.click(function() {
-//     feedback.removeClass('feedback_visible');
-//   });
-// })();
+  feedbackClose.click(function() {
+    feedback.removeClass('feedback_visible');
+  });
+})();
 
-// (function() {
-//   function currentTime() { return Math.floor(Date.now() / 1000); }
-//   function secondsHasPassed(loadedAt, currentTime) { return currentTime - loadedAt; }
-//   function isFulfilled(el) {
-//     if ( el.type === 'checkbox' ) { return el.checked; }
-//     else { return !!el.value; }
-//   }
-//   function isRequired(name) {
-//     return ( ['name', 'email', 'personal'].indexOf(name) !== -1 );
-//   }
+(function() {
+  function currentTime() { return Math.floor(Date.now() / 1000); }
+  function secondsHasPassed(loadedAt, currentTime) { return currentTime - loadedAt; }
+  function isFulfilled(el) {
+    if ( el.type === 'checkbox' ) { return el.checked; }
+    else { return !!el.value; }
+  }
+  function isRequired(name) {
+    return ( ['name', 'email', 'personal'].indexOf(name) !== -1 );
+  }
 
-//   var loadedAt = currentTime();
-//   var threshold = 15;
-//   var fields = query('.feedback-block input');
+  var loadedAt = currentTime(),
+      threshold = 15,
+      requiredFields = ['name', 'email', 'personal'];
 
-//   query('.feedback-block-form-button').click(function(e) {
-//     e.preventDefault();
 
-//     fields.array.forEach(function(el) {
-//       if ( isRequired(el.name) && !isFulfilled(el) ) {
-//         console.log('Поле ' + el.placeholder + ' не может быть пустым');
-//       }
-//     });
+  _q('.form-block__button').click(function(e) {
+    e.preventDefault();
+    var id = e.target.dataset.frm,
+        form = '#' + id;
 
-//     var timeCheckPassed = ( secondsHasPassed(loadedAt, currentTime()) > threshold ),
-//         fieldCheckPassed = ( 1 === 1 );
+    var fields = _q(form + ' input').array.reduce(function(obj, fld) {
+      obj[fld.name] = ( fld.type === 'checkbox' )? fld.checked: fld.value;
+      return obj;
+    }, {});
 
-//     if ( timeCheckPassed && fieldCheckPassed )
-//       { console.log('Yep!', secondsHasPassed(loadedAt, currentTime())); }
-//   });
-// })();
+    var timeCheckPassed = ( secondsHasPassed(loadedAt, currentTime()) > threshold );
+
+    var fieldCheckPassed = requiredFields.reduce(function(res, req) {
+      var info = _q(form + ' [name=' + req + '] ~ .form-block__info');
+      if (!fields.hasOwnProperty(req) || !fields[req]) {
+        info.addClass('form-block__info_visible');
+        return false;
+      }
+      else {
+        info.removeClass('form-block__info_visible');
+        return res && true;
+      }
+    }, true);
+
+    var hideFieldCheckPassed = !fields['companies'];
+
+    if ( fieldCheckPassed ) {
+      if ( timeCheckPassed && hideFieldCheckPassed ) {
+        console.log('Yep!', fields);
+      }
+      else {
+        console.log('Yep but!', fields);
+      }
+    }
+    else {
+      console.log('Nope!', fields);
+    }
+  });
+})();
