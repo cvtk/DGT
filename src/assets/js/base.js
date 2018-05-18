@@ -287,7 +287,7 @@ function tinySwipe(args) {
       }
     }, true);
 
-    var hideFieldCheckPassed = !fields['companies'];
+    var hideFieldCheckPassed = !fields.companies;
 
     if ( fieldCheckPassed ) {
       if ( timeCheckPassed && hideFieldCheckPassed ) {

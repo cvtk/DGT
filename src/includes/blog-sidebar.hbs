@@ -8,7 +8,7 @@
   <div class="blog-content-sidebar__tags">
     <noindex>
       {{#each posts}}{{#is post "news"}}{{#pages}}{{#each data.tags}}
-      <a href="/blog/tags/{{this}}.html" class="blog-content-sidebar-tags__item" rel="nofollow">{{this}}</a>
+      <a href="/blog/tags/{{this}}.html" class="tag tag_small tag_red blog-content-sidebar-tags__item" rel="nofollow">{{this}}</a>
       {{/each}}{{/pages}}{{/is}}{{/each}}
     </noindex>
   </div>

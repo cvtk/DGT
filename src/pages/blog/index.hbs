@@ -30,9 +30,7 @@ layout: default.hbs
               {{/unless}}
               <div class="blog-content-posts-item-preview__tags">
                 <div class="blog-content-posts-item-preview-tags">
-                  {{#each data.tags}}
-                  <a href="{{data.basename}}//{{this}}" class="blog-content-posts-item-preview-tags__item" title="{{this}}">{{this}}</a>
-                  {{/each}}
+                  {{#each data.tags}}<a href="{{data.basename}}//{{this}}" class="tag tag_small blog-content-posts-item-preview-tags__tag" title="{{this}}">{{this}}</a>{{/each}}
                 </div>
               </div>
             </div>

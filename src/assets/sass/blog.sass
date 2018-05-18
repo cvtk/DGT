@@ -58,21 +58,10 @@
   border-top: 1px solid #ff6b6b
 
 .blog-content-sidebar-tags__item
-  display: inline-block
-  border: 1px solid #ff7474
-  border-radius: 3px
-  padding: 0 10px 3px 10px
-  font-size: .9125em
-  cursor: pointer
   margin-right: 5px
-  transition: border-color .2s ease-in-out
-  color: white
-  margin-top: 5px
-  &:visited
-    color: #fff
-  &:hover
-    border-color: #fff
-    color: #fff
+  margin-top: 8px
+  &:last-child
+    margin-right: 0
 
 .blog-content-sidebar__social-block
   width: 100%
@@ -263,29 +252,19 @@
   margin: 15px 0
   img
     max-width: 1100px
+    width: 100%
 
 .blog-content-posts-item-preview__tags
   width: 100%
-  margin-top: 10px
 
 .blog-content-posts-item-preview-tags
-  line-height: normal
+  position: relative
 
-.blog-content-posts-item-preview-tags__item
-  display: inline-block
-  color: #c9c9c9
-  border: 1px solid #dedede
-  border-radius: 3px
-  padding: 0 10px 3px 10px
-  font-size: 16px
-  cursor: pointer
+.blog-content-posts-item-preview-tags__tag
+  margin-top: 10px
   margin-right: 5px
-  transition: color .2s ease-in-out, border-color .2s ease-in-out
-  &:visited
-    color: #c9c9c9
-  &:hover
-    color: #3a3a3a
-    border-color: #3a3a3a
+  &:last-child
+    margin-right: 0
 
 .blog-content-posts__comments
   position: relative
