@@ -15,83 +15,21 @@ layout: default.hbs
       </div>
       <div class="index-content-services__body">
         <ul class="index-content-services-body">
-          <li class="index-content-services-body__item _active" data-jt="0">Обслуживание рабочих мест</li>
-          <li class="index-content-services-body__item" data-jt="1">Администрирование серверов</li>
-          <li class="index-content-services-body__item" data-jt="2">Поддержка оргтехники</li>
-          <li class="index-content-services-body__item" data-jt="3">IP-телефония</li>
-          <li class="index-content-services-body__item" data-jt="4">Монтаж и настройка сети</li>
-          <li class="index-content-services-body__item" data-jt="5">Web-разработка</li>
-          <li class="index-content-services-body__item" data-jt="6">Seo-продвижение</li>
-          <li class="index-content-services-body__item" data-jt="7">Внедрение и поддержка ПО</li>
-          <li class="index-content-services-body__item" data-jt="8">Безопасность</li>
+          {{#each services.items}}
+          <li class="index-content-services-body__item{{#is @index 0}} _active{{/is}}" data-jt="{{ @index }}">{{ title }}</li>
+          {{/each}}
         </ul>
       </div>
       <div class="index-content-services__description">
         <div class="index-content-services-description">
-          <div class="index-content-services-description__wrapper">
+          <div class="index-content-services-description__wrapper">{{#each services.items}}
             <div class="index-content-services-description__item">
               <div class="index-content-services-description-item">
-                <h4 class="index-content-services-description-item__title">Обслуживание рабочих мест</h4>
-                <span class="index-content-services-description-item__text">Ремаркетинг – это функция, позволяющая показывать рекламу пользователям, которые раньше уже заходили на ваш сайт. Это можно делать, когда они посещают другие сайты в контекстно-медийной сети Google или используют ваши ключевые слова в поисковой системе.</span>
+                <h4 class="index-content-services-description-item__title">{{ title }}</h4>
+                <span class="index-content-services-description-item__text">{{ teaser }}</span>
                 <a href="#request" title="Оставить заявку" class="index-content-services-description-item__button">Оставить заявку</a>
               </div>
-            </div>
-            <div class="index-content-services-description__item">
-              <div class="index-content-services-description-item">
-                <h4 class="index-content-services-description-item__title">Администрирование серверов</h4>
-                <span class="index-content-services-description-item__text">Ремаркетинг – это функция, позволяющая показывать рекламу пользователям, которые раньше уже заходили на ваш сайт. Это можно делать, когда они посещают другие сайты в контекстно-медийной сети Google или используют ваши ключевые слова в поисковой системе.</span>
-                <a href="#request" title="Оставить заявку" class="index-content-services-description-item__button">Оставить заявку</a>
-              </div>
-            </div>
-            <div class="index-content-services-description__item">
-              <div class="index-content-services-description-item">
-                <h4 class="index-content-services-description-item__title">Поддержка оргтехники</h4>
-                <span class="index-content-services-description-item__text">Ремаркетинг – это функция, позволяющая показывать рекламу пользователям, которые раньше уже заходили на ваш сайт. Это можно делать, когда они посещают другие сайты в контекстно-медийной сети Google или используют ваши ключевые слова в поисковой системе.</span>
-                <a href="#request" title="Оставить заявку" class="index-content-services-description-item__button">Оставить заявку</a>
-              </div>
-            </div>
-            <div class="index-content-services-description__item">
-              <div class="index-content-services-description-item">
-                <h4 class="index-content-services-description-item__title">IP-телефония</h4>
-                <span class="index-content-services-description-item__text">Ремаркетинг – это функция, позволяющая показывать рекламу пользователям, которые раньше уже заходили на ваш сайт. Это можно делать, когда они посещают другие сайты в контекстно-медийной сети Google или используют ваши ключевые слова в поисковой системе.</span>
-                <a href="#request" title="Оставить заявку" class="index-content-services-description-item__button">Оставить заявку</a>
-              </div>
-            </div>
-            <div class="index-content-services-description__item">
-              <div class="index-content-services-description-item">
-                <h4 class="index-content-services-description-item__title">Монтаж и настройка сети</h4>
-                <span class="index-content-services-description-item__text">Ремаркетинг – это функция, позволяющая показывать рекламу пользователям, которые раньше уже заходили на ваш сайт. Это можно делать, когда они посещают другие сайты в контекстно-медийной сети Google или используют ваши ключевые слова в поисковой системе.</span>
-                <a href="#request" title="Оставить заявку" class="index-content-services-description-item__button">Оставить заявку</a>
-              </div>
-            </div>
-            <div class="index-content-services-description__item">
-              <div class="index-content-services-description-item">
-                <h4 class="index-content-services-description-item__title">Web-разработка</h4>
-                <span class="index-content-services-description-item__text">Ремаркетинг – это функция, позволяющая показывать рекламу пользователям, которые раньше уже заходили на ваш сайт. Это можно делать, когда они посещают другие сайты в контекстно-медийной сети Google или используют ваши ключевые слова в поисковой системе.</span>
-                <a href="#request" title="Оставить заявку" class="index-content-services-description-item__button">Оставить заявку</a>
-              </div>
-            </div>
-            <div class="index-content-services-description__item">
-              <div class="index-content-services-description-item">
-                <h4 class="index-content-services-description-item__title">Seo-продвижение</h4>
-                <span class="index-content-services-description-item__text">Ремаркетинг – это функция, позволяющая показывать рекламу пользователям, которые раньше уже заходили на ваш сайт. Это можно делать, когда они посещают другие сайты в контекстно-медийной сети Google или используют ваши ключевые слова в поисковой системе.</span>
-                <a href="#request" title="Оставить заявку" class="index-content-services-description-item__button">Оставить заявку</a>
-              </div>
-            </div>
-            <div class="index-content-services-description__item">
-              <div class="index-content-services-description-item">
-                <h4 class="index-content-services-description-item__title">Внедрение и поддержка ПО</h4>
-                <span class="index-content-services-description-item__text">Ремаркетинг – это функция, позволяющая показывать рекламу пользователям, которые раньше уже заходили на ваш сайт. Это можно делать, когда они посещают другие сайты в контекстно-медийной сети Google или используют ваши ключевые слова в поисковой системе.</span>
-                <a href="#request" title="Оставить заявку" class="index-content-services-description-item__button">Оставить заявку</a>
-              </div>
-            </div>
-            <div class="index-content-services-description__item">
-              <div class="index-content-services-description-item">
-                <h4 class="index-content-services-description-item__title">Безопасность</h4>
-                <span class="index-content-services-description-item__text">Ремаркетинг – это функция, позволяющая показывать рекламу пользователям, которые раньше уже заходили на ваш сайт. Это можно делать, когда они посещают другие сайты в контекстно-медийной сети Google или используют ваши ключевые слова в поисковой системе.</span>
-                <a href="#request" title="Оставить заявку" class="index-content-services-description-item__button">Оставить заявку</a>
-              </div>
-            </div>
+            </div>{{/each}}
           </div>
         </div>
       </div>
@@ -329,18 +267,18 @@ layout: default.hbs
                 <div class="index-content-rates-list-item__price">
                   <div class="index-content-rates-list-item-price">
                     <span class="index-content-rates-list-item-price__sum">
-                      от 15 000<svg id="price-ru" viewBox="0 0 37 53" width="100%" height="100%">
+                      от 750<svg id="price-ru" viewBox="0 0 37 53" width="100%" height="100%">
                         <path fillrule="evenodd" d="M 0.4 33.1C 0.4 33.1 5.24 33.1 5.24 33.1 5.24 33.1 5.24 37.94 5.24 37.94 5.24 37.94 0.4 37.94 0.4 37.94 0.4 37.94 0.4 43.73 0.4 43.73 0.4 43.73 5.24 43.73 5.24 43.73 5.24 43.73 5.24 52.16 5.24 52.16 5.24 52.16 12.06 52.16 12.06 52.16 12.06 52.16 12.06 43.73 12.06 43.73 12.06 43.73 28.69 43.73 28.69 43.73 28.69 43.73 28.69 37.94 28.69 37.94 28.69 37.94 12.06 37.94 12.06 37.94 12.06 37.94 12.06 33.03 12.06 33.03 12.06 33.03 18.88 33.03 18.88 33.03 26.21 33.03 28.09 31.27 31.61 27.75 34.54 24.89 36.15 20.93 36.15 16.31 36.15 10.44 33.88 6.7 29.99 4.06 26.7 1.79 25.33 0.84 19.1 0.84 19.1 0.84 5.24 0.84 5.24 0.84 5.24 0.84 5.24 27.23 5.24 27.23 5.24 27.23 0.4 27.23 0.4 27.23 0.4 27.23 0.4 33.1 0.4 33.1ZM 29.04 16.53C 29.04 19.54 28.24 21.95 26.11 24.08 23.84 26.21 23.35 27.23 17.78 27.23 17.78 27.23 12.06 27.23 12.06 27.23 12.06 27.23 12.06 6.7 12.06 6.7 12.06 6.7 18.8 6.7 18.8 6.7 23.13 6.7 23.03 7.29 25.3 8.76 27.87 10.44 29.04 12.94 29.04 16.53Z"></path>
                       </svg>
                     </span>
-                    <div class="index-content-rates-list-item-price__text">в месяц</div>
+                    <div class="index-content-rates-list-item-price__text">за час</div>
                   </div>
                 </div>
                 <div class="index-content-rates-list-item__info">
                   <ul class="index-content-rates-list-item-info">
-                    <li class="index-content-rates-list-item-info__point">Оплата за позиции в ТОПе<br>по выбранным<br>ключевым запросам</li>
-                    <li class="index-content-rates-list-item-info__point">Ограниченный пул запросов</li>
-                    <li class="index-content-rates-list-item-info__point">Коммерческая и имиджевая<br>ориентация</li>
+                    <li class="index-content-rates-list-item-info__point">Возможен срочный выезд</li>
+                    <li class="index-content-rates-list-item-info__point">Договор о неразглашении</li>
+                    <li class="index-content-rates-list-item-info__point">Гарантийное обслуживание</li>
                   </ul>
                 </div>
               </div>
@@ -355,7 +293,7 @@ layout: default.hbs
                 <div class="index-content-rates-list-item__price">
                   <div class="index-content-rates-list-item-price">
                     <span class="index-content-rates-list-item-price__sum">
-                      от 40 000<svg id="price-ru" viewBox="0 0 37 53" width="100%" height="100%">
+                      от 3 500<svg id="price-ru" viewBox="0 0 37 53" width="100%" height="100%">
                         <path fillrule="evenodd" d="M 0.4 33.1C 0.4 33.1 5.24 33.1 5.24 33.1 5.24 33.1 5.24 37.94 5.24 37.94 5.24 37.94 0.4 37.94 0.4 37.94 0.4 37.94 0.4 43.73 0.4 43.73 0.4 43.73 5.24 43.73 5.24 43.73 5.24 43.73 5.24 52.16 5.24 52.16 5.24 52.16 12.06 52.16 12.06 52.16 12.06 52.16 12.06 43.73 12.06 43.73 12.06 43.73 28.69 43.73 28.69 43.73 28.69 43.73 28.69 37.94 28.69 37.94 28.69 37.94 12.06 37.94 12.06 37.94 12.06 37.94 12.06 33.03 12.06 33.03 12.06 33.03 18.88 33.03 18.88 33.03 26.21 33.03 28.09 31.27 31.61 27.75 34.54 24.89 36.15 20.93 36.15 16.31 36.15 10.44 33.88 6.7 29.99 4.06 26.7 1.79 25.33 0.84 19.1 0.84 19.1 0.84 5.24 0.84 5.24 0.84 5.24 0.84 5.24 27.23 5.24 27.23 5.24 27.23 0.4 27.23 0.4 27.23 0.4 27.23 0.4 33.1 0.4 33.1ZM 29.04 16.53C 29.04 19.54 28.24 21.95 26.11 24.08 23.84 26.21 23.35 27.23 17.78 27.23 17.78 27.23 12.06 27.23 12.06 27.23 12.06 27.23 12.06 6.7 12.06 6.7 12.06 6.7 18.8 6.7 18.8 6.7 23.13 6.7 23.03 7.29 25.3 8.76 27.87 10.44 29.04 12.94 29.04 16.53Z"></path>
                       </svg>
                     </span>
@@ -364,8 +302,8 @@ layout: default.hbs
                 </div>
                 <div class="index-content-rates-list-item__info">
                   <ul class="index-content-rates-list-item-info">
-                    <li class="index-content-rates-list-item-info__point">Оплата за позиции в ТОПе<br>по выбранным<br>ключевым запросам</li>
-                    <li class="index-content-rates-list-item-info__point">Ограниченный пул запросов</li>
+                    <li class="index-content-rates-list-item-info__point">Передача обращения в работу в течении 3 часов </li>
+                    <li class="index-content-rates-list-item-info__point">Единое окно</li>
                     <li class="index-content-rates-list-item-info__point">Коммерческая и имиджевая<br>ориентация</li>
                   </ul>
                 </div>
@@ -381,7 +319,7 @@ layout: default.hbs
                 <div class="index-content-rates-list-item__price">
                   <div class="index-content-rates-list-item-price">
                     <span class="index-content-rates-list-item-price__sum">
-                      от 100<svg id="price-ru" viewBox="0 0 37 53" width="100%" height="100%">
+                      от 9 500<svg id="price-ru" viewBox="0 0 37 53" width="100%" height="100%">
                         <path fillrule="evenodd" d="M 0.4 33.1C 0.4 33.1 5.24 33.1 5.24 33.1 5.24 33.1 5.24 37.94 5.24 37.94 5.24 37.94 0.4 37.94 0.4 37.94 0.4 37.94 0.4 43.73 0.4 43.73 0.4 43.73 5.24 43.73 5.24 43.73 5.24 43.73 5.24 52.16 5.24 52.16 5.24 52.16 12.06 52.16 12.06 52.16 12.06 52.16 12.06 43.73 12.06 43.73 12.06 43.73 28.69 43.73 28.69 43.73 28.69 43.73 28.69 37.94 28.69 37.94 28.69 37.94 12.06 37.94 12.06 37.94 12.06 37.94 12.06 33.03 12.06 33.03 12.06 33.03 18.88 33.03 18.88 33.03 26.21 33.03 28.09 31.27 31.61 27.75 34.54 24.89 36.15 20.93 36.15 16.31 36.15 10.44 33.88 6.7 29.99 4.06 26.7 1.79 25.33 0.84 19.1 0.84 19.1 0.84 5.24 0.84 5.24 0.84 5.24 0.84 5.24 27.23 5.24 27.23 5.24 27.23 0.4 27.23 0.4 27.23 0.4 27.23 0.4 33.1 0.4 33.1ZM 29.04 16.53C 29.04 19.54 28.24 21.95 26.11 24.08 23.84 26.21 23.35 27.23 17.78 27.23 17.78 27.23 12.06 27.23 12.06 27.23 12.06 27.23 12.06 6.7 12.06 6.7 12.06 6.7 18.8 6.7 18.8 6.7 23.13 6.7 23.03 7.29 25.3 8.76 27.87 10.44 29.04 12.94 29.04 16.53Z"></path>
                       </svg>
                     </span>
