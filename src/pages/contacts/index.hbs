@@ -5,27 +5,21 @@ layout: default.hbs
 ---
 
 <div class="contacts-content">
-  <div class="contacts-content__company">
-    <div class="contacts-content-company">
-      <div class="contacts-content-company__header-block">
-        <div class="header-block">
-          <h3 class="header-block__title">Цифровые идеи<br>для бизнеса</h3>
-          <h4 class="header-block__subtitle">Работаем с 2004</h4>
-        </div>
+  <div class="contacts-content__wrap">
+    <div class="contacts-content__header-block">
+      <div class="header-block">
+        <h3 class="header-block__title">Цифровые идеи<br>для бизнеса</h3>
+        <h4 class="header-block__subtitle">Работаем с 2004</h4>
       </div>
-      <div class="contacts-content-company__info">
-        <div class="contacts-content-company-info">
-          <p class="contacts-content-company-info__desc">Мы всегда открыты для общения и новых знакомств. И даже когда наш офис закрыт, мы рады пообщаться по почте или по телефону. Хотите поговорить с нашим руководителем?<br>Напишите Николаю в <a href="https://www.facebook.com/nickfet" target="_blank">Facebook</a>, он будет рад<br>Мечтаете работать у нас? Отправляйте резюме на <a href="mailto:bestjob@mstagency.ru" target="_blank">bestjob@mstagency.ru</a> нашему HR-директору Ольге.</p>
-          <div class="contacts-content-company-info__contacts-block _dark">{{> contacts-block alignVertical=true withEmail=true }}</div>
-          <div class="contacts-content-company-info__actions">
-            <div class="contacts-content-company-info-actions">
-              <a href="/upload/MST_DIGITAL_AGENCY_2017.pdf" download="" target="_blank" class="contacts-content-company-info-actions__link" title="Скачать pdf-презентацию">Скачать pdf-презентацию</a>
-              <span class="contacts-content-company-info-actions__link" title="Отправить заявку / письмо">Отправить заявку / письмо</span>
-            </div>
-          </div>
-          <div class="contacts-content-company-info__social-block">{{> social-block }}</div>
+    </div>
+    <div class="contacts-content__inner">
+        <p class="contacts-content__desc">Мы всегда открыты для общения и новых знакомств. И даже когда наш офис закрыт, мы рады пообщаться по почте или по телефону. Хотите поговорить с нашим руководителем?<br>Напишите Николаю в <a href="https://www.facebook.com/nickfet" target="_blank">Facebook</a>, он будет рад<br>Мечтаете работать у нас? Отправляйте резюме на <a href="mailto:bestjob@mstagency.ru" target="_blank">bestjob@mstagency.ru</a> нашему HR-директору Ольге.</p>
+        {{> contacts-block class="contacts-block_dark contacts-content__contacts-block" alignVertical=true withEmail=true }}
+        <div class="contacts-content__actions">
+          <a href="/upload/MST_DIGITAL_AGENCY_2017.pdf" download="" target="_blank" class="btn contacts-content__btn" title="Скачать pdf-презентацию">Скачать pdf-презентацию</a>
+          <span class="btn contacts-content__btn js__feedback_toggler" title="Отправить заявку / письмо">Отправить заявку / письмо</span>
         </div>
-      </div>
+        {{> social-block class="contacts-content__social-block"}}
     </div>
   </div>
 </div>

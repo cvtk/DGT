@@ -60,6 +60,7 @@ function _q(selector) {
 
   return {
     nodeList: nodeList,
+    first: array[0],
     array: array,
     addClass: addClass,
     removeClass: removeClass,

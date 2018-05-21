@@ -13,17 +13,11 @@
   position: relative
   float: left
 
-.contacts-content__company
-  width: 100%
-  height: 100%
-  box-sizing: border-box
-  padding-top: 180px
-
-.contacts-content-company
+.contacts-content__wrap
   position: relative
-  height: 75%
+  height: 65%
   width: 80%
-  margin-left: 10%
+  margin: 180px 10% 0
   border: 4px solid #ff4f4f
   text-align: center
   min-height: 520px
@@ -36,15 +30,14 @@
     height: 6px
     width: 290px
     background-color: white
-
-.contacts-content-company__header-block
+  
+.contacts-content__header-block
   position: absolute
   top: -49px
-  left: 50%
-  margin-left: -120px
-  overflow: hidden
+  margin: 0 auto
+  width: 100%
 
-.contacts-content-company__info
+.contacts-content__inner
   padding-left: 2%
   padding-right: 2%
   height: 100%
@@ -53,75 +46,51 @@
   width: 100%
   box-sizing: border-box
 
-.contacts-content-company-info
-  position: relative
-
-.contacts-content-company-info__desc
+.contacts-content__desc
   font-size: 17px
   line-height: 23px
   width: 76%
   margin: 0 12%
 
-.contacts-content-company-info__contacts-block
+.contacts-content__contacts-block
   text-align: center
   margin-top: 40px
 
-.contacts-content-company-info__actions
+.contacts-content__actions
   margin-top: 15px
 
-.contacts-content-company-info-actions
-  position: relative
-
-.contacts-content-company-info-actions__link
-  display: inline-block
-  height: 45px
-  font-size: 17px
-  line-height: 43px
-  box-sizing: border-box
-  background-color: #ff4f4f
-  padding: 0 10px
-  color: white !important
-  text-align: center
-  text-decoration: none !important
-  border: 0
-  cursor: pointer
-  transition: background-color .1s ease-in-out !important
+.contacts-content__btn
   width: 237px
-  &:hover
-    background-color: #e73636
   &:first-child
     margin-right: 7px
 
-.contacts-content-company-info__social-block
-  padding: 76px 0
+.contacts-content__social-block
+  margin: 76px 0
 
 @media (max-width: 1600px)
-  .contacts-content-company-info__desc
+  .contacts-content__desc
     font-size: 15px
     line-height: 21px
 
-  .contacts-content-company-info-actions__link
-    font-size: 15px
-
-  .contacts-content-company-info__social-block
-    padding: 30px 0
+  .contacts-content__social-block
+    margin: 30px 0
 
 @media (max-width: 1100px)
-  .contacts-content-company__info
+  .contacts-content__inner
     padding-top: 85px
 
-  .contacts-content-company-info__contacts-block
+  .contacts-content__contacts-block
     margin-top: 30px
 
-  .contacts-content-company-info-actions__link
+  .contacts-content__btn
     display: block
     margin: 0 auto
     &:first-child
       margin-right: auto
       margin-bottom: 10px
 
-  .contacts-content-company-info__social-block
-    padding: 20px 0
+  .contacts-content__social-block
+    margin: 20px 0
 
 @media (max-width: 900px)
   .contacts-content
@@ -136,12 +105,16 @@
     height: 320px
     float: none
 
-  .contacts-content__company
-    padding: 0
-
-  .contacts-content-company
+  .contacts-content__wrap
     width: 100%
     height: auto
     border: 0
-    margin-left: 0
+    margin: 0
     min-height: 0
+
+  .contacts-content__inner
+    padding: 85px 30px 0
+
+  .contacts-content__desc
+    width: 100%
+    margin: 0
