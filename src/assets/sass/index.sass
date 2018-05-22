@@ -796,7 +796,7 @@
   height: 136px
 
 .index-content-rates-list-item__header
-  padding: 0 0 36px
+  padding: 8px 0 26px
   text-align: center
   font: 400 18px/1em "Roboto Condensed"
   text-transform: uppercase
@@ -835,9 +835,17 @@
 
 .index-content-rates-list-item-info__point
   display: block
-  font: 300 17px/30.25px "Roboto Condensed"
+  font: 300 17px/23px "Roboto Condensed"
   color: #272727
-
+  padding-bottom: 10px
+  &:before
+    content: ""
+    display: inline-block
+    background-color: #ff4e4e
+    width: 5px
+    height: 5px
+    margin: 3px 4px 3px -3px
+  
 .index-content-rates-list-item__order
   margin: 30px -14px 0
   width: 100%
@@ -879,7 +887,7 @@
     height: 103px
 
   .index-content-rates-list-item__header
-    padding: 0 0 27px
+    padding: 6px 0 20px
 
   .index-content-rates-list-item__price
     height: 110px
@@ -904,7 +912,8 @@
 
   .index-content-rates-list-item-info__point
     font-size: 15px
-    line-height: 23.25px
+    line-height: 21px
+    padding-bottom: 7px
   
 @media screen and (max-width: 1100px)
   .index-content__rates
@@ -935,7 +944,7 @@
 
   .index-content-rates-list-item__header
     font-size: 15px
-    padding: 0 0 15px
+    padding: 3px 0 12px
 
   .index-content-rates-list-item__price
     height: 110px
@@ -960,7 +969,8 @@
 
   .index-content-rates-list-item-info__point
     font-size: 15px
-    line-height: 23.25px
+    line-height: 21px
+    padding-bottom: 7px
 
 @media screen and (max-width: 900px)
   .index-content-rates-list
@@ -1090,6 +1100,13 @@
   width: 100%
   float: left
   height: 420px
+  &:last-child
+    .index-content-reviews-content-slider-item-footer-nav__next
+      display: none
+  &:first-child
+    .index-content-reviews-content-slider-item-footer-nav__prev
+      display: none
+
 
 .index-content-reviews-content-slider-item
   position: relative
@@ -1169,7 +1186,7 @@
   height: 48px
   margin: 7px 7px 0 0
   border: 2px solid #b4b4b4
-  float: left
+  float: right
   cursor: pointer
   svg
     width: 23px
@@ -1201,21 +1218,60 @@
   position: relative
   margin: -2px -2px 0 0
 
-.index-content-reviews-banners-item
-  position: relative
-  width: 100%
-  height: 100%
-  display: block
+.cases-companies-asteros, .cases-companies-atrus, .cases-companies-bzhf, .cases-companies-defo, .cases-companies-enforta, 
+.cases-companies-moreman, .cases-companies-park-otel, .cases-companies-rkk, .cases-companies-rtk, .cases-companies-vostok, 
+.cases-companies-yarsak, .cases-companies-yats
+  max-width: 100%
+  background-size: 100%
+  background-image: url('cases-companies-sprites.png')
   pointer-events: none
-  &:after
-    content: " "
-    position: absolute
-    width: 100%
-    height: 100%
-    background-size: 80%
-    background-position: 50%
-    background-repeat: no-repeat
-    background-image: url(cases-companies-sprites.png)
+ 
+.cases-companies-asteros
+  background-position: 0 0%
+  background-size: 100%
+
+.cases-companies-atrus
+  background-position: 0 9.090909%
+  background-size: 100%
+
+.cases-companies-bzhf
+  background-position: 0 18.181818%
+  background-size: 100%
+
+.cases-companies-defo
+  background-position: 0 27.272727%
+  background-size: 100%
+
+.cases-companies-enforta
+  background-position: 0 36.363636%
+  background-size: 100%
+
+.cases-companies-moreman
+  background-position: 0 45.454545%
+  background-size: 100%
+
+.cases-companies-park-otel
+  background-position: 0 54.545455%
+  background-size: 100%
+
+.cases-companies-rkk
+  background-position: 0 63.636364%
+  background-size: 100%
+.cases-companies-rtk
+  background-position: 0 72.727273%
+  background-size: 100%
+
+.cases-companies-vostok
+  background-position: 0 81.818182%
+  background-size: 100%
+
+.cases-companies-yarsak
+  background-position: 0 90.909091%
+  background-size: 100%
+
+.cases-companies-yats
+  background-position: 0 100%
+  background-size: 100%
   
 @media screen and (max-width: 1600px) and (min-width: 1100px)
   .index-content-reviews__content
