@@ -16,7 +16,7 @@
 .services-nav__items
   position: relative
   display: block
-  top: 3%
+  top: 5%
   width: 100%
   height: 94%
   text-align: center
@@ -34,15 +34,6 @@
     height: 100%
     background-color: #d6d6d6
     z-index: 1
-  &:after
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    height: 47px
-    width: 99%
-    background-color: white
-    z-index: 2
   &:last-child:before
     display: none
 
@@ -50,14 +41,15 @@
   position: absolute
   left: 50%
   margin-left: -24px
+  margin-top: -24px
   cursor: pointer
-  opacity: .35
   z-index: 5
+  opacity: .9
   top: 0
   width: 48px
   height: 48px
   display: inline-block
-  background-color: white
+  background-color: transparent
   border-radius: 48px
   line-height: 46px
   text-align: center
@@ -65,88 +57,44 @@
   font-size: 0
   padding-left: 30px
   border: 0
-  color: white
-  transition: all .2s ease-in-out
+  color: transparent
+  transition: background-color .1s .25s, width .1s .3s, color .2s .35s
   &:hover
-    opacity: .9
     background-color: #ff4f4f
     width: 275px
     z-index: 10
     font-size: 15px
     color: white
     text-decoration: none
+    &:after
+      width: 48px
+      height: 48px
+      left: 0
+      top: 0
   &:after
     content: ''
     position: absolute
-    width: 48px
-    height: 48px
-    left: 0
-    top: 0
-    background: url(icons-services.png) 0 0 no-repeat
-
-.services-btn_type-computers
-  &:after
-    background-position: 0 0
-  &.services-btn_active:after, &:hover:after
-    background-position: 0 -50px
-.services-btn_type-servers
-  &:after
-    background-position: -50px 0
-  &.services-btn_active:after, &:hover:after
-    background-position: -50px -50px
-.services-btn_type-printers
-  &:hover
-    width: 225px
-  &:after
-    background-position: -100px 0
-  &.services-btn_active:after, &:hover:after
-    background-position: -100px -50px
-.services-btn_type-telephony
-  &:hover
-    width: 225px
-  &:after
-    background-position: -150px 0
-  &.services-btn_active:after, &:hover:after
-    background-position: -150px -50px
-.services-btn_type-network
-  &:after
-    background-position: -200px 0
-  &.services-btn_active:after, &:hover:after
-    background-position: -200px -50px
-.services-btn_type-web
-  &:hover
-    width: 225px
-  &:after
-    background-position: -250px 0
-  &.services-btn_active:after, &:hover:after
-    background-position: -250px -50px
-.services-btn_type-seo
-  &:hover
-    width: 225px
-  &:after
-    background-position: -250px 0
-  &.services-btn_active:after, &:hover:after
-    background-position: -250px -50px
-.services-btn_type-integration
-  &:after
-    background-position: -250px 0
-  &.services-btn_active:after, &:hover:after
-    background-position: -250px -50px
-.services-btn_type-security
-  &:hover
-    width: 225px
-  &:after
-    background-position: -250px 0
-  &.services-btn_active:after, &:hover:after
-    background-position: -250px -50px
+    width: 15px
+    height: 15px
+    background-color: white
+    border-radius: 50%
+    border: 2px solid #ff4f4f
+    left: 17px
+    top: 17px
+    transition: all .2s
 
 .services-btn_active
-  opacity: 1
-  background-color: #ff4f4f
   &:hover
-    width: 48px
+    background-color: transparent
     z-index: 5
     font-size: 0
+    &:after
+      width: 15px
+      height: 15px
+      left: 17px
+      top: 17px
+  &:after
+    background-color: #ff4f4f
 
 .services-content
   width: 100%
@@ -176,6 +124,12 @@
   display: inline-block
   width: 90%
   vertical-align: middle
+
+.scroll-button_services
+  position: fixed
+  left: 30%
+  bottom: 22px
+  z-index: 5
 
 .services-content__cases
   position: relative
@@ -252,7 +206,7 @@
     bottom: -15px
     width: 24px
     height: 11px
-    background: url(sprite.png) -26px -157px no-repeat
+    background: url(sprite.png) -20px -227px no-repeat
 
 .services-feedback__presentation
   position: absolute
@@ -291,6 +245,9 @@
 
   .services-content
     padding-left: 0
+
+  .scroll-button_services
+    display: none
 
   .services-content__page
     height: auto

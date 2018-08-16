@@ -1,10 +1,19 @@
 (function() {
+  var menuToggler = _q('.menu-toggler'),
+    feedbackForm = _q('.feedback');
+
+  _q('.js__feedback_toggler').click(function(e) {
+    menuToggler.first.checked = true;
+    feedbackForm.addClass('feedback_visible');
+  });
+
   var navs = document.querySelectorAll('.services-btn'),
       pages = document.querySelectorAll('.services-content__page'),
       feedbackToggler = document.querySelector('.services-feedback__header-block'),
       feedback = document.querySelector('.feedback'),
       feedbackClose = document.querySelector('.feedback__close'),
       overlay = document.querySelector('.overlay'),
+      button = document.querySelector('.scroll-button'),
       currentPage = 0,
       isWheeling = false;
 
@@ -25,19 +34,11 @@
       }
       scrollTo(to, duration - 10);
     }, 10);
-  }
-
-  function showFeedbackForm() {
-    if ( !hasClass(feedback, 'feedback_visible_right') ) {
-      feedback.classList.add('feedback_visible_right');
-      overlay.classList.add('overlay_visible');
+    if ( currentPage === pages.length - 1 ) {
+      button.classList.add('_up');
     }
-  }
-
-  function hideFeedbackForm() {
-    if ( hasClass(feedback, 'feedback_visible_right') ) {
-      feedback.classList.remove('feedback_visible_right');
-      overlay.classList.remove('overlay_visible');
+    else {
+      button.classList.remove('_up');
     }
   }
 
@@ -84,9 +85,6 @@
       }, 0);
     });
   });
-  
-  feedbackToggler.addEventListener('click', showFeedbackForm);
-  feedbackClose.addEventListener('click', hideFeedbackForm);
 
   if (window.addEventListener) {
     if ('onwheel' in document) {
@@ -100,14 +98,12 @@
     window.attachEvent("onmousewheel", onWheel);
   }
 
-  var hash = window.location.hash.split('#')[1];
+  var hash = window.location.hash.split('#')[1] || 'Обслуживание-рабочих-мест';
 
-  if ( hash ) {
-    var target = document.querySelector('[data-ctgr="' + decodeURIComponent(hash) + '"]');
-    scrollTo( target, 250 );
-    currentPage = [].reduce.call(pages, function(res, cur, i) {
-        return ( cur.dataset.ctgr ===  target.dataset.ctgr) ? i : res;
-      }, 0);
-  } else { scrollTo( pages[currentPage], 1 ); }
+  var target = document.querySelector('[data-ctgr="' + decodeURIComponent(hash) + '"]');
+  scrollTo( target, 250 );
+  currentPage = [].reduce.call(pages, function(res, cur, i) {
+      return ( cur.dataset.ctgr ===  target.dataset.ctgr) ? i : res;
+    }, 0);
 
 })();

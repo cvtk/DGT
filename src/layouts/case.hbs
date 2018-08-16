@@ -9,15 +9,23 @@ layout: default.hbs
       <div class="blog-content-posts__item">
         <div class="blog-content-posts-item">
           <a href="/cases" class="blog-content-posts-item__back" title="к кейсам">к кейсам</a>
-          <h1 class="blog-content-posts-item__title">{{title}}</h1>
-          <span class="blog-content-posts-item__date">{{moment  created  lang ="ru"  format ="DD MMMM YYYY" }}</span>
           <div class="blog-content-posts-item__body">
             <div class="blog-content-posts-item-body">{{> body }}</div>
           </div>
-          <div class="blog-content-posts-item__social"></div>
         </div>
       </div>
     </div>
   </div>
-  <div class="blog-content__banner"></div>
+  <div class="blog-content__banner-image">
+    <div class="banner-image" style="background-image: url(/{{this.basename}}.jpg)">
+      <div class="banner-image__wrapper">
+        <div class="banner-image__header-block _white">
+          <div class="header-block">
+            <h1 class="header-block__title">{{title}}</h1>
+            <h4 class="header-block__subtitle">Гордимся нашими проектами</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

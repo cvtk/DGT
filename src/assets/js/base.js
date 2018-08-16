@@ -58,6 +58,17 @@ function _q(selector) {
     });
   };
 
+  var clickFire = function() {
+    array.forEach(function(el) {
+      var ev = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+      });
+      var canceled = !el.dispatchEvent(ev);
+    });
+  };
+
   return {
     nodeList: nodeList,
     first: array[0],
@@ -65,7 +76,10 @@ function _q(selector) {
     addClass: addClass,
     removeClass: removeClass,
     toggleClass: toggleClass,
-    click: function(handler) { return addEvent('click', handler); }
+    click: function(handler) {
+      if ( typeof(handler) === 'undefined' ) return clickFire();
+      return addEvent('click', handler);
+    }
   };
 }
 
@@ -235,8 +249,13 @@ function tinySwipe(args) {
 
 (function() {
   var feedback = _q('.feedback'),
-      feedbackToggler = _q('.nav-actions__link'),
-      feedbackClose = _q('.feedback__close');
+      feedbackToggler = _q('.nav-actions__link._request'),
+      feedbackClose = _q('.feedback__close'),
+      overlay = _q('.overlay');
+
+  overlay.click(function(e) {
+    feedback.removeClass('feedback_visible');
+  });
 
   feedbackToggler.click(function(e) {
     e.preventDefault();

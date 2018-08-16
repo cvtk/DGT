@@ -1167,3 +1167,33 @@ button, input
 
   .cases-content-list-item-meta__header
     padding: 14px 20px
+
+.scroll-button
+  display: inline-block
+  position: relative
+  width: 48px
+  height: 48px
+  border-radius: 48px
+  border: 1px solid #484848
+  animation-duration: .35s
+  animation-name: flick
+  animation-iteration-count: infinite
+  animation-direction: alternate
+  background-color: #fff
+  &:after
+    content: ''
+    position: absolute
+    width: 10px
+    height: 24px
+    top: 10px
+    left: 19px
+    background: url(/sprite.png) 0 -75px no-repeat
+  &._up:after
+    top: 12px
+    background-position: -23px -75px
+
+@keyframes flick
+  from
+    opacity: 0
+  to 
+    opacity: 1

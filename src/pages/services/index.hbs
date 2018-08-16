@@ -9,7 +9,7 @@ layout: default.hbs
   <ul class="services-nav__items">
     {{#each services.items }}
     <li class="services-nav__item">
-      <button class="services-btn services-btn_type-{{ id }}" title="{{ title }}" data-ctn="{{ anchor }}">{{ title }}</button>
+      <button class="services-btn services-btn_type-{{ id }}" data-ctn="{{ anchor }}">{{ title }}</button>
     </li>
     {{/each}}
   </ul>
@@ -36,13 +36,14 @@ layout: default.hbs
       {{/is}}{{/each}}</div>
   </div>
 {{/each}}
+<div class="scroll-button scroll-button_services"></div>
 </div>
 <div class="services-feedback">
-  <div class="services-feedback__wrap">
+  <div class="services-feedback__wrap js__feedback_toggler">
     <div class="header-block services-feedback__header-block">
       <h3 class="header-block__title">Цифровые идеи<br>для бизнеса</h3>
       <h4 class="header-block__subtitle">Оставить заявку</h4>
     </div>
   </div>
-  <a href="/" class="btn services-feedback__presentation" target="_blank" download title="Скачать презентацию">Скачать презентацию</a>
+  <a href="/digit-offer.pdf" class="btn services-feedback__presentation" target="_blank" download title="Скачать презентацию">Скачать презентацию</a>
 </div>

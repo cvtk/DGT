@@ -44,6 +44,14 @@
     return false;
   }
 
+  _q('.about-content-info-feedback').click(function(e) {
+    e.preventDefault();
+    _q('.logo').click();
+    _q('.nav-actions__link._request').click();
+    console.log('ok!');
+    return false;
+  });
+
   if (window.addEventListener) {
     if ('onwheel' in document) {
       window.addEventListener("wheel", onWheel);
@@ -65,4 +73,5 @@
       }
     });
   });
+
 })();

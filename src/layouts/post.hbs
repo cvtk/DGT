@@ -34,7 +34,9 @@ layout: default.hbs
       </div>
     </div>
   </div>
-  <div class="blog-content__banner"></div>
+  <div class="blog-content__banner-image">
+    <div class="banner-image"{{#unless noImage}} style="background-image: url(/{{this.basename}}.jpg)"{{/unless}}></div>
+  </div>
 </div>
 <script>
   var disqus_config = function () {
