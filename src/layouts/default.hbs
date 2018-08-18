@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{{ title }}</title>
-    <meta name="description" content="">
+    <meta name="description" content="{{ description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="cvtk">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -14,8 +14,7 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff4f4f">
     <meta name="msapplication-TileColor" content="#ff4f4f">
     <meta name="theme-color" content="#ff4f4f">
-    <link rel="stylesheet" href="/base.css">
-    <link rel="stylesheet" href="/{{ shortname }}.css">
+    <link rel="stylesheet" href="/a.css">
   </head>
   <body class="page">
     <input type="checkbox" class="menu-toggler" id="_xph">
@@ -27,9 +26,8 @@
     <label for="_xph" class="close"></label>
     {{> main-nav }}
     {{> body }}
-    <!-- <script src="//localhost:35729/livereload.js"></script> -->
-    <script src="/base.js"></script>
-    <script src="/{{ shortname }}.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
+    <script src="/b.js"></script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function (d, w, c) {

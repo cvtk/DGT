@@ -3,12 +3,12 @@ function hasClass(el, cl) {
 }
 
 function _q(selector) {
-  if ( !selector && typeof(selector) !== 'string' ) return;
+  if ( !selector && typeof(selector) !== 'string' ) return false;
 
   var nodeList = document.querySelectorAll(selector),
       array = Array.prototype.slice.call(nodeList);
 
-  if ( !array.length ) return;
+  if ( !array.length ) return false;
 
   var addWord = function(str, word) {
     return str + ' ' + word;

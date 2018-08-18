@@ -1,4 +1,5 @@
 (function() {
+  if ( !_q('.cases-content') ) return;
   var currentFilter = '',
       navItems = _q('.cases-content-nav-item');
 

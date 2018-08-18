@@ -1,4 +1,6 @@
 (function() {
+  if ( !_q('.about-content') ) return;
+
   var pages = document.querySelectorAll('.about-content'),
       navs = document.querySelectorAll('.about-content-info__scroll-button'),
       currentPage = 0,

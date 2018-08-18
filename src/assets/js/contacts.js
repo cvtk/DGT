@@ -1,4 +1,5 @@
 (function() {
+	if ( !_q('.contacts-content') ) return;
   var menuToggler = _q('.menu-toggler'),
       feedbackForm = _q('.feedback');
 
