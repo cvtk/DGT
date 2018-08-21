@@ -1,6 +1,7 @@
 ---
-title: DGT - информация о нас
-shortname: index
+title: Услуги системного администратора в Ярославле, ООО Диджит
+description: "Обслуживание компьютеров юр лиц – установка программ, настройка сетей, обеспечение компьютерной безопасности, а так же диагностика неисправностей и ремонт ПК, устранение неполадок, модернизация ИС."
+baseurl: /
 layout: default.hbs
 ---
 
@@ -9,8 +10,8 @@ layout: default.hbs
     <div class="index-content-services">
       <div class="index-content-services__header-block">
         <div class="header-block">
-          <div class="header-block__title">Цифровые идеи<br>для бизнеса</div>
-          <div class="header-block__subtitle">спектр предоставляемых услуг</div>
+          <h1 class="header-block__title">Цифровые идеи <br>для бизнеса</h1>
+          <h2 class="header-block__subtitle">спектр предоставляемых услуг</h2>
         </div>
       </div>
       <div class="index-content-services__body">
@@ -25,7 +26,7 @@ layout: default.hbs
           <div class="index-content-services-description__wrapper">{{#each services.items}}
             <div class="index-content-services-description__item">
               <div class="index-content-services-description-item">
-                <h4 class="index-content-services-description-item__title">{{ title }}</h4>
+                <h5 class="index-content-services-description-item__title">{{ title }}</h5>
                 <span class="index-content-services-description-item__text">{{ teaser }}</span>
                 <a href="#request" title="Оставить заявку" class="index-content-services-description-item__button">Оставить заявку</a>
               </div>
@@ -41,8 +42,8 @@ layout: default.hbs
         <div class="index-content-advantage-content">
           <div class="index-content-advantage-content__header-block">
             <div class="header-block">
-              <div class="header-block__title">Наши приемущества</div>
-              <div class="header-block__subtitle">почему нам доверяют</div>
+              <h3 class="header-block__title">Наши приемущества</h3>
+              <h4 class="header-block__subtitle">почему нам доверяют</h4>
             </div>
           </div>
           <div class="index-content-advantage-content__text">
@@ -61,13 +62,15 @@ layout: default.hbs
               <div class="index-content-advantage-cases-item">
                 <div class="index-content-advantage-cases-item__wrapper">
                   <div class="index-content-advantage-cases-item-wrapper">
-                    <svg id="guarantee_icon" viewBox="0 0 112.979 112.979" width="100%" height="100%">
+                    <svg id="guarantee_icon" viewBox="0 0 112.979 112.979" role="img" aria-label="Гарантия. Обеспечиваем полный цикл работ по развитию и обслуживанию ИТ, включая гарантийное и постгарантийное обслуживание." width="100%" height="100%">
+                      <title>Гарантия</title>
+                      <desc>Обеспечиваем полный цикл работ по развитию и обслуживанию ИТ, включая гарантийное и постгарантийное обслуживание.</desc>
                       <path fill-rule="evenodd" clip-rule="evenodd" fill="#FF4E4E" d="M0,0v112.979h112.979V0H0z M111.127,111.127H1.852V1.851h109.275
                       V111.127z M49.988,91.787l55.001-56.797l-15-14L49.481,62.98L22.833,37.251L8.683,51.906l26.648,25.729L49.988,91.787z
                       M49.527,65.599L89.989,23.99l12,11L62.805,75.844L49.94,89.166L37.666,77.314l11.787-11.787L49.527,65.599z M22.878,39.87
                       l25.048,24.184L36.139,75.84L11.301,51.86L22.878,39.87z"></path>
                     </svg>
-                    <h3 class="index-content-advantage-cases-item__title">Гарантия</h3>
+                    <h5 class="index-content-advantage-cases-item__title">Гарантия</h5>
                     <p class="index-content-advantage-cases-item__text">Обеспечиваем полный цикл работ по развитию и обслуживанию ИТ, включая гарантийное и постгарантийное обслуживание.</p>
                   </div>
                 </div>
@@ -77,7 +80,9 @@ layout: default.hbs
               <div class="index-content-advantage-cases-item">
                 <div class="index-content-advantage-cases-item__wrapper">
                   <div class="index-content-advantage-cases-item-wrapper">
-                    <svg id="experience_icon" viewBox="0 0 112.979 112.979" width="100%" height="100%">
+                    <svg id="experience_icon" viewBox="0 0 112.979 112.979" role="img" aria-label="Опыт. Мы более 5 лет предоставляем услуги по обслуживанию ИТ. Нам доверяют такие крупные компании, как Ростелеком, Энфорта, Технониколь." width="100%" height="100%">
+                      <title>Опыт</title>
+                      <desc>Мы более 5 лет предоставляем услуги по обслуживанию ИТ. Нам доверяют такие крупные компании, как Ростелеком, Энфорта, Технониколь.</desc>
                       <path fill="#FF4E4E" d="M0-0.001v112.979h112.979V-0.001H0z M111.127,111.125H1.852V1.85h109.275V111.125z M25.7,85.969
                       l-7.139,7.136h75.853l-7.135-7.136l-1.853-1.852L57.799,56.489l13.35-13.351l1.854-1.854L94.415,19.87H18.563l21.415,21.414
                       l1.853,1.854l13.351,13.351L27.552,84.117L25.7,85.969z M23.032,21.722h66.913L70.381,41.284H42.597L23.032,21.722z
@@ -88,7 +93,7 @@ layout: default.hbs
                       c-1.218,0-2.203,0.986-2.203,2.204c0,1.219,0.985,2.204,2.203,2.204c1.217,0,2.202-0.985,2.202-2.204
                       C58.693,76.686,57.706,75.698,56.49,75.698z"></path>
                     </svg>
-                    <h3 class="index-content-advantage-cases-item__title">Опыт</h3>
+                    <h5 class="index-content-advantage-cases-item__title">Опыт</h5>
                     <p class="index-content-advantage-cases-item__text">Мы более 5 лет предоставляем услуги по обслуживанию ИТ. Нам доверяют такие крупные компании, как Ростелеком, Энфорта, Технониколь.</p>
                   </div>
                 </div>
@@ -98,12 +103,14 @@ layout: default.hbs
               <div class="index-content-advantage-cases-item">
                 <div class="index-content-advantage-cases-item__wrapper">
                   <div class="index-content-advantage-cases-item-wrapper">
-                    <svg id="quality_icon" viewBox="0 0 112.979 112.979" width="100%" height="100%">
+                    <svg id="quality_icon" viewBox="0 0 112.979 112.979" role="img" aria-label="Качество. Управляем ходом ИТ-проекта на каждом этапе реализации, предоставляя клиенту возможность следить за его текущими показателями." width="100%" height="100%">
+                      <title>Качество</title>
+                      <desc>Управляем ходом ИТ-проекта на каждом этапе реализации, предоставляя клиенту возможность следить за его текущими показателями.</desc>
                       <path fill="#FF4E4E" d="M0,0.001v112.978h112.979V0.001H0z M111.127,111.127H1.852V1.852h109.275V111.127z M46.303,103.717h20.371
                       V66.676h37.042V46.302H66.674V9.26H46.303v37.042H9.261v20.374h37.042V103.717z M48.155,11.113h16.669v37.042h37.042v16.667
                       H48.155V11.113z M48.155,66.676h16.669v35.189H48.155V66.676z M11.113,64.823V48.155h35.19v16.667H11.113z"></path>
                     </svg>
-                    <h3 class="index-content-advantage-cases-item__title">Качество</h3>
+                    <h5 class="index-content-advantage-cases-item__title">Качество</h5>
                     <p class="index-content-advantage-cases-item__text">Управляем ходом ИТ-проекта на каждом этапе реализации, предоставляя клиенту возможность следить за его текущими показателями.</p>
                   </div>
                 </div>
@@ -113,7 +120,9 @@ layout: default.hbs
               <div class="index-content-advantage-cases-item">
                 <div class="index-content-advantage-cases-item__wrapper">
                   <div class="index-content-advantage-cases-item-wrapper">
-                    <svg id="result_icon" viewBox="0 0 112.979 112.979" width="100%" height="100%">
+                    <svg id="result_icon" viewBox="0 0 112.979 112.979" role="img" aria-label="Результат. Снижение стоимости владения ИТ, рост удовлетворенности пользователей, минимизация простоев - главная цель и лучший показатель нашей работы." width="100%" height="100%">
+                      <title>Результат</title>
+                      <desc>Снижение стоимости владения ИТ, рост удовлетворенности пользователей, минимизация простоев - главная цель и лучший показатель нашей работы.</desc>
                       <path fill="#FF4E4E" d="M0,0v112.979h112.979V0H0z M111.127,111.127H1.852V1.852h109.275V111.127z M56.003,91.631v11.351h1.974
                       V91.631c18.333-0.517,33.141-15.323,33.656-33.652h11.345v-1.974H91.633c-0.516-18.331-15.323-33.14-33.656-33.657V11.002h-1.974
                       v11.346c-18.331,0.517-33.14,15.325-33.656,33.657H11.001v1.974h11.346C22.864,76.309,37.672,91.115,56.003,91.631z M56.99,24.296
@@ -125,7 +134,7 @@ layout: default.hbs
                       c-4.474,0-8.114,3.64-8.114,8.116C48.875,61.466,52.515,65.104,56.99,65.104z M56.99,50.852c3.388,0,6.142,2.755,6.141,6.142
                       c0,3.385-2.753,6.138-6.141,6.138s-6.141-2.753-6.141-6.138C50.85,53.607,53.604,50.852,56.99,50.852z"></path>
                     </svg>
-                    <h3 class="index-content-advantage-cases-item__title">Результат</h3>
+                    <h5 class="index-content-advantage-cases-item__title">Результат</h5>
                     <p class="index-content-advantage-cases-item__text">Снижение стоимости владения ИТ, рост удовлетворенности пользователей, минимизация простоев - главная цель и лучший показатель нашей работы.</p>
                   </div>
                 </div>
@@ -142,8 +151,8 @@ layout: default.hbs
     <div class="index-content-work">
       <div class="index-content-work__header-block">
         <div class="header-block">
-          <div class="header-block__title">Как мы работаем</div>
-          <div class="header-block__subtitle">Работа выполняется в несколько этапов</div>
+          <h3 class="header-block__title">Как мы работаем</h3>
+          <h4 class="header-block__subtitle">Работа выполняется в несколько этапов</h4>
         </div>
       </div>
       <div class="index-content-work__list">
@@ -151,7 +160,7 @@ layout: default.hbs
           <li class="index-content-work-list__item">
             <div class="index-content-work-list-item">
               <div class="index-content-work-list-item__arrow">
-                <svg id="icon-work-next" viewBox="0 0 99 17" width="100%" height="100%">
+                <svg id="icon-work-next" viewBox="0 0 99 17" role="img" aria-label="Этап проекта аутсорсинга" width="100%" height="100%">
                   <path fillrule="evenodd" d="M-0 9.28C-0 9.28-0 6.52-0 6.52-0 6.52 97.93 6.52 97.93 6.52 97.93 6.52 97.93 9.28 97.93 9.28 97.93 9.28-0 9.28-0 9.28Z"></path>
                   <path fillrule="evenodd" d="M 96.75 9.96C 96.75 9.96 98.66 8 98.66 8 98.66 8 91.08 0.21 91.08 0.21 91.08 0.21 89.17 2.17 89.17 2.17 89.17 2.17 96.75 9.96 96.75 9.96Z"></path>
                   <path fillrule="evenodd" d="M 97.38 6.53C 97.38 6.53 99.28 8.47 99.28 8.47 99.28 8.47 91.77 16.19 91.77 16.19 91.77 16.19 89.88 14.25 89.88 14.25 89.88 14.25 97.38 6.53 97.38 6.53Z"></path>
@@ -159,7 +168,9 @@ layout: default.hbs
               </div>
               <div class="index-content-work-list-item_middle">
                 <div class="index-content-work-list-item__icon">
-                  <svg viewBox="0 0 112.979 112.979" width="100%" height="100%">
+                  <svg viewBox="0 0 112.979 112.979" role="img" aria-label="Аудит. Предварительная оценка состояния вашей ИТ-инфраструктуры, опрос сотрудников и выявление слабых сторон." width="100%" height="100%">
+                    <title>Аудит</title>
+                    <desc>Предварительная оценка состояния вашей ИТ-инфраструктуры, опрос сотрудников и выявление слабых сторон.</desc>
                     <path fill="#FF4E4E" d="M0,0v112.979h112.979V0H0z M111.127,111.126H1.852V1.852h109.275V111.126z M96.99,22.99h-11v-4h-10v4h-14
                     v-4h-10v4h-14v-4h-10v4h-11l-0.001,72.001H96.99L96.99,22.99z M77.99,20.99h6v6h-6V20.99z M53.99,20.99h6v6h-6V20.99z
                     M29.99,20.99h6v6h-6V20.99z M94.99,92.99h-76v-53h76V92.99z M94.99,37.99h-76v-13h9v4h10v-4h14v4h10v-4h14v4h10v-4h9V37.99z"></path>
@@ -168,15 +179,15 @@ layout: default.hbs
                   z M28.666,83.5h10v-7h-10V83.5z M52.666,83.5h10v-7h-10V83.5z M76.666,83.5h10v-7h-10V83.5z"></path>
                   </svg>
                 </div>
-                <h3 class="index-content-work-list-item__header">Аудит</h3>
-                <p class="index-content-work-list-item__text">Предварительная оценка состояния вашей ИТ-инфраструктуры, опрос сотрудников и выявление слабых сторон</p>
+                <h5 class="index-content-work-list-item__header">Аудит</h5>
+                <p class="index-content-work-list-item__text">Предварительная оценка состояния вашей ИТ-инфраструктуры, опрос сотрудников и выявление слабых сторон.</p>
               </div>
             </div>
           </li>
           <li class="index-content-work-list__item">
             <div class="index-content-work-list-item">
               <div class="index-content-work-list-item__arrow">
-                <svg viewBox="0 0 99 17" width="100%" height="100%">
+                <svg viewBox="0 0 99 17" role="img" aria-label="Этап проекта аутсорсинга" width="100%" height="100%">
                   <path fillrule="evenodd" d="M-0 9.28C-0 9.28-0 6.52-0 6.52-0 6.52 97.93 6.52 97.93 6.52 97.93 6.52 97.93 9.28 97.93 9.28 97.93 9.28-0 9.28-0 9.28Z"></path>
                   <path fillrule="evenodd" d="M 96.75 9.96C 96.75 9.96 98.66 8 98.66 8 98.66 8 91.08 0.21 91.08 0.21 91.08 0.21 89.17 2.17 89.17 2.17 89.17 2.17 96.75 9.96 96.75 9.96Z"></path>
                   <path fillrule="evenodd" d="M 97.38 6.53C 97.38 6.53 99.28 8.47 99.28 8.47 99.28 8.47 91.77 16.19 91.77 16.19 91.77 16.19 89.88 14.25 89.88 14.25 89.88 14.25 97.38 6.53 97.38 6.53Z"></path>
@@ -184,7 +195,9 @@ layout: default.hbs
               </div>
               <div class="index-content-work-list-item_middle">
                 <div class="index-content-work-list-item__icon">
-                  <svg id="report_icon" viewBox="0 0 112.979 112.979" width="100%" height="100%">
+                  <svg id="report_icon" viewBox="0 0 112.979 112.979" role="img" aria-label="Отчет. Анализ проблем, выявленных в ходе аудита, разработка плана работ по устранению рисков и уязвимостей." width="100%" height="100%">
+                    <title>Аудит</title>
+                    <desc>Предварительная оценка состояния вашей ИТ-инфраструктуры, опрос сотрудников и выявление слабых сторон.</desc>
                     <path fill="#FF4E4E" d="M-0.001,0V112.98h112.979V0H-0.001z M111.126,111.126H1.851V1.852h109.275V111.126z M92.992,25.531H77.045
                     v12.104H35.923V25.531H19.984V99.99h73.009V25.531z M90.989,97.99h-69V27.991h12v12h45v-12h12V97.99z M72.869,17.319h-9.998
                     v-4.327H50.16v4.327H40.107v16.425h32.763V17.319z M52.215,15.024h8.602v8.553h-8.602V15.024z M70.816,30.712l-0.001,1H42.161
@@ -193,7 +206,7 @@ layout: default.hbs
                     H29.647V87.331z"></path>
                   </svg>
                 </div>
-                <h3 class="index-content-work-list-item__header">Отчет</h3>
+                <h5 class="index-content-work-list-item__header">Отчет</h5>
                 <p class="index-content-work-list-item__text">Анализ проблем, выявленных в ходе аудита, разработка плана работ по устранению рисков и уязвимостей.</p>
               </div>
             </div>
@@ -201,7 +214,7 @@ layout: default.hbs
           <li class="index-content-work-list__item">
             <div class="index-content-work-list-item">
               <div class="index-content-work-list-item__arrow">
-                <svg id="icon-work-next-prev" viewBox="0 0 99 36" width="100%" height="100%">
+                <svg id="icon-work-next-prev" viewBox="0 0 99 36" role="img" aria-label="Этап проекта аутсорсинга" width="100%" height="100%">
                   <path fillrule="evenodd" d="M 0.33 8.95C 0.33 8.95 0.33 6.18 0.33 6.18 0.33 6.18 98.26 6.18 98.26 6.18 98.26 6.18 98.26 8.95 98.26 8.95 98.26 8.95 0.33 8.95 0.33 8.95Z"></path>
                   <path fillrule="evenodd" d="M 97.08 9.63C 97.08 9.63 98.99 7.66 98.99 7.66 98.99 7.66 91.42-0.13 91.42-0.13 91.42-0.13 89.51 1.84 89.51 1.84 89.51 1.84 97.08 9.63 97.08 9.63Z"></path>
                   <path fillrule="evenodd" d="M 97.72 6.19C 97.72 6.19 99.61 8.14 99.61 8.14 99.61 8.14 92.1 15.86 92.1 15.86 92.1 15.86 90.21 13.91 90.21 13.91 90.21 13.91 97.72 6.19 97.72 6.19Z"></path>
@@ -212,7 +225,9 @@ layout: default.hbs
               </div>
               <div class="index-content-work-list-item_middle">
                 <div class="index-content-work-list-item__icon">
-                  <svg viewBox="0 0 112.979 112.979" width="100%" height="100%">
+                  <svg viewBox="0 0 112.979 112.979" role="img" aria-label="Обслуживание. Приём и обработка обращений, консультация сотрудников, выполнение плановых эксплуатационных мероприятий." width="100%" height="100%">
+                    <title>Обслуживание</title>
+                    <desc>Приём и обработка обращений, консультация сотрудников, выполнение плановых эксплуатационных мероприятий.</desc>
                     <path fill="#FF4E4E" d="M0,0v112.979h112.979V0H0z M111.127,111.126H1.852V1.852h109.275V111.126z"></path>
                     <path fill="none" stroke="#FF4E4E" stroke-width="2" stroke-miterlimit="10" d="M29.505,55.103
                       c0.696-13.8,11.748-24.869,25.542-25.595l6.84-9.044l-6.791-8.982c-23.751,0.722-42.872,19.832-43.613,43.576l8.981-6.79
@@ -223,7 +238,7 @@ layout: default.hbs
                       L83.472,57.873z"></path>
                   </svg>
                 </div>
-                <h3 class="index-content-work-list-item__header">Обслуживание</h3>
+                <h5 class="index-content-work-list-item__header">Обслуживание</h5>
                 <p class="index-content-work-list-item__text">Приём и обработка обращений, консультация сотрудников, выполнение плановых эксплуатационных мероприятий.</p>
               </div>
             </div>
@@ -232,15 +247,17 @@ layout: default.hbs
             <div class="index-content-work-list-item">
               <div class="index-content-work-list-item_middle">
                 <div class="index-content-work-list-item__icon">
-                  <svg id="analysis_icon" viewBox="0 0 112.979 112.979" width="100%" height="100%">
-                      <path fill-rule="evenodd" clip-rule="evenodd" fill="#FF4E4E" d="M0,0V112.98h112.979V0H0z M111.127,111.126H1.852V1.852h109.275
+                  <svg id="analysis_icon" viewBox="0 0 112.979 112.979" role="img" aria-label="Анализ. Контрольный срез данных по итогам оговорённого периода, полный отчет о результатах." width="100%" height="100%">
+                    <title>Анализ</title>
+                    <desc>Контрольный срез данных по итогам оговорённого периода, полный отчет о результатах.</desc>
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FF4E4E" d="M0,0V112.98h112.979V0H0z M111.127,111.126H1.852V1.852h109.275
                       V111.126z M39.433,42.227l26.894,10.385l28.64-36.687v5.076h1.998v-7.995h-2.144l-0.061-0.048l-0.037,0.048H88.97v1.999h4.193
                       L65.569,50.352L39.365,40.057l-0.03,0.076l-0.22-0.076l-24.87,29.272l1.536,1.277L39.433,42.227z"></path>
-                      <path fill="none" stroke="#FF4E4E" stroke-width="2" stroke-miterlimit="10" d="M40.365,100.608h12v-45h-12V100.608z
+                    <path fill="none" stroke="#FF4E4E" stroke-width="2" stroke-miterlimit="10" d="M40.365,100.608h12v-45h-12V100.608z
                     M81.365,42.608v58h12v-58H81.365z M60.365,100.608h12v-28h-12V100.608z M20.365,100.608h12v-23h-12V100.608z"></path>
                   </svg>
                 </div>
-                <h3 class="index-content-work-list-item__header">Анализ</h3>
+                <h5 class="index-content-work-list-item__header">Анализ</h5>
                 <p class="index-content-work-list-item__text">Контрольный срез данных по итогам оговорённого периода, полный отчет о результатах.</p>
               </div>
             </div>
@@ -253,8 +270,8 @@ layout: default.hbs
     <div class="index-content-rates">
       <div class="index-content-rates__header-block _white">
         <div class="header-block">
-          <div class="header-block__title">Тарифы<br>на обслуживание</div>
-          <div class="header-block__subtitle">Порядочность начинается с честной цены</div>
+          <h3 class="header-block__title">Тарифы<br>на обслуживание</h3>
+          <h4 class="header-block__subtitle">Порядочность начинается с честной цены</h4>
         </div>
       </div>
       <div class="index-content-rates__list">
@@ -263,11 +280,11 @@ layout: default.hbs
             <div class="index-content-rates-list-item">
               <div class="index-content-rates-list-item_inner">
                 <img src="/index-content-rates-list-item__image_ad-hoc.png" alt="Заказать разовые работы" class="index-content-rates-list-item__image">
-                <h3 class="index-content-rates-list-item__header">Разовые работы</h3>
+                <h5 class="index-content-rates-list-item__header">Разовые работы</h5>
                 <div class="index-content-rates-list-item__price">
                   <div class="index-content-rates-list-item-price">
                     <span class="index-content-rates-list-item-price__sum">
-                      от 750<svg id="price-ru" viewBox="0 0 37 53" width="100%" height="100%">
+                      от 750<svg id="price-ru" viewBox="0 0 37 53" role="img" aria-label="рублей" width="100%" height="100%">
                         <path fillrule="evenodd" d="M 0.4 33.1C 0.4 33.1 5.24 33.1 5.24 33.1 5.24 33.1 5.24 37.94 5.24 37.94 5.24 37.94 0.4 37.94 0.4 37.94 0.4 37.94 0.4 43.73 0.4 43.73 0.4 43.73 5.24 43.73 5.24 43.73 5.24 43.73 5.24 52.16 5.24 52.16 5.24 52.16 12.06 52.16 12.06 52.16 12.06 52.16 12.06 43.73 12.06 43.73 12.06 43.73 28.69 43.73 28.69 43.73 28.69 43.73 28.69 37.94 28.69 37.94 28.69 37.94 12.06 37.94 12.06 37.94 12.06 37.94 12.06 33.03 12.06 33.03 12.06 33.03 18.88 33.03 18.88 33.03 26.21 33.03 28.09 31.27 31.61 27.75 34.54 24.89 36.15 20.93 36.15 16.31 36.15 10.44 33.88 6.7 29.99 4.06 26.7 1.79 25.33 0.84 19.1 0.84 19.1 0.84 5.24 0.84 5.24 0.84 5.24 0.84 5.24 27.23 5.24 27.23 5.24 27.23 0.4 27.23 0.4 27.23 0.4 27.23 0.4 33.1 0.4 33.1ZM 29.04 16.53C 29.04 19.54 28.24 21.95 26.11 24.08 23.84 26.21 23.35 27.23 17.78 27.23 17.78 27.23 12.06 27.23 12.06 27.23 12.06 27.23 12.06 6.7 12.06 6.7 12.06 6.7 18.8 6.7 18.8 6.7 23.13 6.7 23.03 7.29 25.3 8.76 27.87 10.44 29.04 12.94 29.04 16.53Z"></path>
                       </svg>
                     </span>
@@ -290,11 +307,11 @@ layout: default.hbs
             <div class="index-content-rates-list-item">
               <div class="index-content-rates-list-item_inner">
                 <img src="/index-content-rates-list-item__image_standart.png" alt="Заказать тариф «Стандарт»" class="index-content-rates-list-item__image">
-                <h3 class="index-content-rates-list-item__header">Стандарт</h3>
+                <h5 class="index-content-rates-list-item__header">Стандарт</h5>
                 <div class="index-content-rates-list-item__price">
                   <div class="index-content-rates-list-item-price">
                     <span class="index-content-rates-list-item-price__sum">
-                      от 3 500<svg id="price-ru" viewBox="0 0 37 53" width="100%" height="100%">
+                      от 3 500<svg id="price-ru" viewBox="0 0 37 53" role="img" aria-label="рублей" width="100%" height="100%">
                         <path fillrule="evenodd" d="M 0.4 33.1C 0.4 33.1 5.24 33.1 5.24 33.1 5.24 33.1 5.24 37.94 5.24 37.94 5.24 37.94 0.4 37.94 0.4 37.94 0.4 37.94 0.4 43.73 0.4 43.73 0.4 43.73 5.24 43.73 5.24 43.73 5.24 43.73 5.24 52.16 5.24 52.16 5.24 52.16 12.06 52.16 12.06 52.16 12.06 52.16 12.06 43.73 12.06 43.73 12.06 43.73 28.69 43.73 28.69 43.73 28.69 43.73 28.69 37.94 28.69 37.94 28.69 37.94 12.06 37.94 12.06 37.94 12.06 37.94 12.06 33.03 12.06 33.03 12.06 33.03 18.88 33.03 18.88 33.03 26.21 33.03 28.09 31.27 31.61 27.75 34.54 24.89 36.15 20.93 36.15 16.31 36.15 10.44 33.88 6.7 29.99 4.06 26.7 1.79 25.33 0.84 19.1 0.84 19.1 0.84 5.24 0.84 5.24 0.84 5.24 0.84 5.24 27.23 5.24 27.23 5.24 27.23 0.4 27.23 0.4 27.23 0.4 27.23 0.4 33.1 0.4 33.1ZM 29.04 16.53C 29.04 19.54 28.24 21.95 26.11 24.08 23.84 26.21 23.35 27.23 17.78 27.23 17.78 27.23 12.06 27.23 12.06 27.23 12.06 27.23 12.06 6.7 12.06 6.7 12.06 6.7 18.8 6.7 18.8 6.7 23.13 6.7 23.03 7.29 25.3 8.76 27.87 10.44 29.04 12.94 29.04 16.53Z"></path>
                       </svg>
                     </span>
@@ -320,7 +337,7 @@ layout: default.hbs
                 <div class="index-content-rates-list-item__price">
                   <div class="index-content-rates-list-item-price">
                     <span class="index-content-rates-list-item-price__sum">
-                      от 9 500<svg id="price-ru" viewBox="0 0 37 53" width="100%" height="100%">
+                      от 9 500<svg id="price-ru" viewBox="0 0 37 53" role="img" aria-label="рублей" width="100%" height="100%">
                         <path fillrule="evenodd" d="M 0.4 33.1C 0.4 33.1 5.24 33.1 5.24 33.1 5.24 33.1 5.24 37.94 5.24 37.94 5.24 37.94 0.4 37.94 0.4 37.94 0.4 37.94 0.4 43.73 0.4 43.73 0.4 43.73 5.24 43.73 5.24 43.73 5.24 43.73 5.24 52.16 5.24 52.16 5.24 52.16 12.06 52.16 12.06 52.16 12.06 52.16 12.06 43.73 12.06 43.73 12.06 43.73 28.69 43.73 28.69 43.73 28.69 43.73 28.69 37.94 28.69 37.94 28.69 37.94 12.06 37.94 12.06 37.94 12.06 37.94 12.06 33.03 12.06 33.03 12.06 33.03 18.88 33.03 18.88 33.03 26.21 33.03 28.09 31.27 31.61 27.75 34.54 24.89 36.15 20.93 36.15 16.31 36.15 10.44 33.88 6.7 29.99 4.06 26.7 1.79 25.33 0.84 19.1 0.84 19.1 0.84 5.24 0.84 5.24 0.84 5.24 0.84 5.24 27.23 5.24 27.23 5.24 27.23 0.4 27.23 0.4 27.23 0.4 27.23 0.4 33.1 0.4 33.1ZM 29.04 16.53C 29.04 19.54 28.24 21.95 26.11 24.08 23.84 26.21 23.35 27.23 17.78 27.23 17.78 27.23 12.06 27.23 12.06 27.23 12.06 27.23 12.06 6.7 12.06 6.7 12.06 6.7 18.8 6.7 18.8 6.7 23.13 6.7 23.03 7.29 25.3 8.76 27.87 10.44 29.04 12.94 29.04 16.53Z"></path>
                       </svg>
                     </span>
@@ -346,8 +363,8 @@ layout: default.hbs
     <div class="index-content-cases">
       <div class="index-content-cases__header-block">
         <div class="header-block">
-          <div class="header-block__title">Лучшие кейсы</div>
-          <div class="header-block__subtitle">результаты говорят сами за себя</div>
+          <h3 class="header-block__title">Лучшие кейсы</h3>
+          <h4 class="header-block__subtitle">результаты говорят сами за себя</h4>
         </div>
       </div>
       <div class="index-content-cases__list _index-page">{{#each posts}}{{#is post "top"}}{{> cases-content-list obj=pages}}{{/is}}{{/each}}
@@ -360,8 +377,8 @@ layout: default.hbs
         <div class="index-content-reviews-content">
           <div class="index-content-reviews-content__header-block">
             <div class="header-block">
-              <div class="header-block__title">Отзывы</div>
-              <div class="header-block__subtitle">Гордимся нашими клиентами</div>
+              <h3 class="header-block__title">Отзывы</h3>
+              <h4 class="header-block__subtitle">Гордимся нашими клиентами</h4>
             </div>
           </div>
           <div class="index-content-reviews-content__slider">
@@ -371,7 +388,7 @@ layout: default.hbs
                 <div class="index-content-reviews-content-slider-item">
                   <div class="index-content-reviews-content-slider-item__body">
                     <div class="index-content-reviews-content-slider-item-body">
-                      <h4 class="index-content-reviews-content-slider-item-body__header">{{ company }}</h4>
+                      <h5 class="index-content-reviews-content-slider-item-body__header">{{ company }}</h5>
                       {{#each text}}<p class="index-content-reviews-content-slider-item-body__text">{{ this }}</p>{{/each}}
                     </div>
                   </div>
@@ -382,14 +399,14 @@ layout: default.hbs
                       <div class="index-content-reviews-content-slider-item-footer__nav">
                         <div class="index-content-reviews-content-slider-item-footer-nav">
                           <div class="index-content-reviews-content-slider-item-footer-nav__next">
-                            <svg id="arrow-right" viewBox="0 0 32 16" width="100%" height="100%">
+                            <svg id="arrow-right" viewBox="0 0 32 16" role="img" aria-label="следующий отзыв" width="100%" height="100%">
                               <path fillrule="evenodd" d="M-0.33 9.14C-0.33 9.14-0.33 6.37-0.33 6.37-0.33 6.37 30.93 6.37 30.93 6.37 30.93 6.37 30.93 9.14 30.93 9.14 30.93 9.14-0.33 9.14-0.33 9.14Z"></path>
                               <path fillrule="evenodd" d="M 29.75 9.81C 29.75 9.81 31.66 7.85 31.66 7.85 31.66 7.85 24.08 0.06 24.08 0.06 24.08 0.06 22.17 2.02 22.17 2.02 22.17 2.02 29.75 9.81 29.75 9.81Z"></path>
                               <path fillrule="evenodd" d="M 30.38 6.38C 30.38 6.38 32.28 8.33 32.28 8.33 32.28 8.33 24.77 16.04 24.77 16.04 24.77 16.04 22.87 14.1 22.87 14.1 22.87 14.1 30.38 6.38 30.38 6.38Z"></path>
                             </svg>
                           </div>
                           <div class="index-content-reviews-content-slider-item-footer-nav__prev">
-                            <svg id="arrow-left" viewBox="0 0 32 16" width="100%" height="100%">
+                            <svg id="arrow-left" viewBox="0 0 32 16" role="img" aria-label="предыдущий отзыв" width="100%" height="100%">
                               <path fillrule="evenodd" d="M 32.67 9.14C 32.67 9.14 32.67 6.37 32.67 6.37 32.67 6.37 1.41 6.37 1.41 6.37 1.41 6.37 1.41 9.14 1.41 9.14 1.41 9.14 32.67 9.14 32.67 9.14Z"></path>
                               <path fillrule="evenodd" d="M 2.58 9.81C 2.58 9.81 0.67 7.85 0.67 7.85 0.67 7.85 8.25 0.06 8.25 0.06 8.25 0.06 10.16 2.02 10.16 2.02 10.16 2.02 2.58 9.81 2.58 9.81Z"></path>
                               <path fillrule="evenodd" d="M 1.95 6.38C 1.95 6.38 0.06 8.33 0.06 8.33 0.06 8.33 7.56 16.04 7.56 16.04 7.56 16.04 9.46 14.1 9.46 14.1 9.46 14.1 1.95 6.38 1.95 6.38Z"></path>
@@ -409,40 +426,40 @@ layout: default.hbs
       <div class="index-content-reviews__banners">
         <div class="index-content-reviews-banners">
           <div class="index-content-reviews-banners__item">
-            <img class="cases-companies-asteros" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
+            <img class="cases-companies-asteros" alt="Клиент Астерос" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
           </div>
           <div class="index-content-reviews-banners__item">
-            <img class="cases-companies-atrus" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
+            <img class="cases-companies-atrus" alt="Клиент ЗАО Атрус" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
           </div>
           <div class="index-content-reviews-banners__item">
-            <img class="cases-companies-bzhf" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
+            <img class="cases-companies-bzhf" alt="Клиент Банк Жилищного Финансирования" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
           </div>
           <div class="index-content-reviews-banners__item">
-            <img class="cases-companies-enforta" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
+            <img class="cases-companies-enforta" alt="Клиент Энфорта" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
           </div>
           <div class="index-content-reviews-banners__item">
-            <img class="cases-companies-tn" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
+            <img class="cases-companies-tn" alt="Клиент Технониколь" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
           </div>
           <div class="index-content-reviews-banners__item">
-            <img class="cases-companies-yats" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
+            <img class="cases-companies-yats" alt="Клиент Ярославльтелесеть" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
           </div>
           <div class="index-content-reviews-banners__item">
-            <img class="cases-companies-defo" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
+            <img class="cases-companies-defo" alt="Клиент ДЭФО" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
           </div>
           <div class="index-content-reviews-banners__item">
-            <img class="cases-companies-rkk" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
+            <img class="cases-companies-rkk" alt="Клиент Красный Крест" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
           </div>
           <div class="index-content-reviews-banners__item">
-            <img class="cases-companies-rtk" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
+            <img class="cases-companies-rtk" alt="Клиент Ростелеком" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
           </div>
           <div class="index-content-reviews-banners__item">
-            <img class="cases-companies-vostok" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
+            <img class="cases-companies-vostok" alt="Клиент Восток Сервис" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
           </div>
           <div class="index-content-reviews-banners__item">
-            <img class="cases-companies-yarsak" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
+            <img class="cases-companies-yarsak" alt="Клиент Ярославльзаказчик" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
           </div>
           <div class="index-content-reviews-banners__item">
-            <img class="cases-companies-park-otel" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
+            <img class="cases-companies-park-otel" alt="Клиент Парк-отель Ярославль" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACgAQMAAAAIFXMmAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABxJREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAgNcAE2AAAfqNLEkAAAAASUVORK5CYII=">
           </div>
         </div>
       </div>
@@ -450,7 +467,7 @@ layout: default.hbs
   </div>
   <div class="index-content__client-feedback" id="request">
     <div class="client-feedback">
-      <h5 class="client-feedback__title">Оставить заявку</h5>
+      <h3 class="client-feedback__title">Оставить заявку</h3>
       {{>form-block class="client-feedback__form-block" id="fin"}}
     </div>
   </div>

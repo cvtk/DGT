@@ -268,6 +268,39 @@ function tinySwipe(args) {
 })();
 
 (function() {
+  function httpGet(url, error, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.withCredentials = true;
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200 || (xhr.status === 0 && xhr.responseText !== '')) {
+          callback({
+            url: url,
+            status: 200,
+            body: xhr.responseText || ''
+          });
+        }
+        else {
+          error({
+            url: url,
+            status: xhr.status,
+            body: xhr.responseText || ''
+          });
+        }
+      }
+    };
+    xhr.send();
+  }
+  function arrToUrl(arr) {
+    var pairs = [];
+    for (var key in arr)
+      if (arr.hasOwnProperty(key))
+        pairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(arr[key]));
+    return pairs.join('&');
+  }
   function currentTime() { return Math.floor(Date.now() / 1000); }
   function secondsHasPassed(loadedAt, currentTime) { return currentTime - loadedAt; }
   function isFulfilled(el) {
@@ -293,6 +326,8 @@ function tinySwipe(args) {
       return obj;
     }, {});
 
+    fields.message = _q(form + ' textarea').first.value;
+
     var timeCheckPassed = ( secondsHasPassed(loadedAt, currentTime()) > threshold );
 
     var fieldCheckPassed = requiredFields.reduce(function(res, req) {
@@ -311,14 +346,18 @@ function tinySwipe(args) {
 
     if ( fieldCheckPassed ) {
       if ( timeCheckPassed && hideFieldCheckPassed ) {
-        console.log('Yep!', fields);
+        var url = '/s.php?' + arrToUrl(fields);
+        httpGet(url, 
+          function(url, status, body) {
+            _q('.form-block__complete-message').first.HTML="Ошибка: " + status + " <br><br>Сообщение: " + body;
+          },
+          function(url, status, body) {
+            _q(form).addClass('form-block_complete');
+          });
       }
       else {
-        console.log('Yep but!', fields);
+        _q(form).addClass('form-block_complete');
       }
-    }
-    else {
-      console.log('Nope!', fields);
     }
   });
 })();

@@ -320,6 +320,17 @@ button, input
 
 .form-block
   position: relative
+  &.form-block_complete
+    .form-block__wrap
+      display: none
+    .form-block__complete-message
+      display: block
+
+.form-block__complete-message
+  display: none
+  color: #fff
+  padding: 0 35px 100px
+  font-size: 17px
 
 .form-block__wrap
   position: relative
@@ -432,6 +443,9 @@ button, input
   cursor: pointer
 
 .form-block_nav
+  .form-block__complete-message
+    color: #3a3a3a
+
   .form-block__wrap
     border: 1px solid #e8e8e8
     border-top: none
