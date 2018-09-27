@@ -1,6 +1,6 @@
 {
-    "name": "Digit",
-    "short_name": "Digit",
+    "name": "Digit Site",
+    "short_name": "Digit Site",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -8,13 +8,12 @@
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-256x256.png",
-            "sizes": "256x256",
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "theme_color": "#ff4f4f",
-    "background_color": "#ff4f4f",
-    "start_url": "https://digit-it.ru",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone"
 }

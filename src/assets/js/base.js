@@ -312,7 +312,7 @@ function tinySwipe(args) {
   }
 
   var loadedAt = currentTime(),
-      threshold = 15,
+      threshold = 3,
       requiredFields = ['name', 'email', 'personal'];
 
 
